@@ -6,7 +6,7 @@ import { DataPart } from '../core/part';
 @Component({
   selector: 'app-wall',
   templateUrl: './wall.component.html',
-  styleUrls: ['./wall.component.css']
+  styleUrls: ['./wall.component.less']
 })
 export class WallComponent implements OnInit {
   @Output()

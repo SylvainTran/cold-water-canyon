@@ -4,7 +4,7 @@ import { Post } from '../core/post';
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
-  styleUrls: ['./post.component.css']
+  styleUrls: ['./post.component.less']
 })
 export class PostComponent {
   @Input()
