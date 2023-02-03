@@ -1,11 +1,25 @@
+@post-container-z-index: 2;
 @post-date-margin-left: 1rem;
+@post-container-width: 20rem;
+@post-margin-bottom: 10rem;
+@post-font-size: 3rem;
+@post-line-height: 3rem;
 
 #post__container {
-    z-index: 2;
+    z-index: @post-container-z-index;
+    width: @post-container-width;
+    margin-bottom: @post-margin-bottom;
+
     .post__author {
         display: inline-block;
         font-weight: bold;
+        font-size: @post-font-size;
     }
+
+    .post__body {
+       line-height: @post-line-height; 
+    }
+
     .post__date {
         display: inline-block;
         margin-left: @post-date-margin-left;

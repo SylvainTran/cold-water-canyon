@@ -29,7 +29,7 @@ export class PartDispatcherService {
       let skip = false;
       this.usedParts.forEach(part => {
         if (part.content?.sKey === content.sKey) {
-          skip = true;
+          //skip = true;
         }
       });
       if (!skip) {
