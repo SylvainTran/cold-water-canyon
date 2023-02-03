@@ -1,0 +1,13 @@
+<ng-container *ngIf="post">
+    <div class="post__author">{{ post.author }}</div>
+    <div class="post__date">{{ post.date }}</div>
+    <ng-container *ngFor="let comment of post.comments">
+        <div class="post__comment"></div>
+    </ng-container>
+    <ng-container *ngFor="let share of post.shares">
+        <div class="post__share"></div>
+    </ng-container>
+    <div class="post__body">
+        {{ post.body }}
+    </div>
+</ng-container>
