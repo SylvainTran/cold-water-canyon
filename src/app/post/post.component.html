@@ -1,4 +1,4 @@
-<ng-container *ngIf="post">
+<div id="post__container" *ngIf="post">
     <div class="post__author">{{ post.author }}</div>
     <div class="post__date">{{ post.date }}</div>
     <ng-container *ngFor="let comment of post.comments">
@@ -10,4 +10,4 @@
     <div class="post__body">
         {{ post.body }}
     </div>
-</ng-container>
+</div>
