@@ -4,7 +4,7 @@ import { Share } from "./share";
 
 export class Content {
     sKey: string = "";
-    author: string = "Merlin";
+    author: string = "";
     date: string = "";
     comments: PComment[] = [];
     shares: Share[] = [];

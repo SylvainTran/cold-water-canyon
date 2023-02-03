@@ -1,3 +1,6 @@
+/**
+    Flex box utilities
+*/
 .centered-flex {
     display: flex;
     flex-direction: column;
@@ -7,9 +10,28 @@
     align-items: center;
 }
 
+/**
+    Fonts
+*/
 @wall-primary-font: 'Charm, cursive';
 
 @font-face {
     font-family: "Charm";
     src: url("assets/fonts/Charm-Regular.ttf") format("ttf");
+}
+
+/**
+    Image backgrounds
+*/
+.ivy-bg {
+    background-image: url("assets/images/ivy-texture.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/**
+    Native HTML elements
+*/
+body {
+    .ivy-bg()
 }
