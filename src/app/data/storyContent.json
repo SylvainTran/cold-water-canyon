@@ -1,0 +1,27 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "properties": {
+        "contentType": "story",
+        "content": [
+            {
+                "sKey": "A",
+                "author": "Merlin",
+                "date": "1d",
+                "comments": [],
+                "shares": [],
+                "body": "Can anyone pull the pretty sword on the way to the Cathedral?",
+                "parts": []
+            },
+            {
+                "sKey": "B",
+                "author": "Pegg Smith",
+                "date": "1d",
+                "comments": [],
+                "shares": [],
+                "body": "I've lost my hammer, and I've lost my chisels...",
+                "parts": []
+            }
+        ]
+    },
+    "required": ["sKey", "author", "date", "comments", "shares", "body"]
+}
