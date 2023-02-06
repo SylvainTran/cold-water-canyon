@@ -8,6 +8,12 @@
         <div class="post__share"></div>
     </ng-container>
     <div class="post__body">
-        {{ post.body }}
+        {{ post.body }}        
+    </div>
+    <div *ngIf="post.threejsSceneKey" class="threejsScene--container">
+        <div class="threejsScene--frame">
+            <img alt="grungy texture" src="../../assets/images/cloud-grungy-texture.png">
+        </div>
+        <canvas [id]="post.threejsSceneKey" class="threejsScene--canvas"></canvas>
     </div>
 </div>

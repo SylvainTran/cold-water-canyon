@@ -10,7 +10,8 @@
                 "comments": [],
                 "shares": [],
                 "body": "Can anyone pull the pretty sword on the way to the Cathedral?",
-                "parts": []
+                "parts": [],
+                "threejsSceneKey": "swordInRockMyth"
             },
             {
                 "sKey": "B",
@@ -19,7 +20,18 @@
                 "comments": [],
                 "shares": [],
                 "body": "I've lost my hammer, and I've lost my chisels...",
-                "parts": []
+                "parts": [],
+                "threejsSceneKey": ""
+            },
+            {
+                "sKey": "C",
+                "author": "Harry",
+                "date": "1d",
+                "comments": [],
+                "shares": [],
+                "body": "I think my field was raided by bandits this morning.",
+                "parts": [],
+                "threejsSceneKey": "banditMyth"
             }
         ]
     },

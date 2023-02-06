@@ -10,4 +10,5 @@ export class Content {
     shares: Share[] = [];
     body: string = "";
     parts: Part[] = [];
+    threejsSceneKey: string = "";
 }
