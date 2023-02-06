@@ -33,7 +33,7 @@ export class PostComponent implements OnInit, OnChanges, AfterViewInit {
       if (canvasById) {
 
         const renderer = new THREE.WebGLRenderer({canvas: canvasById});
-        //renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setSize(600, 300);
   
         const geometry = new THREE.BoxGeometry(1, 1, 1);
         const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
