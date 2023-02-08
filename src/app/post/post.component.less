@@ -26,9 +26,30 @@
     }
 }
 
+.underline-blue {
+    color: blue;
+    text-decoration: underline;
+}
+
 .post__comments__container {
     display: flex;
     justify-content: flex-end;
+    margin-bottom: 2rem;
+
+    .post__links__container {
+        display: flex;
+        gap: 2rem;
+        justify-content: flex-end;
+        
+        .post__links__container__header {
+            cursor: pointer;
+            .underline-blue();
+        }
+
+        .post__shares_links__container__header {
+            cursor: pointer;
+        }
+    }
 }
 
 #post__container__comments-arrow {
@@ -62,13 +83,4 @@
 
 .comment__author {
     font-weight: bolder;
-}
-
-.post__links__container {
-    display: flex;
-    gap: 2rem;
-    justify-content: flex-end;
-    .post__commentary__header {
-    
-    }    
 }

@@ -14,6 +14,8 @@ export class PostComponent implements OnInit, OnChanges, AfterViewInit {
 
   threejsKey: string = "";
 
+  areCommentsDisplayed: boolean = false;
+
   public parseThreejs() {
     console.log("Parsing threejs...");
 
@@ -68,5 +70,9 @@ export class PostComponent implements OnInit, OnChanges, AfterViewInit {
 
   ngAfterViewInit(): void {
     this.parseThreejs();
+  }
+  
+  displayComments(): void {
+    this.areCommentsDisplayed = !this.areCommentsDisplayed;
   }
 }

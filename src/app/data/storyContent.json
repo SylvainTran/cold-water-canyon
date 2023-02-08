@@ -53,6 +53,16 @@
                 "body": "I think my field was raided by bandits this morning.",
                 "parts": [],
                 "threejsSceneKey": "banditMyth"
+            },
+            {
+                "sKey": "D",
+                "author": "Boo",
+                "date": "1d",
+                "comments": [],
+                "shares": [],
+                "body": "",
+                "parts": [],
+                "threejsSceneKey": "banditMyth2"
             }
         ]
     },
