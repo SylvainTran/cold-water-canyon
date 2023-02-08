@@ -7,7 +7,28 @@
                 "sKey": "A",
                 "author": "Merlin",
                 "date": "1d",
-                "comments": [],
+                "comments": [
+                    {
+                        "sKey": "A-1",
+                        "author": "Yuri",
+                        "date": "1d",
+                        "comments": [],
+                        "shares": [],
+                        "body": "All have tried and failed, we need a hero of legend",
+                        "parts": [],
+                        "threejsSceneKey": ""
+                    },
+                    {
+                        "sKey": "A-1",
+                        "author": "Yuri",
+                        "date": "1d",
+                        "comments": [],
+                        "shares": [],
+                        "body": "All have tried and failed, we need a hero of legend",
+                        "parts": [],
+                        "threejsSceneKey": ""
+                    }
+                ],
                 "shares": [],
                 "body": "Can anyone pull the pretty sword on the way to the Cathedral?",
                 "parts": [],

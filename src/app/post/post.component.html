@@ -1,14 +1,25 @@
 <div id="post__container" *ngIf="post">
     <div class="post__author">{{ post.author }}</div>
     <div class="post__date">{{ post.date }}</div>
-    <ng-container *ngFor="let comment of post.comments">
-        <div class="post__comment"></div>
-    </ng-container>
-    <ng-container *ngFor="let share of post.shares">
-        <div class="post__share"></div>
-    </ng-container>
     <div class="post__body">
         {{ post.body }}        
+    </div>
+    <div class="post__comments__container">
+        <div class="post__links__container">
+            <div class="post__links__container__header">
+                {{ post.comments.length }} Commentaries
+            </div>
+            <div class="post__shares_links__container__header">
+                {{ post.shares.length }} Shares
+            </div>
+        </div>
+    </div>
+    <div id="post__links__container__body" *ngFor="let comment of post.comments">
+        <img id="post__container__comments-arrow" alt="grungy texture" src="../../assets/images/comments-arrow-export.png">
+        <div class="post__comment">
+            <div class="comment__author">{{ comment.author }}</div>
+            <div class="comment__body">{{ comment.body }}</div>
+        </div>
     </div>
     <div *ngIf="post.threejsSceneKey" class="threejsScene--container">
         <div class="threejsScene--frame">

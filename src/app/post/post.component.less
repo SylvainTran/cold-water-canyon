@@ -3,7 +3,7 @@
 @post-container-width: 20rem;
 @post-margin-bottom: 10rem;
 @post-font-size: 3rem;
-@post-line-height: 3rem;
+@post-line-height: 1rem;
 
 #post__container {
     z-index: @post-container-z-index;
@@ -26,6 +26,21 @@
     }
 }
 
+.post__comments__container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#post__container__comments-arrow {
+    width: 50px;
+}
+
+#post__links__container__body {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
 .threejsScene--container {
 }
 
@@ -43,4 +58,17 @@
     margin-left: -10vw;
     width: 600px;
     height: 300px;
+}
+
+.comment__author {
+    font-weight: bolder;
+}
+
+.post__links__container {
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-end;
+    .post__commentary__header {
+    
+    }    
 }

@@ -6,7 +6,7 @@ export class Content {
     sKey: string = "";
     author: string = "";
     date: string = "";
-    comments: PComment[] = [];
+    comments: Content[] = []; // Recursive...
     shares: Share[] = [];
     body: string = "";
     parts: Part[] = [];
