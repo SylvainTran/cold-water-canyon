@@ -9,14 +9,18 @@
             <h1>The Cloud Cathedral</h1>
         </div>
         <div *ngIf="tile.id === 'searchBar'" class="searchBar">
-            <h6 *ngIf="activeStoryProfile">Floor >{{ activeStoryProfile }}</h6>
-            <h6 *ngIf="activeStoryCharacter">User >{{ activeStoryCharacter }}</h6>
+            <h6 *ngIf="activeStoryProfile">Floor<mat-icon [ngStyle]="{ 'position': 'relative', 'top': '9px' }">arrow_right_alt</mat-icon>{{ activeStoryProfile }}</h6>
+            <h6 *ngIf="activeStoryCharacter">User<mat-icon [ngStyle]="{ 'position': 'relative', 'top': '9px' }">arrow_right_alt</mat-icon>{{ activeStoryCharacter }}</h6>
             <input type="text" placeholder="Search stories or users">
         </div>
         <div *ngIf="tile.id === 'firstCol'" class="links-menu-height justify-content-flex-start">
-            <h4>For You</h4>
-            <h4>Following</h4>
-            <h4>Discover</h4>
+            <div class="link-menu-icons">
+                <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>&nbsp;&nbsp;<h4>For You</h4>
+            </div>
+            <div class="link-menu-icons">
+                <mat-icon>people_outline</mat-icon>&nbsp;&nbsp;<h4>Following</h4>
+            </div>
+            <h5 class="link-menu__discover">Discover</h5>
         </div>
         <div *ngIf="tile.id === 'mainContent'" class="mainContent">
             <div *ngIf="!activeStoryProfile && !activeStoryCharacter">
@@ -38,8 +42,12 @@
             <hr><h6>About The Cloud Cathedral</h6>
         </div>
         <div *ngIf="tile.id === 'topRightCol'" class="topRightCol">
-            <h4 (click)="switchStory()" *ngIf="activeStoryProfile">Change story</h4>
-            <h4 (click)="switchUser()" *ngIf="activeStoryCharacter">Continue as another user</h4>
+            <div *ngIf="activeStoryProfile" (click)="switchStory()" class="link-menu-icons">
+                <mat-icon>movie_creation</mat-icon>&nbsp;&nbsp;<h4>Change story</h4>
+            </div><br>
+            <div *ngIf="activeStoryCharacter" (click)="switchUser()" class="link-menu-icons">
+                <mat-icon>switch_video</mat-icon>&nbsp;&nbsp;<h4>Continue as another user</h4>
+            </div>
         </div>
     </mat-grid-tile>
 </mat-grid-list>

@@ -47,11 +47,17 @@
 /**
     Fonts
 */
-@wall-primary-font: 'Charm, cursive';
+@primary-font: "Proxima-Nova";
+@primary-font-bold: "Proxima-Nova-Bold";
 
 @font-face {
-    font-family: "Charm";
-    src: url("assets/fonts/Charm-Regular.ttf") format("ttf");
+    font-family: "Proxima-Nova";
+    src: url("assets/fonts/ProximaNovaFont.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Proxima-Nova-Bold";
+    src: url("assets/fonts/FontsFree-Net-Proxima-Nova-Sbold.otf") format("opentype");
 }
 
 /**
@@ -71,4 +77,4 @@ body {
 }
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; }

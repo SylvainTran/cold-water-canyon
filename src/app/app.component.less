@@ -1,6 +1,7 @@
 @import "../styles.less";
 
 @app__wall_margin: 3rem;
+@search_bar_gap: 2rem;
 
 #app__wall {
     .centered-flex();
@@ -23,22 +24,6 @@ html, body, .global-grid {
     .full-parent-height-and-width();
 }
 
-.mainContent h3 {
-    cursor: pointer;
-}
-
-.mainContent h3:hover {
-    background-color: gray;
-}
-
-.mainContent .story--user-links {
-    cursor: pointer;
-}
-
-.mainContent .story--user-links:hover {
-    background-color: gray;
-}
-
 .links-menu {
     position: fixed;
 }
@@ -53,9 +38,37 @@ html, body, .global-grid {
     .row-flex();
     justify-content: flex-start;
     align-items: center;
-    gap: 2rem;
+    gap: @search_bar_gap;
 }
 
-.topRightCol {
+.link-menu__discover {
+    color: grey;
+}
+
+// Icons
+.link-menu-icons, .link-menu-icons h4 {
+    display: inline-block;
+}
+
+// Cursors
+.mainContent h3, .mainContent h1, .links-menu h4, .topRightCol, mainContent .story--user-links {
     cursor: pointer;
+}
+
+// Fonts
+.mainContent h3, .mainContent h1, .links-menu h4, .searchBar h6, .searchBar input, .footerFirstCol h6 {
+    font-family: @primary-font;
+}
+
+.app__title h1 {
+    font-family: @primary-font-bold;
+}
+
+// Hover effects
+.mainContent h3:hover {
+    background-color: gray;
+}
+
+.mainContent .story--user-links:hover {
+    background-color: gray;
 }
