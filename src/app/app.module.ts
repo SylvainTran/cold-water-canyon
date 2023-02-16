@@ -17,7 +17,8 @@ import { PartDispatcherService } from './core/part-dispatcher.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatGridListModule
   ],
   providers: [PageControllerService, PartDispatcherService],
   bootstrap: [AppComponent]

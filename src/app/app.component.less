@@ -1,23 +1,44 @@
 @import "../styles.less";
 
+@app__wall_margin: 3rem;
+
 #app__wall {
     font-family: 'Charm', cursive;
     .centered-flex();
-    margin-top: 50vh;
-}
-
-.system-navbar {
-    display: flex;
-    justify-content: center;
-    z-index: 4;
-    color: black;
-}
-
-.global-container {
-    .centered-flex();
-    .row-flex();
-}
-
-.first-column {
     .column-flex();
+    margin: @app__wall_margin;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+html, body, .global-grid {
+    color: white;
+    background-color: black;
+}
+
+.mainContent {
+    overflow: scroll;
+    .full-parent-height-and-width();
+}
+
+.links-menu {
+    position: fixed;
+}
+
+.links-menu-height, .footerFirstCol {
+    height: 100%;
+}
+
+.searchBar {
+    .front-layer();
+}
+
+.justify-content-flex-start {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
 }

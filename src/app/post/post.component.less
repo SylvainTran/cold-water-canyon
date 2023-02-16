@@ -1,4 +1,5 @@
-@post-container-z-index: 2;
+@import "../../styles.less";
+
 @post-date-margin-left: 1rem;
 @post-container-width: 20rem;
 @post-margin-bottom: 10rem;
@@ -6,7 +7,7 @@
 @post-line-height: 1rem;
 
 #post__container {
-    z-index: @post-container-z-index;
+    .front-layer();
     width: @post-container-width;
     margin-bottom: @post-margin-bottom;
 
