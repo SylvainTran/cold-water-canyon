@@ -16,7 +16,7 @@
     </div>
     <div *ngIf="this.areCommentsDisplayed">
         <div id="post__links__container__body" *ngFor="let comment of post.comments">
-            <img id="post__container__comments-arrow" alt="grungy texture" src="../../assets/images/comments-arrow-export.png">
+            <img id="post__container__comments-arrow" alt="comments arrow" src="../../assets/images/comments-arrow-export.png">
             <div class="post__comment">
                 <div class="comment__author">{{ comment.author }}</div>
                 <div class="comment__body">{{ comment.body }}</div>
@@ -25,7 +25,7 @@
     </div>
     <div *ngIf="post.threejsSceneKey" class="threejsScene--container">
         <div class="threejsScene--frame">
-            <img alt="grungy texture" src="../../assets/images/cloud-grungy-texture.png">
+            <!-- <img alt="grungy texture" src="../../assets/images/cloud-grungy-texture.png"> -->
         </div>
         <canvas [id]="post.threejsSceneKey" class="threejsScene--canvas"></canvas>
     </div>
