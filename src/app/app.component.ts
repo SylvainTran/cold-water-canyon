@@ -21,7 +21,7 @@ export class AppComponent {
 
   constructor(public pageControllerService: PageControllerService) {}
   
-  public setActiveMythProfile(profile: string): void {
+  public setActiveStoryProfile(profile: string): void {
     this.activeStoryProfile = profile;
     console.log("active myth profile= " + this.activeStoryProfile);
     this.activeStoryCharacters = this.getActiveStoryCharacters();
