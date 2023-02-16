@@ -1,8 +1,21 @@
 <div class="app__title">
-    <h1>The Myth Post</h1>
+    <h1>The Cloud Cathedral</h1>
 </div>
 <div class="system-navbar">
-    <h4>Login |</h4>
-    <h4>&nbsp;Register</h4>    
+    <h4>For You |</h4>
+    <h4>&nbsp;Following</h4>    
 </div>
-<app-wall id="app__wall"></app-wall>
+<!--Only if have not picked a myth and a character-->
+<div *ngIf="!activeStoryProfile && !activeStoryCharacter">
+    <h1>Public Floors</h1>    
+    <h1 (click)="setActiveMythProfile('arthurian')">Arthurian Legends</h1>
+    <h1 (click)="setActiveMythProfile('oldTestament')">Old Testament</h1>
+    <h1 (click)="setActiveMythProfile('newTestament')">New Testament</h1>
+    <h1 (click)="setActiveMythProfile('volsunga')">Volsunga Saga</h1>
+    <h1 (click)="setActiveMythProfile('macbeth')">Macbeth</h1>
+    <h1 (click)="setActiveMythProfile('hamlet')">Hamlet</h1>
+</div>
+<div *ngFor="let character of activeStoryCharacters">
+    <h1 (click)="setActiveCharacter(character.name)">Continue as {{character.name}}</h1>
+</div>
+<app-wall [activeStoryProfile]="this.activeStoryProfile" [activeStoryCharacter]="this.activeStoryCharacter" id="app__wall"></app-wall>

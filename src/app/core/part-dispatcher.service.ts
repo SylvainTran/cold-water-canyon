@@ -2,46 +2,38 @@ import { Injectable } from '@angular/core';
 import { DataPart, Part } from './part';
 // Data
 import storyData from '../data/storyContent.json';
+import { Content, StoryCharacter } from './content';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PartDispatcherService {
 
-  private partsDisplaySize: number; // the number of parts before needing to trigger a refresh
-  private usedParts: Part[] = []; 
-  
-  constructor() {
-    this.partsDisplaySize = 10;
+  public getStories() {
+    return storyData.properties.content.stories;
   }
 
-  public getParts(): Part[] {
-    return [...this.getStoryParts()];
-  }
-
-  private getStoryParts(): DataPart[] {
-    let parts: Part[] = [];
-    let tmp = [...storyData.properties.content];
-
-    tmp.forEach(content => {
-      let newPart = new DataPart();
-      newPart.setContent(content);
-      let skip = false;
-      this.usedParts.forEach(part => {
-        if (part.content?.sKey === content.sKey) {
-          skip = true;
-        }
-      });
-      if (!skip) {
-        parts.push(newPart);
-        this.usedParts.push(newPart);
+  public getCharacters(storyKey: String) {
+    let characters: StoryCharacter[] = [];
+    this.getStories().forEach(story => {
+      if (story.name === storyKey) {
+        characters = story.characters;
       }
     });
-    console.log(parts);
-    return parts;
+    return characters;
   }
 
-  private getRandomParts(): DataPart[] {
-    return [];
+  public getPosts(storyKey: String, characterName: String) {
+    let posts: Content[] = [];
+    console.log("Searching posts : " + characterName);
+
+    this.getCharacters(storyKey).forEach(character => {
+      console.log("Searching posts : " + character.name);
+
+      if (character.name === characterName) {
+        posts = character.posts;
+      }
+    });
+    return posts;
   }
 }

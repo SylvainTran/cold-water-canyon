@@ -1,4 +1,3 @@
-import { PComment } from "./pComment";
 import { Part } from "./part";
 import { Share } from "./share";
 
@@ -11,4 +10,14 @@ export class Content {
     body: string = "";
     parts: Part[] = [];
     threejsSceneKey: string = "";
+}
+
+export class StoryContent {
+    name: string = "";
+    characters: StoryCharacter[] = [];
+}
+
+export class StoryCharacter {
+    name: string = "";
+    posts: Content[] = [];
 }

@@ -1,70 +1,98 @@
 {
     "$schema": "http://json-schema.org/schema",
     "properties": {
-        "contentType": "story",
-        "content": [
-            {
-                "sKey": "A",
-                "author": "Merlin",
-                "date": "1d",
-                "comments": [
-                    {
-                        "sKey": "A-1",
-                        "author": "Yuri",
-                        "date": "1d",
-                        "comments": [],
-                        "shares": [],
-                        "body": "All have tried and failed, we need a hero of legend",
-                        "parts": [],
-                        "threejsSceneKey": ""
-                    },
-                    {
-                        "sKey": "A-1",
-                        "author": "Yuri",
-                        "date": "1d",
-                        "comments": [],
-                        "shares": [],
-                        "body": "All have tried and failed, we need a hero of legend",
-                        "parts": [],
-                        "threejsSceneKey": ""
-                    }
-                ],
-                "shares": [],
-                "body": "Can anyone pull the pretty sword on the way to the Cathedral?",
-                "parts": [],
-                "threejsSceneKey": "swordInRockMyth"
-            },
-            {
-                "sKey": "B",
-                "author": "Pegg Smith",
-                "date": "1d",
-                "comments": [],
-                "shares": [],
-                "body": "I've lost my hammer, and I've lost my chisels...",
-                "parts": [],
-                "threejsSceneKey": ""
-            },
-            {
-                "sKey": "C",
-                "author": "Harry",
-                "date": "1d",
-                "comments": [],
-                "shares": [],
-                "body": "I think my field was raided by bandits this morning.",
-                "parts": [],
-                "threejsSceneKey": "banditMyth"
-            },
-            {
-                "sKey": "D",
-                "author": "Boo",
-                "date": "1d",
-                "comments": [],
-                "shares": [],
-                "body": "",
-                "parts": [],
-                "threejsSceneKey": "banditMyth2"
-            }
-        ]
+        "content": {
+            "stories": [
+                {
+                    "name": "arthurian",
+                    "characters": [
+                        {
+                            "name": "Merlin",
+                            "posts": [
+                                {
+                                    "sKey": "A",
+                                    "author": "Merlin",
+                                    "date": "1d",
+                                    "comments": [
+                                        {
+                                            "sKey": "A-1",
+                                            "author": "Lady of the Lake",
+                                            "date": "1d",
+                                            "comments": [],
+                                            "shares": [],
+                                            "body": "The nightingale's cry and the waning moon - between them you must decide",
+                                            "parts": [],
+                                            "threejsSceneKey": ""
+                                        }
+                                    ],
+                                    "shares": [],
+                                    "body": "I feel a call from destiny tonight. Should I venture out?",
+                                    "parts": [],
+                                    "threejsSceneKey": "swordInRockMyth"
+                                },
+                                {
+                                    "sKey": "B",
+                                    "author": "Merlin",
+                                    "date": "1d",
+                                    "comments": [],
+                                    "shares": [],
+                                    "body": "Then I saw my hands were shaking. Something is calling me to the woods. And beyond the woods...",
+                                    "parts": [],
+                                    "threejsSceneKey": ""
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Arthur",
+                            "posts": [
+                                {
+                                    "sKey": "B",
+                                    "author": "Arthur",
+                                    "date": "1d",
+                                    "comments": [],
+                                    "shares": [],
+                                    "body": "I was walking in the woods. The stars seemed far out",
+                                    "parts": [],
+                                    "threejsSceneKey": ""
+                                },
+                                {
+                                    "sKey": "C",
+                                    "author": "Arthur",
+                                    "date": "1d",
+                                    "comments": [
+                                        {
+                                            "sKey": "A-1",
+                                            "author": "Merlin",
+                                            "date": "1d",
+                                            "comments": [],
+                                            "shares": [],
+                                            "body": "You know you're never alone",
+                                            "parts": [],
+                                            "threejsSceneKey": ""
+                                        },
+                                        {
+                                            "sKey": "A-1",
+                                            "author": "Pendragon",
+                                            "date": "1d",
+                                            "comments": [],
+                                            "shares": [],
+                                            "body": "I was with you up there son. Always will be",
+                                            "parts": [],
+                                            "threejsSceneKey": ""
+                                        }
+                                    ],
+                                    "shares": [],
+                                    "body": "I didn't know what I was doing out there. There was someplace I needed to be but I didn't know where",
+                                    "parts": [],
+                                    "threejsSceneKey": ""
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "essays": []
+        }
     },
     "required": ["sKey", "author", "date", "comments", "shares", "body"]
 }
