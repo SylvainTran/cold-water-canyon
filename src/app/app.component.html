@@ -1,21 +1,27 @@
-<div class="app__title">
-    <h1>The Cloud Cathedral</h1>
+<div class="global-container">
+    <div class="first-column">
+        <div class="app__title">
+            <h1>The Cloud Cathedral</h1>
+        </div>
+        <div class="system-navbar">
+            <h4>For You</h4>
+        </div>
+        <div class="system-navbar">
+            <h4>Following</h4>
+        </div>
+    </div>
+    <!--Only if have not picked a myth and a character-->
+    <div *ngIf="!activeStoryProfile && !activeStoryCharacter">
+        <h1>Public Floors</h1>    
+        <h1 (click)="setActiveStoryProfile('arthurian')">Arthurian Legends</h1>
+        <h1 (click)="setActiveStoryProfile('oldTestament')">Old Testament</h1>
+        <h1 (click)="setActiveStoryProfile('newTestament')">New Testament</h1>
+        <h1 (click)="setActiveStoryProfile('volsunga')">Volsunga Saga</h1>
+        <h1 (click)="setActiveStoryProfile('macbeth')">Macbeth</h1>
+        <h1 (click)="setActiveStoryProfile('hamlet')">Hamlet</h1>
+    </div>
+    <div *ngFor="let character of activeStoryCharacters">
+        <h1 (click)="setActiveCharacter(character.name)">Continue as {{character.name}}</h1>
+    </div>
+    <app-wall [activeStoryProfile]="this.activeStoryProfile" [activeStoryCharacter]="this.activeStoryCharacter" id="app__wall"></app-wall>
 </div>
-<div class="system-navbar">
-    <h4>For You |</h4>
-    <h4>&nbsp;Following</h4>    
-</div>
-<!--Only if have not picked a myth and a character-->
-<div *ngIf="!activeStoryProfile && !activeStoryCharacter">
-    <h1>Public Floors</h1>    
-    <h1 (click)="setActiveStoryProfile('arthurian')">Arthurian Legends</h1>
-    <h1 (click)="setActiveStoryProfile('oldTestament')">Old Testament</h1>
-    <h1 (click)="setActiveStoryProfile('newTestament')">New Testament</h1>
-    <h1 (click)="setActiveStoryProfile('volsunga')">Volsunga Saga</h1>
-    <h1 (click)="setActiveStoryProfile('macbeth')">Macbeth</h1>
-    <h1 (click)="setActiveStoryProfile('hamlet')">Hamlet</h1>
-</div>
-<div *ngFor="let character of activeStoryCharacters">
-    <h1 (click)="setActiveCharacter(character.name)">Continue as {{character.name}}</h1>
-</div>
-<app-wall [activeStoryProfile]="this.activeStoryProfile" [activeStoryCharacter]="this.activeStoryCharacter" id="app__wall"></app-wall>
