@@ -8,16 +8,15 @@
         <div *ngIf="tile.id === 'titleAndLogo'" class="app__title">
             <h1>The Cloud Cathedral</h1>
         </div>
-        <div *ngIf="tile.id === 'searchBar'">
-            <input type="text">
+        <div *ngIf="tile.id === 'searchBar'" class="searchBar">
+            <h6 *ngIf="activeStoryProfile">Floor >{{ activeStoryProfile }}</h6>
+            <h6 *ngIf="activeStoryCharacter">User >{{ activeStoryCharacter }}</h6>
+            <input type="text" placeholder="Search stories or users">
         </div>
         <div *ngIf="tile.id === 'firstCol'" class="links-menu-height justify-content-flex-start">
-            <div>
-                <h4>For You</h4>
-            </div>
-            <div>
-                <h4>Following</h4>
-            </div>
+            <h4>For You</h4>
+            <h4>Following</h4>
+            <h4>Discover</h4>
         </div>
         <div *ngIf="tile.id === 'mainContent'" class="mainContent">
             <div *ngIf="!activeStoryProfile && !activeStoryCharacter">
@@ -29,13 +28,20 @@
                 <h3 (click)="setActiveStoryProfile('macbeth')">Macbeth</h3>
                 <h3 (click)="setActiveStoryProfile('hamlet')">Hamlet</h3>
             </div>
+            <div *ngIf="!activeStoryProfile && !activeStoryCharacter">
+                <h1>Secret Floors</h1><hr>
+            </div>
             <div *ngFor="let character of activeStoryCharacters">
                 <h1 (click)="setActiveCharacter(character.name)">Continue as {{character.name}}</h1>
             </div>
             <app-wall [activeStoryProfile]="this.activeStoryProfile" [activeStoryCharacter]="this.activeStoryCharacter" id="app__wall"></app-wall>
         </div>
         <div *ngIf="tile.id === 'footerFirstCol'" class="footerFirstCol">
-            <h4>Discover</h4><hr>
+            <hr><h6>About The Cloud Cathedral</h6>
+        </div>
+        <div *ngIf="activeStoryCharacter && tile.id === 'topRightCol'" class="topRightCol">
+            <h4 (click)="switchStory()" *ngIf="activeStoryProfile">Change story</h4>
+            <h4 (click)="switchUser()">Continue as another user</h4>
         </div>
     </mat-grid-tile>
 </mat-grid-list>

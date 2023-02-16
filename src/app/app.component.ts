@@ -52,4 +52,14 @@ export class AppComponent {
   public getActiveStoryCharacters(): StoryCharacter[] {
     return this.pageControllerService.partDispatcherService.getCharacters(this.activeStoryProfile);
   }
+
+  public switchUser(): void {
+    this.activeStoryCharacter = "";
+    this.activeStoryCharacters = this.getActiveStoryCharacters();
+  }
+
+  public switchStory(): void {
+    this.activeStoryProfile = "";
+    this.activeStoryCharacter = "";
+  }
 }
