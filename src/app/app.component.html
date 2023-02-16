@@ -6,7 +6,10 @@
         [style.background]="tile.color"
         [ngClass]="{'links-menu': tile.id === 'titleAndLogo' || tile.id === 'firstCol' || tile.id === 'rightCol' || tile.id === 'topRightCol' || tile.id === 'searchBar' || tile.id === 'footerFirstCol', 'searchBar': tile.id === 'searchBar'}">
         <div *ngIf="tile.id === 'titleAndLogo'" class="app__title">
-            <h1>The Cloud Cathedral</h1>
+            <div class="inblock-icon">
+                <mat-icon aria-hidden="false" aria-label="Logo" style="color: rgb(0, 238, 255);">shield_moon</mat-icon>&nbsp;&nbsp;
+                <h1>The Cloud Cathedral</h1>
+            </div>
         </div>
         <div *ngIf="tile.id === 'searchBar'" class="searchBar">
             <h6 *ngIf="activeStoryProfile">Floor<mat-icon [ngStyle]="{ 'position': 'relative', 'top': '9px' }">arrow_right_alt</mat-icon>{{ activeStoryProfile }}</h6>
