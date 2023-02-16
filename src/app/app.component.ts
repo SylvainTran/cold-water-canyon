@@ -61,5 +61,6 @@ export class AppComponent {
   public switchStory(): void {
     this.activeStoryProfile = "";
     this.activeStoryCharacter = "";
+    this.activeStoryCharacters = [];
   }
 }

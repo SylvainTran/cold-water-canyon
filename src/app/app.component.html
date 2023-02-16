@@ -27,11 +27,9 @@
                 <h3 (click)="setActiveStoryProfile('volsunga')">Volsunga Saga</h3>
                 <h3 (click)="setActiveStoryProfile('macbeth')">Macbeth</h3>
                 <h3 (click)="setActiveStoryProfile('hamlet')">Hamlet</h3>
-            </div>
-            <div *ngIf="!activeStoryProfile && !activeStoryCharacter">
                 <h1>Secret Floors</h1><hr>
             </div>
-            <div *ngFor="let character of activeStoryCharacters">
+            <div *ngFor="let character of activeStoryCharacters" class="story--user-links">
                 <h1 (click)="setActiveCharacter(character.name)">Continue as {{character.name}}</h1>
             </div>
             <app-wall [activeStoryProfile]="this.activeStoryProfile" [activeStoryCharacter]="this.activeStoryCharacter" id="app__wall"></app-wall>
@@ -39,9 +37,9 @@
         <div *ngIf="tile.id === 'footerFirstCol'" class="footerFirstCol">
             <hr><h6>About The Cloud Cathedral</h6>
         </div>
-        <div *ngIf="activeStoryCharacter && tile.id === 'topRightCol'" class="topRightCol">
+        <div *ngIf="tile.id === 'topRightCol'" class="topRightCol">
             <h4 (click)="switchStory()" *ngIf="activeStoryProfile">Change story</h4>
-            <h4 (click)="switchUser()">Continue as another user</h4>
+            <h4 (click)="switchUser()" *ngIf="activeStoryCharacter">Continue as another user</h4>
         </div>
     </mat-grid-tile>
 </mat-grid-list>
