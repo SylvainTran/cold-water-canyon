@@ -4,19 +4,19 @@
         [colspan]="tile.cols"
         [rowspan]="tile.rows"
         [style.background]="tile.color"
-        [ngClass]="{'links-menu': tile.id === 'titleAndLogo' || tile.id === 'firstCol' || tile.id === 'rightCol' || tile.id === 'topRightCol' || tile.id === 'searchBar' || tile.id === 'footerFirstCol', 'searchBar': tile.id === 'searchBar'}">
-        <div *ngIf="tile.id === 'titleAndLogo'" class="app__title">
+        [ngClass]="{'links-menu': tile.id === 'titleAndLogo' || tile.id === 'firstCol' || tile.id === 'rightCol' || tile.id === 'topRightCol' || tile.id === 'searchBar' || tile.id === 'footerFirstCol', 'searchBar': tile.id === 'searchBar'}" [ngSwitch]="tile.id">
+        <div *ngSwitchCase="'titleAndLogo'" class="app__title">
             <div class="inblock-icon">
                 <mat-icon aria-hidden="false" aria-label="Logo" style="color: rgb(0, 238, 255);">shield_moon</mat-icon>&nbsp;&nbsp;
                 <h1>The Cloud Cathedral</h1>
             </div>
         </div>
-        <div *ngIf="tile.id === 'searchBar'" class="searchBar">
+        <div *ngSwitchCase="'searchBar'" class="searchBar">
             <h6 *ngIf="activeStoryProfile">Floor<mat-icon [ngStyle]="{ 'position': 'relative', 'top': '9px' }">arrow_right_alt</mat-icon>{{ activeStoryProfile }}</h6>
             <h6 *ngIf="activeStoryCharacter">User<mat-icon [ngStyle]="{ 'position': 'relative', 'top': '9px' }">arrow_right_alt</mat-icon>{{ activeStoryCharacter }}</h6>
             <input type="text" placeholder="Search stories or users">
         </div>
-        <div *ngIf="tile.id === 'firstCol'" class="links-menu-height justify-content-flex-start">
+        <div *ngSwitchCase="'firstCol'" class="links-menu-height justify-content-flex-start">
             <div class="link-menu-icons">
                 <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>&nbsp;&nbsp;<h4>For You</h4>
             </div>
@@ -25,7 +25,7 @@
             </div>
             <h5 class="link-menu__discover">Discover</h5>
         </div>
-        <div *ngIf="tile.id === 'mainContent'" class="mainContent">
+        <div *ngSwitchCase="'mainContent'" class="mainContent">
             <div *ngIf="!activeStoryProfile && !activeStoryCharacter">
                 <h1>Public Floors</h1><hr>
                 <h3 (click)="setActiveStoryProfile('arthurian')">Arthurian Legends</h3>
@@ -41,10 +41,10 @@
             </div>
             <app-wall [activeStoryProfile]="this.activeStoryProfile" [activeStoryCharacter]="this.activeStoryCharacter" id="app__wall"></app-wall>
         </div>
-        <div *ngIf="tile.id === 'footerFirstCol'" class="footerFirstCol">
+        <div *ngSwitchCase="'footerFirstCol'" class="footerFirstCol">
             <hr><h6>About The Cloud Cathedral</h6>
         </div>
-        <div *ngIf="tile.id === 'topRightCol'" class="topRightCol">
+        <div *ngSwitchCase="'topRightCol'" class="topRightCol">
             <div *ngIf="activeStoryProfile" (click)="switchStory()" class="link-menu-icons">
                 <mat-icon>movie_creation</mat-icon>&nbsp;&nbsp;<h4>Change story</h4>
             </div><br>

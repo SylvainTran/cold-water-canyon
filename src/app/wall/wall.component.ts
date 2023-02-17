@@ -1,8 +1,7 @@
-import { AfterViewInit, Component, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
+import { Component, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
 import { Post } from '../core/post';
 import { PageControllerService } from '../core/page-controller.service';
-import { DataPart } from '../core/part';
-import { StoryContent } from '../core/content';
+import { Content } from '../core/content';
 
 @Component({
   selector: 'app-wall',
@@ -24,5 +23,16 @@ export class WallComponent implements OnChanges {
   
   ngOnChanges(changes: SimpleChanges): void {    
     this.posts = this.pageControllerService.partDispatcherService.getPosts(this.activeStoryProfile, this.activeStoryCharacter);
+
+    const activeUserPosts: Content[] = this.pageControllerService.partDispatcherService.getActiveUserPosts(this.activeStoryProfile, this.activeStoryCharacter);
+    const nonActiveUserPosts: Content[] = this.pageControllerService.partDispatcherService.getAllNonActiveUserPosts(this.activeStoryProfile, this.activeStoryCharacter);
+
+    this.pageControllerService.partDispatcherService.sortPostRelationMapping(activeUserPosts, nonActiveUserPosts);
+
+    // Update the next/prev keys by reading the nonActiveUserPosts relative to/into the activeUserPosts sequence
+    
+    // Re-read the story sequence in order to determine the final order
+    
+    // Insert the random posts anywhere in that sequence
   }
 }

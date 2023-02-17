@@ -22,13 +22,19 @@
                                             "shares": [],
                                             "body": "The nightingale's cry and the waning moon - between them you must decide",
                                             "parts": [],
-                                            "threejsSceneKey": ""
+                                            "threejsSceneKey": "",
+                                            "storyMilestone": "1-1",
+                                            "previous": "undefined",
+                                            "next": "undefined"
                                         }
                                     ],
                                     "shares": [],
                                     "body": "I feel a call from destiny tonight. Should I venture out?",
                                     "parts": [],
-                                    "threejsSceneKey": "swordInRockMyth"
+                                    "threejsSceneKey": "swordInRockMyth",
+                                    "storyMilestone": "1",
+                                    "previous": "undefined",
+                                    "next": "undefined"
                                 },
                                 {
                                     "sKey": "B",
@@ -38,7 +44,10 @@
                                     "shares": [],
                                     "body": "Then I saw my hands were shaking. Something is calling me to the woods. And beyond the woods...",
                                     "parts": [],
-                                    "threejsSceneKey": ""
+                                    "threejsSceneKey": "",
+                                    "storyMilestone": "2",
+                                    "previous": "undefined",
+                                    "next": "undefined"
                                 }
                             ]
                         },
@@ -53,7 +62,10 @@
                                     "shares": [],
                                     "body": "I was walking in the woods. The stars seemed far out",
                                     "parts": [],
-                                    "threejsSceneKey": ""
+                                    "threejsSceneKey": "",
+                                    "storyMilestone": "1",
+                                    "previous": "undefined",
+                                    "next": "undefined"
                                 },
                                 {
                                     "sKey": "C",
@@ -68,7 +80,10 @@
                                             "shares": [],
                                             "body": "You know you're never alone",
                                             "parts": [],
-                                            "threejsSceneKey": ""
+                                            "threejsSceneKey": "",
+                                            "storyMilestone": "2-1",
+                                            "previous": "undefined",
+                                            "next": "undefined"
                                         },
                                         {
                                             "sKey": "A-1",
@@ -78,20 +93,27 @@
                                             "shares": [],
                                             "body": "I was with you up there son. Always will be",
                                             "parts": [],
-                                            "threejsSceneKey": ""
+                                            "threejsSceneKey": "",
+                                            "storyMilestone": "2-2",
+                                            "previous": "undefined",
+                                            "next": "undefined"
                                         }
                                     ],
                                     "shares": [],
                                     "body": "I didn't know what I was doing out there. There was someplace I needed to be but I didn't know where",
                                     "parts": [],
-                                    "threejsSceneKey": ""
+                                    "threejsSceneKey": "",
+                                    "storyMilestone": "2",
+                                    "previous": "undefined",
+                                    "next": "undefined"
                                 }
                             ]
                         }
-                    ]
+                    ],
+                    "previous": "undefined",
+                    "next": "undefined"
                 }
-            ],
-            "essays": []
+            ]
         }
     },
     "required": ["sKey", "author", "date", "comments", "shares", "body"]

@@ -24,9 +24,7 @@
         </div>
     </div>
     <div *ngIf="post.threejsSceneKey" class="threejsScene--container">
-        <div class="threejsScene--frame">
-            <!-- <img alt="grungy texture" src="../../assets/images/cloud-grungy-texture.png"> -->
-        </div>
+        <div class="threejsScene--frame"></div>
         <canvas [id]="post.threejsSceneKey" class="threejsScene--canvas"></canvas>
     </div>
 </div>
