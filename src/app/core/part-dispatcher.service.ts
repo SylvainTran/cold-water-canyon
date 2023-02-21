@@ -143,11 +143,13 @@ export class PartDispatcherService {
     let clonedNonUserPosts: Content[] = this.deepCloneContentArray(nonUserPosts);
 
     clonedUserPosts.forEach((userPost) => {
-
       clonedNonUserPosts.forEach((nonUserPost) => {
         // nonUserPost = C
         // nonUserPost.previous = 1 
         // userPost.storyMilestone = 1
+
+        const range = parseInt(nonUserPost.next) - parseInt(nonUserPost.previous);
+        // Skip up to range's value... to append the nonUserPost
 
         if (parseInt(userPost.storyMilestone) <= parseInt(nonUserPost.previous) && parseInt(nonUserPost.next) >= parseInt(userPost.storyMilestone)) {
           // ok
@@ -158,9 +160,11 @@ export class PartDispatcherService {
           nonUserPost.previous = userPost.sKey;
           console.log("nonUserPost.previous: " + nonUserPost.previous);
           nonUserPost.next = tmp;
-          console.log("nonUserPost.next: " + nonUserPost.next);          
+          console.log("nonUserPost.next: " + nonUserPost.next);
+          
+          // TODO: randomize or shuffle...
         }
-      });
+      });      
     });
 
     console.log("Final posts sorted: ");
