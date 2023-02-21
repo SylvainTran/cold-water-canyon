@@ -24,8 +24,8 @@
                                             "parts": [],
                                             "threejsSceneKey": "",
                                             "storyMilestone": "1-1",
-                                            "previous": "undefined",
-                                            "next": "undefined"
+                                            "previous": "",
+                                            "next": ""
                                         }
                                     ],
                                     "shares": [],
@@ -33,8 +33,8 @@
                                     "parts": [],
                                     "threejsSceneKey": "swordInRockMyth",
                                     "storyMilestone": "1",
-                                    "previous": "undefined",
-                                    "next": "undefined"
+                                    "previous": "",
+                                    "next": "B"
                                 },
                                 {
                                     "sKey": "B",
@@ -46,8 +46,21 @@
                                     "parts": [],
                                     "threejsSceneKey": "",
                                     "storyMilestone": "2",
-                                    "previous": "undefined",
-                                    "next": "undefined"
+                                    "previous": "A",
+                                    "next": ""
+                                },
+                                {
+                                    "sKey": "C",
+                                    "author": "Lady of the Lake",
+                                    "date": "1d",
+                                    "comments": [],
+                                    "shares": [],
+                                    "body": "Yo get ur ass over here already",
+                                    "parts": [],
+                                    "threejsSceneKey": "",
+                                    "storyMilestone": "",
+                                    "previous": "1",
+                                    "next": "2"
                                 }
                             ]
                         },
@@ -64,8 +77,8 @@
                                     "parts": [],
                                     "threejsSceneKey": "",
                                     "storyMilestone": "1",
-                                    "previous": "undefined",
-                                    "next": "undefined"
+                                    "previous": "",
+                                    "next": ""
                                 },
                                 {
                                     "sKey": "C",
@@ -82,8 +95,8 @@
                                             "parts": [],
                                             "threejsSceneKey": "",
                                             "storyMilestone": "2-1",
-                                            "previous": "undefined",
-                                            "next": "undefined"
+                                            "previous": "",
+                                            "next": ""
                                         },
                                         {
                                             "sKey": "A-1",
@@ -95,8 +108,8 @@
                                             "parts": [],
                                             "threejsSceneKey": "",
                                             "storyMilestone": "2-2",
-                                            "previous": "undefined",
-                                            "next": "undefined"
+                                            "previous": "",
+                                            "next": ""
                                         }
                                     ],
                                     "shares": [],
@@ -104,14 +117,14 @@
                                     "parts": [],
                                     "threejsSceneKey": "",
                                     "storyMilestone": "2",
-                                    "previous": "undefined",
-                                    "next": "undefined"
+                                    "previous": "",
+                                    "next": ""
                                 }
                             ]
                         }
                     ],
-                    "previous": "undefined",
-                    "next": "undefined"
+                    "previous": "",
+                    "next": ""
                 }
             ]
         }

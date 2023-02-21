@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { identity } from 'rxjs';
 
 // Data
 import storyData from '../data/storyContent.json';
@@ -37,6 +38,14 @@ export class PartDispatcherService {
     const allPosts: Content[] = this.getPosts(storyKey, activeCharacterProfile);
     let hashMap = new Map();
     allPosts.forEach((post: Content) => {
+      hashMap.set(post.sKey, post);
+    });
+    return hashMap;
+  }
+  
+  public buildPostHashMapUsingContent(posts: Content[]): Map<string, Content> {
+    let hashMap = new Map();
+    posts.forEach((post: Content) => {
       hashMap.set(post.sKey, post);
     });
     return hashMap;
@@ -93,7 +102,7 @@ export class PartDispatcherService {
 
   }
 
-  public sortPostRelationMapping(userPosts: Content[], nonUserPosts: Content[]): void {
+  public sortPostRelationMapping(userPosts: Content[], nonUserPosts: Content[]): Content[] {
     // Sort
     userPosts.sort((a,b) => {
       return parseInt(a.storyMilestone) - parseInt(b.storyMilestone);
@@ -107,5 +116,70 @@ export class PartDispatcherService {
 
     console.log("Non-User posts sorted: ");
     nonUserPosts.forEach(post => console.log(post.body));
+
+    // traverse user posts
+    // stop when post's story milestone is > TO APPEND 's 
+
+    // CHAPTER 1
+    // User posts (relevant to user story):
+    // 1-2-3-4-5-6
+    // 
+    // Non user posts (relevant to user story):
+    // A B C D E F
+
+    // A    B
+    //1 2  1 2
+
+    // 1-A-B-2-3-4-5-6
+    // 1-B-A-2-3-4-5-6
+
+    // C
+    //1 3
+
+    // 1-B-A-2-C-3-4-5-6 <- if allow full range
+    // 1-B-A-C-2-3-4-5-6 <- if only allow append after lower bound
+
+    let clonedUserPosts: Content[] = this.deepCloneContentArray(userPosts);
+    let clonedNonUserPosts: Content[] = this.deepCloneContentArray(nonUserPosts);
+
+    clonedUserPosts.forEach((userPost) => {
+
+      clonedNonUserPosts.forEach((nonUserPost) => {
+        // nonUserPost = C
+        // nonUserPost.previous = 1 
+        // userPost.storyMilestone = 1
+
+        if (parseInt(userPost.storyMilestone) <= parseInt(nonUserPost.previous) && parseInt(nonUserPost.next) >= parseInt(userPost.storyMilestone)) {
+          // ok
+          let tmp = userPost.next;
+          console.log("tmp: " + tmp);
+          userPost.next = nonUserPost.sKey;
+          console.log("userPost.next: " + userPost.next);
+          nonUserPost.previous = userPost.sKey;
+          console.log("nonUserPost.previous: " + nonUserPost.previous);
+          nonUserPost.next = tmp;
+          console.log("nonUserPost.next: " + nonUserPost.next);          
+        }
+      });
+    });
+
+    console.log("Final posts sorted: ");
+    //clonedUserPosts.forEach(post => console.log(post.body));
+
+    let it: Content | undefined = clonedUserPosts[0];
+    const hashMap: Map<string, Content> = this.buildPostHashMapUsingContent(clonedUserPosts);
+
+    // while(it?.next !== "") {
+    //   if (it) {
+    //     console.log(hashMap.get(it.next)?.body);
+    //     it = hashMap.get(it.next);
+    //   }
+    // }
+
+    return clonedUserPosts;
+  }
+
+  private deepCloneContentArray(elements: Content[]): Content[] {
+    return JSON.parse(JSON.stringify(elements));
   }
 }

@@ -27,11 +27,13 @@ export class WallComponent implements OnChanges {
     const activeUserPosts: Content[] = this.pageControllerService.partDispatcherService.getActiveUserPosts(this.activeStoryProfile, this.activeStoryCharacter);
     const nonActiveUserPosts: Content[] = this.pageControllerService.partDispatcherService.getAllNonActiveUserPosts(this.activeStoryProfile, this.activeStoryCharacter);
 
-    this.pageControllerService.partDispatcherService.sortPostRelationMapping(activeUserPosts, nonActiveUserPosts);
+    this.posts = this.pageControllerService.partDispatcherService.sortPostRelationMapping(activeUserPosts, nonActiveUserPosts);
 
     // Update the next/prev keys by reading the nonActiveUserPosts relative to/into the activeUserPosts sequence
     
     // Re-read the story sequence in order to determine the final order
+
+    
     
     // Insert the random posts anywhere in that sequence
   }
