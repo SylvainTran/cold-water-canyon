@@ -3,12 +3,18 @@ import { identity } from 'rxjs';
 
 // Data
 import storyData from '../data/storyContent.json';
-import { Content, StoryCharacter, StoryContent } from './content';
+import { Content, LinkedList, StoryCharacter, StoryContent } from './content';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PartDispatcherService {
+
+  public postDatabase: Map<string, Content>;
+
+  constructor() {
+    this.postDatabase = new Map<string, Content>;
+  }
 
   public getStories(): StoryContent[] {
     return storyData.properties.content.stories;
@@ -102,85 +108,21 @@ export class PartDispatcherService {
 
   }
 
-  public sortPostRelationMapping(userPosts: Content[], nonUserPosts: Content[]): Content[] {
-    // Sort
-    userPosts.sort((a,b) => {
-      return parseInt(a.storyMilestone) - parseInt(b.storyMilestone);
-    });
+  public testLinkedList() {
+    let posts: Content[] = this.getPosts("arthurian", "Merlin");
+    let hashMap = this.buildPostHashMapUsingContent(posts);
+    // The head of the linked list is posts[0]
+    let list: LinkedList = new LinkedList(posts[0], hashMap);
+    console.log("List size test: " + list.size());
+  }
 
-    nonUserPosts.sort((a,b) => {
-      return parseInt(a.storyMilestone) - parseInt(b.storyMilestone);
-    });
-    console.log("User posts sorted: ");
-    userPosts.forEach(post => console.log(post.body));
+  public arrangePosts() {
 
-    console.log("Non-User posts sorted: ");
-    nonUserPosts.forEach(post => console.log(post.body));
+    this.testLinkedList();
 
-    // traverse user posts
-    // stop when post's story milestone is > TO APPEND 's 
+    // Create the linked list
 
-    // CHAPTER 1
-    // User posts (relevant to user story):
-    // 1-2-3-4-5-6
-    // 
-    // Non user posts (relevant to user story):
-    // A B C D E F
-
-    // A    B
-    //1 2  1 2
-
-    // 1-A-B-2-3-4-5-6
-    // 1-B-A-2-3-4-5-6
-
-    // C
-    //1 3
-
-    // 1-B-A-2-C-3-4-5-6 <- if allow full range
-    // 1-B-A-C-2-3-4-5-6 <- if only allow append after lower bound
-
-    let clonedUserPosts: Content[] = this.deepCloneContentArray(userPosts);
-    let clonedNonUserPosts: Content[] = this.deepCloneContentArray(nonUserPosts);
-
-    clonedUserPosts.forEach((userPost) => {
-      clonedNonUserPosts.forEach((nonUserPost) => {
-        // nonUserPost = C
-        // nonUserPost.previous = 1 
-        // userPost.storyMilestone = 1
-
-        const range = parseInt(nonUserPost.next) - parseInt(nonUserPost.previous);
-        // Skip up to range's value... to append the nonUserPost
-
-        if (parseInt(userPost.storyMilestone) <= parseInt(nonUserPost.previous) && parseInt(nonUserPost.next) >= parseInt(userPost.storyMilestone)) {
-          // ok
-          let tmp = userPost.next;
-          console.log("tmp: " + tmp);
-          userPost.next = nonUserPost.sKey;
-          console.log("userPost.next: " + userPost.next);
-          nonUserPost.previous = userPost.sKey;
-          console.log("nonUserPost.previous: " + nonUserPost.previous);
-          nonUserPost.next = tmp;
-          console.log("nonUserPost.next: " + nonUserPost.next);
-          
-          // TODO: randomize or shuffle...
-        }
-      });      
-    });
-
-    console.log("Final posts sorted: ");
-    //clonedUserPosts.forEach(post => console.log(post.body));
-
-    let it: Content | undefined = clonedUserPosts[0];
-    const hashMap: Map<string, Content> = this.buildPostHashMapUsingContent(clonedUserPosts);
-
-    // while(it?.next !== "") {
-    //   if (it) {
-    //     console.log(hashMap.get(it.next)?.body);
-    //     it = hashMap.get(it.next);
-    //   }
-    // }
-
-    return clonedUserPosts;
+    // Start at the head of the linked list
   }
 
   private deepCloneContentArray(elements: Content[]): Content[] {

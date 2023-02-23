@@ -4,6 +4,7 @@
         "content": {
             "stories": [
                 {
+                    "sKey": "a1",
                     "name": "arthurian",
                     "characters": [
                         {
@@ -23,7 +24,6 @@
                                             "body": "The nightingale's cry and the waning moon - between them you must decide",
                                             "parts": [],
                                             "threejsSceneKey": "",
-                                            "storyMilestone": "1-1",
                                             "previous": "",
                                             "next": ""
                                         }
@@ -32,7 +32,6 @@
                                     "body": "I feel a call from destiny tonight. Should I venture out?",
                                     "parts": [],
                                     "threejsSceneKey": "swordInRockMyth",
-                                    "storyMilestone": "1",
                                     "previous": "",
                                     "next": "B"
                                 },
@@ -45,7 +44,6 @@
                                     "body": "Then I saw my hands were shaking. Something is calling me to the woods. And beyond the woods...",
                                     "parts": [],
                                     "threejsSceneKey": "",
-                                    "storyMilestone": "2",
                                     "previous": "A",
                                     "next": ""
                                 },
@@ -58,9 +56,8 @@
                                     "body": "Yo get ur ass over here already",
                                     "parts": [],
                                     "threejsSceneKey": "",
-                                    "storyMilestone": "",
-                                    "previous": "1",
-                                    "next": "2"
+                                    "previous": "A",
+                                    "next": "B"
                                 },
                                 {
                                     "sKey": "D",
@@ -71,9 +68,8 @@
                                     "body": "Yo get ur ass over here already 2",
                                     "parts": [],
                                     "threejsSceneKey": "",
-                                    "storyMilestone": "",
-                                    "previous": "3",
-                                    "next": "4"
+                                    "previous": "C",
+                                    "next": ""
                                 }
                             ]
                         },
@@ -89,7 +85,6 @@
                                     "body": "I was walking in the woods. The stars seemed far out",
                                     "parts": [],
                                     "threejsSceneKey": "",
-                                    "storyMilestone": "1",
                                     "previous": "",
                                     "next": ""
                                 },
@@ -107,7 +102,6 @@
                                             "body": "You know you're never alone",
                                             "parts": [],
                                             "threejsSceneKey": "",
-                                            "storyMilestone": "2-1",
                                             "previous": "",
                                             "next": ""
                                         },
@@ -120,7 +114,6 @@
                                             "body": "I was with you up there son. Always will be",
                                             "parts": [],
                                             "threejsSceneKey": "",
-                                            "storyMilestone": "2-2",
                                             "previous": "",
                                             "next": ""
                                         }
@@ -129,7 +122,6 @@
                                     "body": "I didn't know what I was doing out there. There was someplace I needed to be but I didn't know where",
                                     "parts": [],
                                     "threejsSceneKey": "",
-                                    "storyMilestone": "2",
                                     "previous": "",
                                     "next": ""
                                 }
