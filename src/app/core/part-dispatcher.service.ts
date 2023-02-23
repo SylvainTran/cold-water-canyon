@@ -40,6 +40,16 @@ export class PartDispatcherService {
     return posts;
   }
 
+  public getRelationPosts(storyKey: String, characterName: String): StoryCharacter[] | undefined {
+    let relationPosts: StoryCharacter[] | undefined = [];
+    this.getCharacters(storyKey).forEach(character => {
+      if (character.name === characterName) {
+        relationPosts = character.relations;
+      }
+    });
+    return relationPosts;
+  }
+
   public buildPostHashMap(storyKey: string, activeCharacterProfile: string): Map<string, Content> {
     const allPosts: Content[] = this.getPosts(storyKey, activeCharacterProfile);
     let hashMap = new Map();
@@ -88,15 +98,21 @@ export class PartDispatcherService {
     return output;
   }
 
-  public getAllNonActiveUserPosts(storyKey: string, activeCharacterProfile: string): Content[] {
-    const allPosts: Content[] = this.getPosts(storyKey, activeCharacterProfile);
+  public getRelationPostsContent(storyKey: string, activeCharacterProfile: string): Content[] {
+    const relationPosts: StoryCharacter[] | undefined = this.getRelationPosts(storyKey, activeCharacterProfile);
     let output: Content[] = [];
-    allPosts.forEach(post => {
-      if (!output.includes(post) && (post.author !== activeCharacterProfile)) {
-        output.push(post);
-      }
+
+    relationPosts?.forEach(character => {
+      character.posts.forEach(post => {
+        if (!output.includes(post)) {
+          output.push(post);
+        }
+      });
     });
-    //output.forEach(o=>console.log(o.body));
+    output.forEach(o=>{
+      console.log(o.sKey);
+      console.log(o.body);
+    });
     return output;
   }
 
@@ -113,18 +129,19 @@ export class PartDispatcherService {
   // The posts owning the ranks change, but the prev and next refer to the ranks - get me the current owner of that rank.
   public testLinkedList() {
     let posts: Content[] = this.getPosts("arthurian", "Merlin");
+    let relationPosts: StoryCharacter[] | undefined = this.getRelationPosts("arthurian", "Merlin");
     let hashMap = this.buildPostHashMapUsingContent(posts);
     let list: LinkedList = new LinkedList(hashMap);
     // Insert all the story posts
-    this.getAllNonActiveUserPosts("arthurian", "Merlin").forEach((post) => {
-      list.insertAtLeftSKey(post.sKey, post.previous, post.next);
+    this.getRelationPostsContent("arthurian", "Merlin").forEach((post) => {
+      //list.insertAtPreviousSKey(post.sKey, post.previous, post.next);
     });
     console.log("List size test: " + list.size());
 }
 
   public arrangePosts() {
 
-    // this.testLinkedList();
+    this.testLinkedList();
 
     // Create the linked list
 

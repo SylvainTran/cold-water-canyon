@@ -33,9 +33,9 @@
                                     "body": "I feel a call from destiny tonight. Should I venture out?",
                                     "parts": [],
                                     "threejsSceneKey": "swordInRockMyth",
-                                    "rank": "1",
-                                    "previous": "0",
-                                    "next": "1"
+                                    "rank": "1", 
+                                    "previous": "",
+                                    "next": "B"
                                 },
                                 {
                                     "sKey": "B",
@@ -47,8 +47,8 @@
                                     "parts": [],
                                     "threejsSceneKey": "",
                                     "rank": "2",
-                                    "previous": "1",
-                                    "next": "3"
+                                    "previous": "A",
+                                    "next": ""
                                 }
                             ],
                             "relations": [
@@ -56,7 +56,7 @@
                                     "name": "Arthur",
                                     "posts": [
                                         {
-                                            "sKey": "A",
+                                            "sKey": "r-A",
                                             "author": "Arthur",
                                             "date": "1d",
                                             "comments": [],
@@ -65,8 +65,21 @@
                                             "parts": [],
                                             "threejsSceneKey": "",
                                             "rank": "2",
-                                            "previous": "1",
-                                            "next": "3"
+                                            "previous": "A",
+                                            "next": "B"
+                                        },
+                                        {
+                                            "sKey": "r-B",
+                                            "author": "Arthur",
+                                            "date": "1d",
+                                            "comments": [],
+                                            "shares": [],
+                                            "body": "Sorry to bother bro, where is the rock again?",
+                                            "parts": [],
+                                            "threejsSceneKey": "",
+                                            "rank": "2",
+                                            "previous": "A",
+                                            "next": "B"
                                         }
                                     ]
                                 }
@@ -85,8 +98,8 @@
                                     "parts": [],
                                     "threejsSceneKey": "",
                                     "rank": "1",
-                                    "previous": "0",
-                                    "next": "2"
+                                    "previous": "",
+                                    "next": "B"
                                 },
                                 {
                                     "sKey": "B",
@@ -125,8 +138,8 @@
                                     "parts": [],
                                     "threejsSceneKey": "",
                                     "rank": "2",
-                                    "previous": "1",
-                                    "next": "3"
+                                    "previous": "A",
+                                    "next": ""
                                 }
                             ],
                             "relations": [
@@ -153,11 +166,11 @@
                                             "parts": [],
                                             "threejsSceneKey": "",
                                             "rank": "1",
-                                            "previous": "0",
-                                            "next": "2"
+                                            "previous": "",
+                                            "next": "B"
                                         },
                                         {
-                                            "sKey": "D",
+                                            "sKey": "B",
                                             "author": "Lady of the Lake",
                                             "date": "1d",
                                             "comments": [],
@@ -166,8 +179,8 @@
                                             "parts": [],
                                             "threejsSceneKey": "",
                                             "rank": "2",
-                                            "previous": "1",
-                                            "next": "3"
+                                            "previous": "A",
+                                            "next": ""
                                         }
                                     ]
                                 }

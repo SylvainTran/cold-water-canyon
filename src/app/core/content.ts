@@ -7,7 +7,6 @@ import { Share } from "./share";
  * the hashmap's previous and next
  * property keys.
  * 
- * There is also the concept of ranking.
  */
 export class LinkedList {
     private head: LinkedListNode | undefined;
@@ -93,23 +92,23 @@ export class LinkedList {
     /**
      * Insertion algorithm
      * using hashkeys instead of indexes
+     * Find the leftSKey and rightSKey in the hashmap
      * 
-     * TODO: used owners of ranks system instead
      */
-    public insertAtLeftSKey(postToInsertSKey: string, leftSKey: string, rightSKey: string) {
-        // This is in the linked list
-        let postAtLeft: LinkedListNode | null = this.getAtSKey(leftSKey);
-        let postToInsert: LinkedListNode | undefined = this.contentHashMap.get(postToInsertSKey);
+    public insertAtPreviousSKey(postToInsertSKey: string, leftSKey: string, rightSKey: string) {
+        let l_prev_post: LinkedListNode | undefined = this.contentHashMap.get(leftSKey);
+        // let post_to_insert: LinkedListNode | undefined = this.relationHashMap.get(postToInsertSKey);
 
-        if (postAtLeft && postToInsert) {
-            let oldPostAtLeftNext = postAtLeft.next; // B
-            postAtLeft.next = postToInsertSKey; // C
-            postToInsert.next = oldPostAtLeftNext; // B - implicit, already in the json, but may change again here due to shuffling algorithm
-            // expect A C B
-        } else {
-            console.error("Post at left or post to insert missing");
-        }
-        // TODO: walk in the linked list until reach rightSKey and randomize non user posts in between?
+        // if (l_prev_post && post_to_insert) {
+            
+        //     // update post_to_insert's prev sKey to be the prev post's sKey
+        //     let oldnextSKey = l_prev_post.next;
+
+        //     // Update the prev post's next to be post_to_insert's sKey
+        //     l_prev_post.next = post_to_insert.sKey;
+
+        //     post_to_insert.next = oldnextSKey;            
+        // }
     }
 
     public removeAtKey() {
