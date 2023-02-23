@@ -24,6 +24,7 @@
                                             "body": "The nightingale's cry and the waning moon - between them you must decide",
                                             "parts": [],
                                             "threejsSceneKey": "",
+                                            "rank": "1",
                                             "previous": "",
                                             "next": ""
                                         }
@@ -32,8 +33,9 @@
                                     "body": "I feel a call from destiny tonight. Should I venture out?",
                                     "parts": [],
                                     "threejsSceneKey": "swordInRockMyth",
-                                    "previous": "",
-                                    "next": "B"
+                                    "rank": "1",
+                                    "previous": "0",
+                                    "next": "1"
                                 },
                                 {
                                     "sKey": "B",
@@ -44,32 +46,29 @@
                                     "body": "Then I saw my hands were shaking. Something is calling me to the woods. And beyond the woods...",
                                     "parts": [],
                                     "threejsSceneKey": "",
-                                    "previous": "A",
-                                    "next": ""
-                                },
+                                    "rank": "2",
+                                    "previous": "1",
+                                    "next": "3"
+                                }
+                            ],
+                            "relations": [
                                 {
-                                    "sKey": "C",
-                                    "author": "Lady of the Lake",
-                                    "date": "1d",
-                                    "comments": [],
-                                    "shares": [],
-                                    "body": "Yo get ur ass over here already",
-                                    "parts": [],
-                                    "threejsSceneKey": "",
-                                    "previous": "A",
-                                    "next": "B"
-                                },
-                                {
-                                    "sKey": "D",
-                                    "author": "Lady of the Lake",
-                                    "date": "1d",
-                                    "comments": [],
-                                    "shares": [],
-                                    "body": "Yo get ur ass over here already 2",
-                                    "parts": [],
-                                    "threejsSceneKey": "",
-                                    "previous": "C",
-                                    "next": ""
+                                    "name": "Arthur",
+                                    "posts": [
+                                        {
+                                            "sKey": "A",
+                                            "author": "Arthur",
+                                            "date": "1d",
+                                            "comments": [],
+                                            "shares": [],
+                                            "body": "Sorry to bother bro, where is the rock again?",
+                                            "parts": [],
+                                            "threejsSceneKey": "",
+                                            "rank": "2",
+                                            "previous": "1",
+                                            "next": "3"
+                                        }
+                                    ]
                                 }
                             ]
                         },
@@ -77,7 +76,7 @@
                             "name": "Arthur",
                             "posts": [
                                 {
-                                    "sKey": "B",
+                                    "sKey": "A",
                                     "author": "Arthur",
                                     "date": "1d",
                                     "comments": [],
@@ -85,11 +84,12 @@
                                     "body": "I was walking in the woods. The stars seemed far out",
                                     "parts": [],
                                     "threejsSceneKey": "",
-                                    "previous": "",
-                                    "next": ""
+                                    "rank": "1",
+                                    "previous": "0",
+                                    "next": "2"
                                 },
                                 {
-                                    "sKey": "C",
+                                    "sKey": "B",
                                     "author": "Arthur",
                                     "date": "1d",
                                     "comments": [
@@ -102,6 +102,7 @@
                                             "body": "You know you're never alone",
                                             "parts": [],
                                             "threejsSceneKey": "",
+                                            "rank": "1",
                                             "previous": "",
                                             "next": ""
                                         },
@@ -114,6 +115,7 @@
                                             "body": "I was with you up there son. Always will be",
                                             "parts": [],
                                             "threejsSceneKey": "",
+                                            "rank": "2",
                                             "previous": "",
                                             "next": ""
                                         }
@@ -122,12 +124,57 @@
                                     "body": "I didn't know what I was doing out there. There was someplace I needed to be but I didn't know where",
                                     "parts": [],
                                     "threejsSceneKey": "",
-                                    "previous": "",
-                                    "next": ""
+                                    "rank": "2",
+                                    "previous": "1",
+                                    "next": "3"
+                                }
+                            ],
+                            "relations": [
+                                {
+                                    "name": "Merlin",
+                                    "posts": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Lady of the Lake",
+                            "posts": [],
+                            "relations": [
+                                {
+                                    "name": "Merlin",
+                                    "posts": [
+                                        {
+                                            "sKey": "A",
+                                            "author": "Lady of the Lake",
+                                            "date": "1d",
+                                            "comments": [],
+                                            "shares": [],
+                                            "body": "Yo get ur ass over here already",
+                                            "parts": [],
+                                            "threejsSceneKey": "",
+                                            "rank": "1",
+                                            "previous": "0",
+                                            "next": "2"
+                                        },
+                                        {
+                                            "sKey": "D",
+                                            "author": "Lady of the Lake",
+                                            "date": "1d",
+                                            "comments": [],
+                                            "shares": [],
+                                            "body": "Yo get ur ass over here already 2",
+                                            "parts": [],
+                                            "threejsSceneKey": "",
+                                            "rank": "2",
+                                            "previous": "1",
+                                            "next": "3"
+                                        }
+                                    ]
                                 }
                             ]
                         }
                     ],
+                    "rank": "0",
                     "previous": "",
                     "next": ""
                 }

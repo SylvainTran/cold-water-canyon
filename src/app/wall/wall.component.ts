@@ -28,7 +28,7 @@ export class WallComponent implements OnChanges {
       this.pageControllerService.partDispatcherService.arrangePosts();
     }
 
-    // Update the next/prev keys by reading the nonActiveUserPosts relative to/into the activeUserPosts sequence
+    // Update the posts' order in the sequence using the ranks (who owns it)
     
     // Re-read the story sequence in order to determine the final order
 

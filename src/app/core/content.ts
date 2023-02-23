@@ -1,8 +1,21 @@
 import { Part } from "./part";
 import { Share } from "./share";
 
+/**
+ * Basically walks through
+ * the hashmap using the
+ * the hashmap's previous and next
+ * property keys.
+ * 
+ * There is also the concept of ranking.
+ */
 export class LinkedList {
-    constructor(private head: LinkedListNode | null, private contentHashMap: Map<string, LinkedListNode>) {}
+    private head: LinkedListNode | undefined;
+    
+    constructor(private contentHashMap: Map<string, LinkedListNode>) {
+        // The head of the linked list is posts[0] or post with sKey == "A"
+        this.head = contentHashMap.get("A");
+    }
 
     public size(): number {
         if (this.head == undefined) {
@@ -21,14 +34,14 @@ export class LinkedList {
     }
 
     public clear(): void {
-        this.head = null;
+        this.head = undefined;
     }
 
-    public getFirst(): LinkedListNode | null {
+    public getFirst(): LinkedListNode | undefined {
         return this.head;
     }
 
-    public getLast(): LinkedListNode | null {
+    public getLast(): LinkedListNode | undefined {
         let lastNode = this.head;
         if (lastNode != null) {
             while (lastNode.next) {
@@ -38,7 +51,7 @@ export class LinkedList {
                 }
             }
         }
-        return lastNode
+        return lastNode;
     }
 
     public getAtIndex(index: number): LinkedListNode | null {
@@ -57,24 +70,55 @@ export class LinkedList {
         return it;
     }
 
-    public insertAtIndex(newKey: string, oldKey: string) {
-        let atIndex: LinkedListNode | null = this.getAtIndex(parseInt(oldKey));
-        let atNewIndex: LinkedListNode | null = this.getAtIndex(parseInt(newKey));
-
-        if (atIndex && atNewIndex) {
-            let oldNext: string = atIndex.next;
-            atIndex.next = newKey;
-            atNewIndex.previous = atIndex.next;
+    public getAtSKey(sKey: string): LinkedListNode | null {
+        if (this.head == undefined) {
+            return null;
         }
+        let it = this.head;
+        while(it.next) {
+
+            if (it.sKey == sKey) {
+                return it;
+            }
+            else {
+                let next = this.contentHashMap.get(it.next);
+                if (next) {
+                    it = next;
+                }
+            }
+        }
+        return null;
     }
 
-    public removeAtIndex() {
+    /**
+     * Insertion algorithm
+     * using hashkeys instead of indexes
+     * 
+     * TODO: used owners of ranks system instead
+     */
+    public insertAtLeftSKey(postToInsertSKey: string, leftSKey: string, rightSKey: string) {
+        // This is in the linked list
+        let postAtLeft: LinkedListNode | null = this.getAtSKey(leftSKey);
+        let postToInsert: LinkedListNode | undefined = this.contentHashMap.get(postToInsertSKey);
 
+        if (postAtLeft && postToInsert) {
+            let oldPostAtLeftNext = postAtLeft.next; // B
+            postAtLeft.next = postToInsertSKey; // C
+            postToInsert.next = oldPostAtLeftNext; // B - implicit, already in the json, but may change again here due to shuffling algorithm
+            // expect A C B
+        } else {
+            console.error("Post at left or post to insert missing");
+        }
+        // TODO: walk in the linked list until reach rightSKey and randomize non user posts in between?
+    }
+
+    public removeAtKey() {
     }
 }
 
 export class LinkedListNode {
     sKey: string = ""; // this is the data
+    rank: string = "";
     previous: string = "";
     next: string = "";
 }
@@ -97,4 +141,5 @@ export class StoryContent extends LinkedListNode {
 export class StoryCharacter {
     name: string = "";
     posts: Content[] = [];
+    relations?: StoryCharacter[] = [];
 }

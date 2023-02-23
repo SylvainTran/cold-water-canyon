@@ -108,17 +108,23 @@ export class PartDispatcherService {
 
   }
 
+  // TODO: need fixed ranks
+  // It means, insert me somewhere after my 'prev' and somewhere before the 'next'
+  // The posts owning the ranks change, but the prev and next refer to the ranks - get me the current owner of that rank.
   public testLinkedList() {
     let posts: Content[] = this.getPosts("arthurian", "Merlin");
     let hashMap = this.buildPostHashMapUsingContent(posts);
-    // The head of the linked list is posts[0]
-    let list: LinkedList = new LinkedList(posts[0], hashMap);
+    let list: LinkedList = new LinkedList(hashMap);
+    // Insert all the story posts
+    this.getAllNonActiveUserPosts("arthurian", "Merlin").forEach((post) => {
+      list.insertAtLeftSKey(post.sKey, post.previous, post.next);
+    });
     console.log("List size test: " + list.size());
-  }
+}
 
   public arrangePosts() {
 
-    this.testLinkedList();
+    // this.testLinkedList();
 
     // Create the linked list
 
