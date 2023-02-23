@@ -57,12 +57,14 @@ export class LinkedList {
         return it;
     }
 
-    public insertAtIndex(newKey: string, index: string) {
-        let atIndex: LinkedListNode | null = this.getAtIndex(parseInt(index));
-        if (atIndex) {
-            let oldNext: string = atIndex?.next;
+    public insertAtIndex(newKey: string, oldKey: string) {
+        let atIndex: LinkedListNode | null = this.getAtIndex(parseInt(oldKey));
+        let atNewIndex: LinkedListNode | null = this.getAtIndex(parseInt(newKey));
+
+        if (atIndex && atNewIndex) {
+            let oldNext: string = atIndex.next;
             atIndex.next = newKey;
-            //this.contentHashMap.set(index, )
+            atNewIndex.previous = atIndex.next;
         }
     }
 
