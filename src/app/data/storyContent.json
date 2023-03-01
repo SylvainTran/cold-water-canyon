@@ -13,12 +13,12 @@
                                 {
                                     "sKey": "A",
                                     "author": "Onager",
-                                    "date": "1d",
+                                    "date": "848110d",
                                     "comments": [
                                         {
                                             "sKey": "A-1",
                                             "author": "Donkey",
-                                            "date": "1d",
+                                            "date": "848110d",
                                             "comments": [],
                                             "shares": [],
                                             "body": "Yo, cousin. Feel the caress of the sun with me.",
@@ -31,7 +31,7 @@
                                         {
                                             "sKey": "A-2",
                                             "author": "Onager",
-                                            "date": "1d",
+                                            "date": "848110d",
                                             "comments": [],
                                             "shares": [],
                                             "body": "O-K sure. We hang in the sun, cousin. By the way, I’m impressed by your pelt and your teeth. You look way more in shape than I do. Where do you workout?",
@@ -44,7 +44,7 @@
                                         {
                                             "sKey": "A-3",
                                             "author": "Donkey",
-                                            "date": "1d",
+                                            "date": "848110d",
                                             "comments": [],
                                             "shares": [],
                                             "body": "I barely workout. It’s all because of my diet.",
@@ -57,7 +57,7 @@
                                         {
                                             "sKey": "A-4",
                                             "author": "Onager",
-                                            "date": "1d",
+                                            "date": "848109d",
                                             "comments": [],
                                             "shares": [],
                                             "body": "Where do you get all that food?",
@@ -70,7 +70,7 @@
                                         {
                                             "sKey": "A-5",
                                             "author": "Donkey",
-                                            "date": "1d",
+                                            "date": "848109d",
                                             "comments": [],
                                             "shares": [],
                                             "body": "My master, the driver? He feeds me",
@@ -83,7 +83,7 @@
                                         {
                                             "sKey": "A-6",
                                             "author": "Onager",
-                                            "date": "1d",
+                                            "date": "848109d",
                                             "comments": [],
                                             "shares": [],
                                             "body": "Sheeht man, that's great. I'm soooo envious",
@@ -105,7 +105,7 @@
                                 {
                                     "sKey": "B",
                                     "author": "Onager",
-                                    "date": "1d",
+                                    "date": "848108d",
                                     "comments": [],
                                     "shares": [],
                                     "body": "The sun is hot and I’m walking alone in the plains. I wonder what Donkey’s doing?",
@@ -118,12 +118,12 @@
                                 {
                                     "sKey": "C",
                                     "author": "Onager",
-                                    "date": "1d",
+                                    "date": "848108d",
                                     "comments": [
                                         {
                                             "sKey": "C-1",
                                             "author": "Donkey",
-                                            "date": "1d",
+                                            "date": "848108d",
                                             "comments": [],
                                             "shares": [],
                                             "body": "But cousin, the food is worth. Remember how nice my pelt and teeth are!",
@@ -136,7 +136,7 @@
                                         {
                                             "sKey": "C-2",
                                             "author": "Onager",
-                                            "date": "1d",
+                                            "date": "848108d",
                                             "comments": [],
                                             "shares": [],
                                             "body": "Nah, cousin, your pelt and teeth don’t look so nice with that man swinging his club at your ass all day long.",
@@ -149,7 +149,7 @@
                                         {
                                             "sKey": "C-3",
                                             "author": "Driver",
-                                            "date": "1d",
+                                            "date": "848108d",
                                             "comments": [],
                                             "shares": [],
                                             "body": "As long as he eats, he don’t care. Now move along, unless you want to carry some of that load too!",
@@ -176,10 +176,10 @@
                                         {
                                             "sKey": "R-A",
                                             "author": "Narrator",
-                                            "date": "1d",
+                                            "date": "848110d",
                                             "comments": [],
                                             "shares": [],
-                                            "body": "The sun is high, and an onager is walking on a mellow boulevard to an unimportant destination. But what stands on the horizon? Is it a donkey? Here is a tale of envying the wrong person, and of deliberately turning a blind eye to a situation in exchange for a life of security.",
+                                            "body": "300 BCE. The sun is high, and an onager is walking on a mellow boulevard to an unimportant destination. But what stands on the horizon? Is it a donkey? Here is a tale of envying the wrong person, and of deliberately turning a blind eye to a situation in exchange for a life of security.",
                                             "parts": [],
                                             "threejsSceneKey": "",
                                             "rank": "1",
@@ -189,7 +189,7 @@
                                         {
                                             "sKey": "R-B",
                                             "author": "Narrator",
-                                            "date": "1d",
+                                            "date": "848110d",
                                             "comments": [],
                                             "shares": [],
                                             "body": "He’s on a good break, happiest as a donkey can be, and the sunshine envelops his full being and form, agreeing with his every step.",
@@ -202,7 +202,7 @@
                                         {
                                             "sKey": "R-C",
                                             "author": "Narrator",
-                                            "date": "1d",
+                                            "date": "848110d",
                                             "comments": [],
                                             "shares": [],
                                             "body": "The Donkey approaches the horizon again, but this time with a load on his back, a driver beating him on the ass with a club.",
@@ -213,22 +213,9 @@
                                             "next": "B"
                                         },
                                         {
-                                            "sKey": "R-D",
-                                            "author": "Driver",
-                                            "date": "1d",
-                                            "comments": [],
-                                            "shares": [],
-                                            "body": "It doesn’t matter what the breed is. They’re all the same. Just need a roof over their head and food, and the rest don’t matter anymore!",
-                                            "parts": [],
-                                            "threejsSceneKey": "",
-                                            "rank": "7",
-                                            "previous": "A",
-                                            "next": "B"
-                                        },
-                                        {
                                             "sKey": "R-E",
                                             "author": "Narrator",
-                                            "date": "1d",
+                                            "date": "Today",
                                             "comments": [],
                                             "shares": [],
                                             "body": "And just the same is with our lives - with a belly full of knowledge of security, we may fail to properly assess important details of our existence that must be valued too, such as freedom, and pursuing a good life.",

@@ -18,7 +18,7 @@
         <div id="post__links__container__body" *ngFor="let comment of post.comments">
             <div class="post__comment">
                 <mat-icon [ngStyle]="{'color':'white', 'width': '33px', 'float': 'left'}">subdirectory_arrow_right</mat-icon>
-                <div class="comment__author">{{ comment.author }}</div>
+                <div class="comment__author"><span [ngStyle]="{'fontSize':'2rem'}">{{ comment.author }}</span>&nbsp;&nbsp;{{ comment.date }}</div>
                 <div class="comment__body">{{ comment.body }}</div>
             </div>
         </div>
