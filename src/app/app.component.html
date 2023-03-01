@@ -28,12 +28,8 @@
         <div *ngSwitchCase="'mainContent'" class="mainContent">
             <div *ngIf="!activeStoryProfile && !activeStoryCharacter">
                 <h1>Public Floors</h1><hr>
-                <h3 (click)="setActiveStoryProfile('arthurian')">Arthurian Legends</h3>
-                <h3 (click)="setActiveStoryProfile('oldTestament')">Old Testament</h3>
-                <h3 (click)="setActiveStoryProfile('newTestament')">New Testament</h3>
-                <h3 (click)="setActiveStoryProfile('volsunga')">Volsunga Saga</h3>
-                <h3 (click)="setActiveStoryProfile('macbeth')">Macbeth</h3>
-                <h3 (click)="setActiveStoryProfile('hamlet')">Hamlet</h3>
+                <h3 (click)="setActiveStoryProfile('f4')">The Onager, the Donkey, and the Driver</h3>
+                <h3 (click)="setActiveStoryProfile('f5')">The Onager, the Donkey, and the Lion</h3>
                 <h1>Secret Floors</h1><hr>
             </div>
             <div *ngFor="let character of activeStoryCharacters" class="story--user-links">

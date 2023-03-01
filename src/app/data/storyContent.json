@@ -4,24 +4,89 @@
         "content": {
             "stories": [
                 {
-                    "sKey": "a1",
-                    "name": "arthurian",
+                    "sKey": "f4",
+                    "name": "The Onager, the Donkey, and the Driver",
                     "characters": [
                         {
-                            "name": "Merlin",
+                            "name": "Onager",
                             "posts": [
                                 {
                                     "sKey": "A",
-                                    "author": "Merlin",
+                                    "author": "Onager",
                                     "date": "1d",
                                     "comments": [
                                         {
                                             "sKey": "A-1",
-                                            "author": "Lady of the Lake",
+                                            "author": "Donkey",
                                             "date": "1d",
                                             "comments": [],
                                             "shares": [],
-                                            "body": "The nightingale's cry and the waning moon - between them you must decide",
+                                            "body": "Yo, cousin. Feel the caress of the sun with me.",
+                                            "parts": [],
+                                            "threejsSceneKey": "",
+                                            "rank": "1",
+                                            "previous": "",
+                                            "next": ""
+                                        },
+                                        {
+                                            "sKey": "A-2",
+                                            "author": "Onager",
+                                            "date": "1d",
+                                            "comments": [],
+                                            "shares": [],
+                                            "body": "O-K sure. We hang in the sun, cousin. By the way, I’m impressed by your pelt and your teeth. You look way more in shape than I do. Where do you workout?",
+                                            "parts": [],
+                                            "threejsSceneKey": "",
+                                            "rank": "1",
+                                            "previous": "",
+                                            "next": ""
+                                        },
+                                        {
+                                            "sKey": "A-3",
+                                            "author": "Donkey",
+                                            "date": "1d",
+                                            "comments": [],
+                                            "shares": [],
+                                            "body": "Dude, I barely workout. It’s all because of my diet.",
+                                            "parts": [],
+                                            "threejsSceneKey": "",
+                                            "rank": "1",
+                                            "previous": "",
+                                            "next": ""
+                                        },
+                                        {
+                                            "sKey": "A-4",
+                                            "author": "Onager",
+                                            "date": "1d",
+                                            "comments": [],
+                                            "shares": [],
+                                            "body": "Where do you get all that food?",
+                                            "parts": [],
+                                            "threejsSceneKey": "",
+                                            "rank": "1",
+                                            "previous": "",
+                                            "next": ""
+                                        },
+                                        {
+                                            "sKey": "A-5",
+                                            "author": "Donkey",
+                                            "date": "1d",
+                                            "comments": [],
+                                            "shares": [],
+                                            "body": "My master, the driver? He feeds me",
+                                            "parts": [],
+                                            "threejsSceneKey": "",
+                                            "rank": "1",
+                                            "previous": "",
+                                            "next": ""
+                                        },
+                                        {
+                                            "sKey": "A-6",
+                                            "author": "Onager",
+                                            "date": "1d",
+                                            "comments": [],
+                                            "shares": [],
+                                            "body": "Sheeht man, that's great. I'm soooo envious",
                                             "parts": [],
                                             "threejsSceneKey": "",
                                             "rank": "1",
@@ -30,89 +95,38 @@
                                         }
                                     ],
                                     "shares": [],
-                                    "body": "I feel a call from destiny tonight. Should I venture out?",
+                                    "body": "Man it’s hot out here. I wish I could find something nice to eat today… I haven’t eaten anything but grass for days. Oh, hey, it’s Donkey.",
                                     "parts": [],
-                                    "threejsSceneKey": "swordInRockMyth",
-                                    "rank": "1", 
+                                    "threejsSceneKey": "f4-1",
+                                    "rank": "2", 
                                     "previous": "",
-                                    "next": "B"
+                                    "next": "R-A"
                                 },
                                 {
                                     "sKey": "B",
-                                    "author": "Merlin",
+                                    "author": "Onager",
                                     "date": "1d",
                                     "comments": [],
                                     "shares": [],
-                                    "body": "Then I saw my hands were shaking. Something is calling me to the woods. And beyond the woods...",
+                                    "body": "The sun is hot and I’m walking alone in the plains. I wonder what Donkey’s doing?",
                                     "parts": [],
-                                    "threejsSceneKey": "",
-                                    "rank": "2",
+                                    "threejsSceneKey": "f4-2",
+                                    "rank": "4",
                                     "previous": "A",
                                     "next": ""
-                                }
-                            ],
-                            "relations": [
-                                {
-                                    "name": "Arthur",
-                                    "posts": [
-                                        {
-                                            "sKey": "r-A",
-                                            "author": "Arthur",
-                                            "date": "1d",
-                                            "comments": [],
-                                            "shares": [],
-                                            "body": "Sorry to bother bro, where is the rock again?",
-                                            "parts": [],
-                                            "threejsSceneKey": "",
-                                            "rank": "2",
-                                            "previous": "A",
-                                            "next": "B"
-                                        },
-                                        {
-                                            "sKey": "r-B",
-                                            "author": "Arthur",
-                                            "date": "1d",
-                                            "comments": [],
-                                            "shares": [],
-                                            "body": "Sorry to bother bro, where is the rock again?",
-                                            "parts": [],
-                                            "threejsSceneKey": "",
-                                            "rank": "2",
-                                            "previous": "A",
-                                            "next": "B"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "name": "Arthur",
-                            "posts": [
-                                {
-                                    "sKey": "A",
-                                    "author": "Arthur",
-                                    "date": "1d",
-                                    "comments": [],
-                                    "shares": [],
-                                    "body": "I was walking in the woods. The stars seemed far out",
-                                    "parts": [],
-                                    "threejsSceneKey": "",
-                                    "rank": "1",
-                                    "previous": "",
-                                    "next": "B"
                                 },
                                 {
-                                    "sKey": "B",
-                                    "author": "Arthur",
+                                    "sKey": "C",
+                                    "author": "Onager",
                                     "date": "1d",
                                     "comments": [
                                         {
-                                            "sKey": "A-1",
-                                            "author": "Merlin",
+                                            "sKey": "C-1",
+                                            "author": "Donkey",
                                             "date": "1d",
                                             "comments": [],
                                             "shares": [],
-                                            "body": "You know you're never alone",
+                                            "body": "But cousin, the food is worth. Remember how nice my pelt and teeth are!",
                                             "parts": [],
                                             "threejsSceneKey": "",
                                             "rank": "1",
@@ -120,67 +134,109 @@
                                             "next": ""
                                         },
                                         {
-                                            "sKey": "A-1",
-                                            "author": "Pendragon",
+                                            "sKey": "C-2",
+                                            "author": "Onager",
                                             "date": "1d",
                                             "comments": [],
                                             "shares": [],
-                                            "body": "I was with you up there son. Always will be",
+                                            "body": "Nah, cousin, your pelt and teeth don’t look so nice with that man swinging his club at your ass all day long.",
                                             "parts": [],
                                             "threejsSceneKey": "",
-                                            "rank": "2",
+                                            "rank": "1",
+                                            "previous": "",
+                                            "next": ""
+                                        },
+                                        {
+                                            "sKey": "C-3",
+                                            "author": "Driver",
+                                            "date": "1d",
+                                            "comments": [],
+                                            "shares": [],
+                                            "body": "As long as he eats, he don’t care. Now move along, unless you want to carry some of that load too!",
+                                            "parts": [],
+                                            "threejsSceneKey": "",
+                                            "rank": "1",
                                             "previous": "",
                                             "next": ""
                                         }
                                     ],
                                     "shares": [],
-                                    "body": "I didn't know what I was doing out there. There was someplace I needed to be but I didn't know where",
+                                    "body": "I’m going to take back what I said, Donkey. I don’t care about how epic your diet is, if you have to go through that shit. That’s too high a price. Even for a donkey.",
                                     "parts": [],
-                                    "threejsSceneKey": "",
-                                    "rank": "2",
+                                    "threejsSceneKey": "f4-2",
+                                    "rank": "6",
                                     "previous": "A",
                                     "next": ""
                                 }
                             ],
                             "relations": [
                                 {
-                                    "name": "Merlin",
-                                    "posts": []
-                                }
-                            ]
-                        },
-                        {
-                            "name": "Lady of the Lake",
-                            "posts": [],
-                            "relations": [
-                                {
-                                    "name": "Merlin",
+                                    "name": "Narrator",
                                     "posts": [
                                         {
-                                            "sKey": "A",
-                                            "author": "Lady of the Lake",
+                                            "sKey": "R-A",
+                                            "author": "Narrator",
                                             "date": "1d",
                                             "comments": [],
                                             "shares": [],
-                                            "body": "Yo get ur ass over here already",
+                                            "body": "The sun is high, and an onager is walking on a mellow boulevard to an unimportant destination. But what stands on the horizon? Is it a donkey? Here is a tale of envying the wrong person, and of deliberately turning a blind eye to a situation in exchange for a life of security.",
                                             "parts": [],
                                             "threejsSceneKey": "",
                                             "rank": "1",
                                             "previous": "",
-                                            "next": "B"
+                                            "next": "A"
                                         },
                                         {
-                                            "sKey": "B",
-                                            "author": "Lady of the Lake",
+                                            "sKey": "R-B",
+                                            "author": "Narrator",
                                             "date": "1d",
                                             "comments": [],
                                             "shares": [],
-                                            "body": "Yo get ur ass over here already 2",
+                                            "body": "He’s on a good break, happiest as a donkey can be, and the sunshine envelops his full being and form, agreeing with his every step.",
                                             "parts": [],
                                             "threejsSceneKey": "",
-                                            "rank": "2",
+                                            "rank": "3",
                                             "previous": "A",
-                                            "next": ""
+                                            "next": "B"
+                                        },
+                                        {
+                                            "sKey": "R-C",
+                                            "author": "Narrator",
+                                            "date": "1d",
+                                            "comments": [],
+                                            "shares": [],
+                                            "body": "The Donkey approaches the horizon again, but this time with a load on his back, a driver beating him on the ass with a club.",
+                                            "parts": [],
+                                            "threejsSceneKey": "",
+                                            "rank": "5",
+                                            "previous": "A",
+                                            "next": "B"
+                                        },
+                                        {
+                                            "sKey": "R-D",
+                                            "author": "Driver",
+                                            "date": "1d",
+                                            "comments": [],
+                                            "shares": [],
+                                            "body": "It doesn’t matter what the breed is. They’re all the same. Just need a roof over their head and food, and the rest don’t matter anymore!",
+                                            "parts": [],
+                                            "threejsSceneKey": "",
+                                            "rank": "7",
+                                            "previous": "A",
+                                            "next": "B"
+                                        },
+                                        {
+                                            "sKey": "R-E",
+                                            "author": "Narrator",
+                                            "date": "1d",
+                                            "comments": [],
+                                            "shares": [],
+                                            "body": "And just the same is with our lives - with a belly full of knowledge of security, we may fail to properly assess important details of our existence that must be valued too, such as freedom, and pursuing a good life.",
+                                            "parts": [],
+                                            "threejsSceneKey": "",
+                                            "rank": "8",
+                                            "previous": "A",
+                                            "next": "B"
                                         }
                                     ]
                                 }
@@ -188,6 +244,24 @@
                         }
                     ],
                     "rank": "0",
+                    "previous": "",
+                    "next": ""
+                },
+                {
+                    "sKey": "f5",
+                    "name": "The Donkey, the Onager, and the Lion",
+                    "characters": [
+                        {
+                            "name": "Onager",
+                            "posts": [
+
+                            ],
+                            "relations": [
+
+                            ]
+                        }
+                    ],
+                    "rank": "1",
                     "previous": "",
                     "next": ""
                 }

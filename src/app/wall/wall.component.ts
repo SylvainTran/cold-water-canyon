@@ -22,10 +22,10 @@ export class WallComponent implements OnChanges {
   constructor(private pageControllerService: PageControllerService) {}
   
   ngOnChanges(changes: SimpleChanges): void {    
-    this.posts = this.pageControllerService.partDispatcherService.getPosts(this.activeStoryProfile, this.activeStoryCharacter);
+    // this.posts = this.pageControllerService.partDispatcherService.getPosts(this.activeStoryProfile, this.activeStoryCharacter);
 
     if (changes['activeStoryCharacter']) {
-      this.pageControllerService.partDispatcherService.arrangePosts();
+      this.posts = this.pageControllerService.partDispatcherService.arrangePosts(this.activeStoryProfile, this.activeStoryCharacter);
     }
 
     // Update the posts' order in the sequence using the ranks (who owns it)
