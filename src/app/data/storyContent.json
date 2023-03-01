@@ -578,6 +578,197 @@
                     "rank": "3",
                     "previous": "",
                     "next": ""
+                },
+                {
+                    "sKey": "f18",
+                    "name": "The Fox, the Lion, and the Footprints",
+                    "characters": [
+                        {
+                            "name": "Fox",
+                            "posts": [
+                                {
+                                    "sKey": "A",
+                                    "author": "Fox",
+                                    "date": "848110d",
+                                    "comments": [],
+                                    "shares": [],
+                                    "body": "Why are all the animals going in that cave? I wonder if there’s anything important going on.",
+                                    "parts": [],
+                                    "threejsSceneKey": "f12-3",
+                                    "rank": "3", 
+                                    "previous": "",
+                                    "next": "R-A"
+                                },
+                                {
+                                    "sKey": "B",
+                                    "author": "Fox",
+                                    "date": "848110d",
+                                    "comments": [
+                                        {
+                                            "sKey": "B-1",
+                                            "author": "Goose",
+                                            "date": "848110d",
+                                            "comments": [],
+                                            "shares": [],
+                                            "body": "The lion has grown sick. We’re trying to smooze up to him while we can.",
+                                            "parts": [],
+                                            "threejsSceneKey": "f18-4",
+                                            "rank": "4", 
+                                            "previous": "",
+                                            "next": "R-A"
+                                        },
+                                        {
+                                            "sKey": "B-2",
+                                            "author": "Turtle",
+                                            "date": "848110d",
+                                            "comments": [],
+                                            "shares": [],
+                                            "body": "You mean lick his stinky fur, to get his favor? You’ll need a bigger tongue for that, pal! You can’t lick it up for all of us, no you can’t!",
+                                            "parts": [],
+                                            "threejsSceneKey": "f18-4",
+                                            "rank": "4", 
+                                            "previous": "",
+                                            "next": "R-A"
+                                        },
+                                        {
+                                            "sKey": "B-3",
+                                            "author": "Cat",
+                                            "date": "848110d",
+                                            "comments": [],
+                                            "shares": [],
+                                            "body": "That’s right, I’ll lick him more!",
+                                            "parts": [],
+                                            "threejsSceneKey": "f18-4",
+                                            "rank": "4", 
+                                            "previous": "",
+                                            "next": "R-A"
+                                        },
+                                        {
+                                            "sKey": "B-4",
+                                            "author": "Fox",
+                                            "date": "848110d",
+                                            "comments": [],
+                                            "shares": [],
+                                            "body": "What a bunch of weirdos. Wait… I’ve got a suspicion…",
+                                            "parts": [],
+                                            "threejsSceneKey": "f18-4",
+                                            "rank": "4", 
+                                            "previous": "",
+                                            "next": "R-A"
+                                        }
+                                    ],
+                                    "shares": [],
+                                    "body": "Hey, you! Can you tell me what’s going on over there?",
+                                    "parts": [],
+                                    "threejsSceneKey": "f12-4",
+                                    "rank": "4", 
+                                    "previous": "",
+                                    "next": "R-A"
+                                },
+                                {
+                                    "sKey": "C",
+                                    "author": "Fox",
+                                    "date": "848110d",
+                                    "comments": [],
+                                    "shares": [],
+                                    "body": "Because I can see that the tracks are going in, but that none are going out.",
+                                    "parts": [],
+                                    "threejsSceneKey": "f12-4",
+                                    "rank": "8", 
+                                    "previous": "",
+                                    "next": "R-A"
+                                }
+                            ],
+                            "relations": [
+                                {
+                                    "name": "Narrator",
+                                    "posts": [
+                                        {
+                                            "sKey": "R-A",
+                                            "author": "Narrator",
+                                            "date": "848110d",
+                                            "comments": [],
+                                            "shares": [],
+                                            "body": "An old lion was getting old and weak, and he was not getting any less hungry.",
+                                            "parts": [],
+                                            "threejsSceneKey": "f12-1",
+                                            "rank": "1",
+                                            "previous": "",
+                                            "next": "A"
+                                        },
+                                        {
+                                            "sKey": "R-B",
+                                            "author": "Lion",
+                                            "date": "848110d",
+                                            "comments": [],
+                                            "shares": [],
+                                            "body": "I know what I’m going to do: I’ll pretend I’m sick, then the idiots are going to come pay their respect and wish me well so that I don’t eat them up later. But then… I’ll do just the opposite, hehehehehehehehe",
+                                            "parts": [],
+                                            "threejsSceneKey": "f18-2",
+                                            "rank": "2", 
+                                            "previous": "",
+                                            "next": "R-A"
+                                        },
+                                        {
+                                            "sKey": "R-C",
+                                            "author": "Narrator",
+                                            "date": "848110d",
+                                            "comments": [],
+                                            "shares": [],
+                                            "body": "The fox approached the mouth of the cave, careful to look around her as she threaded. The lion saw her and immediately smiled.",
+                                            "parts": [],
+                                            "threejsSceneKey": "f18-2",
+                                            "rank": "5", 
+                                            "previous": "",
+                                            "next": "R-A"
+                                        },
+                                        {
+                                            "sKey": "R-D",
+                                            "author": "The Eye",
+                                            "date": "848110d",
+                                            "comments": [],
+                                            "shares": [],
+                                            "body": "PIC-f18-6/ALT: Prompt: A lion smiles with wide teeth at a fox from inside a dark cave.",
+                                            "parts": [],
+                                            "threejsSceneKey": "f18-2",
+                                            "rank": "6", 
+                                            "previous": "",
+                                            "next": "R-A"
+                                        },
+                                        {
+                                            "sKey": "R-E",
+                                            "author": "Lion",
+                                            "date": "848110d",
+                                            "comments": [],
+                                            "shares": [],
+                                            "body": "Hey, fox. Did you come to visit me? I won’t forget it. It’s quite dark here. Why don’t you come inside?",
+                                            "parts": [],
+                                            "threejsSceneKey": "f18-2",
+                                            "rank": "7", 
+                                            "previous": "",
+                                            "next": "R-A"
+                                        },
+                                        {
+                                            "sKey": "R-F",
+                                            "author": "Narrator",
+                                            "date": "848110d",
+                                            "comments": [],
+                                            "shares": [],
+                                            "body": "Other people’s mistakes can often save us from making them.",
+                                            "parts": [],
+                                            "threejsSceneKey": "f18-2",
+                                            "rank": "9", 
+                                            "previous": "",
+                                            "next": "R-A"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "rank": "3",
+                    "previous": "",
+                    "next": ""
                 }
             ]
         }
