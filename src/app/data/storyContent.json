@@ -369,7 +369,213 @@
                             ]
                         }
                     ],
-                    "rank": "1",
+                    "rank": "2",
+                    "previous": "",
+                    "next": ""
+                },
+                {
+                    "sKey": "f12",
+                    "name": "The Frogs and the Battle of the Bulls",
+                    "characters": [
+                        {
+                            "name": "Frog",
+                            "posts": [
+                                {
+                                    "sKey": "A",
+                                    "author": "Frog",
+                                    "date": "848110d",
+                                    "comments": [
+                                        {
+                                            "sKey": "A-1",
+                                            "author": "Frog 2",
+                                            "date": "848108d",
+                                            "comments": [],
+                                            "shares": [],
+                                            "body": "Have you checked with the neighbors? Maybe they’re responsible for all this ruckus.",
+                                            "parts": [],
+                                            "threejsSceneKey": "",
+                                            "rank": "1",
+                                            "previous": "",
+                                            "next": ""
+                                        },
+                                        {
+                                            "sKey": "A-2",
+                                            "author": "Frog",
+                                            "date": "848108d",
+                                            "comments": [],
+                                            "shares": [],
+                                            "body": "No, they’re on vacation dear. I think it’s something else outside. Beyond the pond, I mean.",
+                                            "parts": [],
+                                            "threejsSceneKey": "",
+                                            "rank": "1",
+                                            "previous": "",
+                                            "next": ""
+                                        },
+                                        {
+                                            "sKey": "A-3",
+                                            "author": "Frog 2",
+                                            "date": "848108d",
+                                            "comments": [],
+                                            "shares": [],
+                                            "body": "Well then, what are you waiting for? You poo-wit, go check it out, and tell us what’s going on already!",
+                                            "parts": [],
+                                            "threejsSceneKey": "",
+                                            "rank": "1",
+                                            "previous": "",
+                                            "next": ""
+                                        }
+                                    ],
+                                    "shares": [],
+                                    "body": "What is this low tremor in the ground? Why are the lilies sinking and the dragonflies departing so suddenly?",
+                                    "parts": [],
+                                    "threejsSceneKey": "f12-2",
+                                    "rank": "2", 
+                                    "previous": "",
+                                    "next": "R-A"
+                                },
+                                {
+                                    "sKey": "B",
+                                    "author": "Frog",
+                                    "date": "848110d",
+                                    "comments": [
+                                        {
+                                            "sKey": "B-1",
+                                            "author": "Frog 2",
+                                            "date": "848108d",
+                                            "comments": [],
+                                            "shares": [],
+                                            "body": "Oh that’s it? What’s the big deal? The rich bulls’ place is pretty far from here, ain’t it?",
+                                            "parts": [],
+                                            "threejsSceneKey": "",
+                                            "rank": "1",
+                                            "previous": "",
+                                            "next": ""
+                                        },
+                                        {
+                                            "sKey": "B-2",
+                                            "author": "Frog",
+                                            "date": "848108d",
+                                            "comments": [],
+                                            "shares": [],
+                                            "body": "No, that’s not the problem. Look, come with me and you’ll understand.",
+                                            "parts": [],
+                                            "threejsSceneKey": "",
+                                            "rank": "1",
+                                            "previous": "",
+                                            "next": ""
+                                        }
+                                    ],
+                                    "shares": [],
+                                    "body": "Well, that sure breaks the routine. Ribbit. I recognize these bulls. My gosh. They're the bulls that control half of the meadow. This is bad news.",
+                                    "parts": [],
+                                    "threejsSceneKey": "f12-3",
+                                    "rank": "3", 
+                                    "previous": "",
+                                    "next": "R-A"
+                                },
+                                {
+                                    "sKey": "C",
+                                    "author": "The Eye",
+                                    "date": "848110d",
+                                    "comments": [],
+                                    "shares": [],
+                                    "body": "PIC-f12-4/ALT: Bulls fighting each other as frogs stand on lilies on a pod nearby, watching.",
+                                    "parts": [],
+                                    "threejsSceneKey": "f12-4",
+                                    "rank": "4", 
+                                    "previous": "",
+                                    "next": "R-A"
+                                },
+                                {
+                                    "sKey": "D",
+                                    "author": "Frog",
+                                    "date": "848110d",
+                                    "comments": [],
+                                    "shares": [],
+                                    "body": "The bulls are fighting each other. That is bad news. From the tremors and noise, the lilies are being squished to the sides of the pond. The dragonflies are flying off, and the butterflies are quivering back to the woods. Our very lifestyle is being threatened.",
+                                    "parts": [],
+                                    "threejsSceneKey": "f12-4",
+                                    "rank": "5", 
+                                    "previous": "",
+                                    "next": "R-A"
+                                },
+                                {
+                                    "sKey": "E",
+                                    "author": "Frog",
+                                    "date": "848110d",
+                                    "comments": [
+                                        {
+                                            "sKey": "E-1",
+                                            "author": "Frog",
+                                            "date": "848108d",
+                                            "comments": [],
+                                            "shares": [],
+                                            "body": "Who cares if our homes are destroyed - when that bull comes down on us, we’ll be trampled to death!",
+                                            "parts": [],
+                                            "threejsSceneKey": "",
+                                            "rank": "1",
+                                            "previous": "",
+                                            "next": ""
+                                        }
+                                    ],
+                                    "shares": [],
+                                    "body": "Goodbye, my home.",
+                                    "parts": [],
+                                    "threejsSceneKey": "f12-4",
+                                    "rank": "6", 
+                                    "previous": "",
+                                    "next": "R-A"
+                                }
+                            ],
+                            "relations": [
+                                {
+                                    "name": "Narrator",
+                                    "posts": [
+                                        {
+                                            "sKey": "R-A",
+                                            "author": "Narrator",
+                                            "date": "848110d",
+                                            "comments": [],
+                                            "shares": [],
+                                            "body": "What is the balance of the world, if not imbalance? This is a tale that proves the following: When rich and powerful people fight one another, it is the poor that ultimately pay the price.",
+                                            "parts": [],
+                                            "threejsSceneKey": "f12-1",
+                                            "rank": "1",
+                                            "previous": "",
+                                            "next": "A"
+                                        },
+                                        {
+                                            "sKey": "R-B",
+                                            "author": "Narrator",
+                                            "date": "848110d",
+                                            "comments": [],
+                                            "shares": [],
+                                            "body": "And suddenly, the bull who was losing the fight turned around and charged off. Towards the pond.",
+                                            "parts": [],
+                                            "threejsSceneKey": "",
+                                            "rank": "6",
+                                            "previous": "A",
+                                            "next": "B"
+                                        },
+                                        {
+                                            "sKey": "R-C",
+                                            "author": "Narrator",
+                                            "date": "848110d",
+                                            "comments": [],
+                                            "shares": [],
+                                            "body": "And thus the bull who lost the fight destroyed all the lilies in the pond, and in a rush of panic, crushed the frogs’ homes as well as the frogs, who had attempted to leap away in vain.",
+                                            "parts": [],
+                                            "threejsSceneKey": "",
+                                            "rank": "7",
+                                            "previous": "A",
+                                            "next": "B"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "rank": "3",
                     "previous": "",
                     "next": ""
                 }
