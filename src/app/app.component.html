@@ -28,8 +28,8 @@
         <div *ngSwitchCase="'mainContent'" class="mainContent">
             <div *ngIf="!activeStoryProfile && !activeStoryCharacter">
                 <h1>Public Floors</h1><hr>
-                <h3 (click)="setActiveStoryProfile('f4')">The Onager, the Donkey, and the Driver</h3>
-                <h3 (click)="setActiveStoryProfile('f5')">The Onager, the Donkey, and the Lion</h3>
+                <h3 (click)="setActiveStoryProfile('f4')">F4 - The Onager, the Donkey, and the Driver</h3>
+                <h3 (click)="setActiveStoryProfile('f5')">F5 - The Onager, the Donkey, and the Lion</h3>
                 <h1>Secret Floors</h1><hr>
             </div>
             <div *ngFor="let character of activeStoryCharacters" class="story--user-links">
