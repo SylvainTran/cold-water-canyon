@@ -56,13 +56,16 @@
                     <li><h4 (click)="setActiveCharacter(character.name)">Read as {{character.name}}</h4></li>
                 </ul>
                 <hr>
-                <p>Click Here to Read the Original Translation Instead</p>
+                <p>Click Here to Read the Original Translation Instead (by Dr. Laura Gibbs)</p>
             </div>
             <app-wall [activeStoryProfile]="this.activeStoryProfile" [activeStoryCharacter]="this.activeStoryCharacter" id="app__wall"></app-wall>
         </div>
         <div *ngSwitchCase="'footerFirstCol'" class="footerFirstCol">
-            <hr><h6>About The Project:</h6>
+            <hr>
             <h5>Reinventing Storytelling and Digital Literature</h5>
+            <h6>Funded by Concordia University's Special Funding Grant (SPG) @Winter 2023</h6>
+            <h5>About The Project</h5>
+            <p>Fables are part of the world's cultural heritage timeless classics. In studying how to design experiences and tales concerned with morals based on Christian thought, I imagined that starting by translating (and analyzing) the old classics, I could find a link with my own work.</p>
         </div>
         <div *ngSwitchCase="'topRightCol'" class="topRightCol">
             <div (click)="this.resetScrollTopPosition()" *ngIf="activeStoryProfile" (click)="switchStory()" class="link-menu-icons">
