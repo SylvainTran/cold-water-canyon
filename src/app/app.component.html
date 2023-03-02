@@ -43,10 +43,10 @@
             <hr><h6>About The Cloud Cathedral</h6>
         </div>
         <div *ngSwitchCase="'topRightCol'" class="topRightCol">
-            <div *ngIf="activeStoryProfile" (click)="switchStory()" class="link-menu-icons">
+            <div (click)="this.resetScrollTopPosition()" *ngIf="activeStoryProfile" (click)="switchStory()" class="link-menu-icons">
                 <mat-icon>movie_creation</mat-icon>&nbsp;&nbsp;<h4>Change story</h4>
             </div><br>
-            <div *ngIf="activeStoryCharacter" (click)="switchUser()" class="link-menu-icons">
+            <div (click)="this.resetScrollTopPosition()" *ngIf="activeStoryCharacter" (click)="switchUser()" class="link-menu-icons">
                 <mat-icon>switch_video</mat-icon>&nbsp;&nbsp;<h4>Continue as another user</h4>
             </div>
         </div>
