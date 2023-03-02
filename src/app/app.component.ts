@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ElementRef, Output, ViewChild } from '@angular/core';
 import { PageControllerService } from './core/page-controller.service';
 import { StoryCharacter } from './core/content';
+import { animate, state, style, transition, trigger } from '@angular/animations';
 
 export interface Tile {
   color: string;
@@ -13,7 +14,27 @@ export interface Tile {
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.less']
+  styleUrls: ['./app.component.less'],
+  animations: [
+    trigger('moveRight', [
+      state('idle', style({
+        color: 'rgb(30,30,30)',
+        position: 'relative',
+        left: '0px',
+      })),
+      state('movedRight', style({
+        color: 'white',
+        position: 'relative',
+        left: '100px'
+      })),
+      transition('idle => movedRight', [
+        animate('1s')
+      ]),
+      transition('movedRight => idle', [
+        animate('0.5s')
+      ]),
+    ]),
+  ],
 })
 export class AppComponent implements AfterViewInit {
   title = 'angular-test';
@@ -38,6 +59,8 @@ export class AppComponent implements AfterViewInit {
   ];
   
   @ViewChild('mainContentContainer') mainContentContainerRef: ElementRef | undefined;
+
+  activeHoveredElement: string = "";
 
   constructor(public pageControllerService: PageControllerService) {}
   
@@ -74,5 +97,13 @@ export class AppComponent implements AfterViewInit {
     if (this.mainContentContainerRef) {
       this.mainContentContainerRef.nativeElement.scrollTop = 0;
     }
+  }
+
+  public setHover(element: string): void {
+    this.activeHoveredElement = element;
+  }
+
+  public unsetHover(): void {
+    this.activeHoveredElement = "";
   }
 }

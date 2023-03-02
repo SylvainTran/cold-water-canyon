@@ -28,11 +28,11 @@
         </div>
         <div *ngSwitchCase="'mainContent'" class="mainContent" #mainContentContainer [scrollTop]="0">
             <div *ngIf="!activeStoryProfile && !activeStoryCharacter">
-                <h1>Public Floors</h1><hr>
-                <h3 (click)="setActiveStoryProfile('f4')">F4 - The Onager, the Donkey, and the Driver</h3>
-                <h3 (click)="setActiveStoryProfile('f5')">F5 - The Onager, the Donkey, and the Lion</h3>
-                <h3 (click)="setActiveStoryProfile('f12')">F12 - The Frogs and the Battle of the Bulls</h3>
-                <h3 (click)="setActiveStoryProfile('f18')">F18 - The Fox, the Lion, and the Footprints</h3>
+                <h1>Public Floors (F1-10)</h1><hr>
+                <h3 (mouseenter)="setHover('f4')" (mouseout)="unsetHover()" [@moveRight]="activeHoveredElement === 'f4'? 'movedRight' : 'idle'" (click)="setActiveStoryProfile('f4')">F1 - The Onager, the Donkey, and the Driver</h3>
+                <h3 (mouseenter)="setHover('f5')" (mouseout)="unsetHover()" [@moveRight]="activeHoveredElement === 'f5'? 'movedRight' : 'idle'" (click)="setActiveStoryProfile('f5')">F2 - The Onager, the Donkey, and the Lion</h3>
+                <h3 (mouseenter)="setHover('f12')" (mouseout)="unsetHover()" [@moveRight]="activeHoveredElement === 'f12'? 'movedRight' : 'idle'" (click)="setActiveStoryProfile('f12')">F3 - The Frogs and the Battle of the Bulls</h3>
+                <h3 (mouseenter)="setHover('f18')" (mouseout)="unsetHover()" [@moveRight]="activeHoveredElement === 'f18'? 'movedRight' : 'idle'" (click)="setActiveStoryProfile('f18')">F4 - The Fox, the Lion, and the Footprints</h3>
                 <h1>Secret Floors</h1><hr>
             </div>
             <div *ngFor="let character of activeStoryCharacters" class="story--user-links">
