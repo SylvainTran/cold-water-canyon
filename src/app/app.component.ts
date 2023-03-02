@@ -16,6 +16,20 @@ export interface Tile {
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.less'],
   animations: [
+    trigger('toggleLiVisible', [
+      state('showLi', style({
+        listStyleType: 'circle'
+      })),
+      state('hideLi', style({
+        listStyleType: 'none'
+      })),
+      transition('idle => movedRight', [
+        animate('1s')
+      ]),
+      transition('movedRight => idle', [
+        animate('0.5s')
+      ])
+    ]),
     trigger('moveRight', [
       state('idle', style({
         color: 'rgb(30,30,30)',
@@ -61,6 +75,7 @@ export class AppComponent implements AfterViewInit {
   @ViewChild('mainContentContainer') mainContentContainerRef: ElementRef | undefined;
 
   activeHoveredElement: string = "";
+  isHoveringOverCharacter: boolean = false;
 
   constructor(public pageControllerService: PageControllerService) {}
   
@@ -105,5 +120,9 @@ export class AppComponent implements AfterViewInit {
 
   public unsetHover(): void {
     this.activeHoveredElement = "";
+  }
+
+  public setHoveringOverCharacter(state: boolean): void {
+    this.isHoveringOverCharacter = state;
   }
 }
