@@ -4,7 +4,8 @@
         [colspan]="tile.cols"
         [rowspan]="tile.rows"
         [style.background]="tile.color"
-        [ngClass]="{'links-menu': tile.id === 'titleAndLogo' || tile.id === 'firstCol' || tile.id === 'rightCol' || tile.id === 'topRightCol' || tile.id === 'searchBar' || tile.id === 'footerFirstCol', 'searchBar': tile.id === 'searchBar'}" [ngSwitch]="tile.id">
+        [ngClass]="{'links-menu': tile.id === 'titleAndLogo' || tile.id === 'firstCol' || tile.id === 'rightCol' || tile.id === 'topRightCol' || tile.id === 'searchBar' || tile.id === 'footerFirstCol', 'searchBar': tile.id === 'searchBar'}" [ngSwitch]="tile.id"
+        class="mat-grid-tile-custom">
         <div *ngSwitchCase="'titleAndLogo'" class="app__title">
             <div class="inblock-icon">
                 <mat-icon aria-hidden="false" aria-label="Logo" style="color: rgb(0, 238, 255);">shield_moon</mat-icon>&nbsp;&nbsp;
