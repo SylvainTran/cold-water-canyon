@@ -28,13 +28,13 @@ export class AppComponent implements AfterViewInit {
   activeStoryCharacters: StoryCharacter[] = [];
 
   tiles: Tile[] = [
-    {id: "titleAndLogo", text: '1', cols: 1, rows: 1, color: 'black'},
-    {id: "searchBar", text: '2', cols: 1, rows: 1, color: 'black'},
-    {id: "topRightCol", text: '3', cols: 1, rows: 1, color: 'black'},
-    {id: "firstCol", text: '4', cols: 1, rows: 2, color: 'black'},
-    {id: "mainContent", text: '5', cols: 1, rows: 4, color: 'black'},
-    {id: "rightCol", text: '6', cols: 1, rows: 5, color: 'black'},
-    {id: "footerFirstCol", text: '7', cols: 1, rows: 1, color: 'black'}
+    {id: "titleAndLogo", text: '1', cols: 1, rows: 1, color: 'rgb(18, 18, 18);'},
+    {id: "searchBar", text: '2', cols: 1, rows: 1, color: 'rgb(18, 18, 18);'},
+    {id: "topRightCol", text: '3', cols: 1, rows: 1, color: 'rgb(18, 18, 18);'},
+    {id: "firstCol", text: '4', cols: 1, rows: 2, color: 'rgb(18, 18, 18);'},
+    {id: "mainContent", text: '5', cols: 1, rows: 4, color: 'rgb(18, 18, 18);'},
+    {id: "rightCol", text: '6', cols: 1, rows: 5, color: 'rgb(18, 18, 18);'},
+    {id: "footerFirstCol", text: '7', cols: 1, rows: 1, color: 'rgb(18, 18, 18);'}
   ];
   
   @ViewChild('mainContentContainer') mainContentContainerRef: ElementRef | undefined;
