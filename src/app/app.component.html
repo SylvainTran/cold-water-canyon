@@ -62,7 +62,9 @@
                         [matRippleUnbounded]="true"
                         [matRippleColor]="'rgb(0,255,255,0.5)'"
                         [@moveRight]="isHoveringOverCharacter ? 'movedRight' : 'idle'"
-                        (click)="setActiveCharacter(character.name)">Read as {{character.name}}
+                        (click)="setActiveCharacter(character.name)"
+                        (click)="this.resetScrollTopPosition()">
+                            Read as {{character.name}}
                         </h4>
                     </li>
                 </ul>
@@ -88,7 +90,6 @@
                 [matRippleRadius]="100"
                 [matRippleUnbounded]="true"
                 [matRippleColor]="'rgb(0,255,255,0.5)'"
-                (click)="this.resetScrollTopPosition()" 
                 (click)="switchStory()" 
                 class="link-menu-icons">
                 <mat-icon>movie_creation</mat-icon>&nbsp;&nbsp;<h4>Read another fable</h4>
@@ -100,7 +101,6 @@
                 [matRippleRadius]="100"
                 [matRippleUnbounded]="true"
                 [matRippleColor]="'rgb(0,255,255,0.5)'"
-                (click)="this.resetScrollTopPosition()"
                 (click)="switchUser()" 
                 class="link-menu-icons">
                 <mat-icon>switch_video</mat-icon>&nbsp;&nbsp;<h4>Read as another character</h4>
