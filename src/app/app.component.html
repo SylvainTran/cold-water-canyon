@@ -25,7 +25,7 @@
             </div>
             <h5 class="link-menu__discover">Discover</h5>
         </div>
-        <div *ngSwitchCase="'mainContent'" class="mainContent">
+        <div *ngSwitchCase="'mainContent'" class="mainContent" #mainContentContainer [scrollTop]="0">
             <div *ngIf="!activeStoryProfile && !activeStoryCharacter">
                 <h1>Public Floors</h1><hr>
                 <h3 (click)="setActiveStoryProfile('f4')">F4 - The Onager, the Donkey, and the Driver</h3>
