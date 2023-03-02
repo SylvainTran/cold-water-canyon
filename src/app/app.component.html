@@ -6,18 +6,18 @@
         [style.background]="tile.color"
         [ngClass]="{'links-menu': tile.id === 'titleAndLogo' || tile.id === 'firstCol' || tile.id === 'rightCol' || tile.id === 'topRightCol' || tile.id === 'searchBar' || tile.id === 'footerFirstCol', 'searchBar': tile.id === 'searchBar'}" [ngSwitch]="tile.id"
         class="mat-grid-tile-custom">
-        <div *ngSwitchCase="'titleAndLogo'" class="app__title">
+        <div [ngClass]="{'suppressed': activeStoryProfile && activeStoryCharacter}" *ngSwitchCase="'titleAndLogo'" class="app__title">
             <div class="inblock-icon">
                 <mat-icon aria-hidden="false" aria-label="Logo" style="color: rgb(0, 238, 255);">shield_moon</mat-icon>&nbsp;&nbsp;
                 <h1>Morals & Plays: <span style="font-size: 1rem;">A Playful Tech Translation of Classics</span></h1>
             </div>
         </div>
-        <div *ngSwitchCase="'searchBar'" class="searchBar">
+        <div [ngClass]="{'suppressed': activeStoryProfile && activeStoryCharacter}" *ngSwitchCase="'searchBar'" class="searchBar">
             <h6 *ngIf="activeStoryProfile">Fable<mat-icon [ngStyle]="{ 'position': 'relative', 'top': '9px' }">arrow_right_alt</mat-icon>{{ activeStoryProfile }}</h6>
             <h6 *ngIf="activeStoryCharacter">Character<mat-icon [ngStyle]="{ 'position': 'relative', 'top': '9px' }">arrow_right_alt</mat-icon>{{ activeStoryCharacter }}</h6>
             <input type="text" placeholder="Search stories or users">
         </div>
-        <div *ngSwitchCase="'firstCol'" class="links-menu-height justify-content-flex-start">
+        <div [ngClass]="{'suppressed': activeStoryProfile && activeStoryCharacter}" *ngSwitchCase="'firstCol'" class="links-menu-height justify-content-flex-start">
             <div class="link-menu-icons">
                 <mat-icon aria-hidden="false" aria-label="Example help icon" fontIcon="help"></mat-icon>&nbsp;&nbsp;<h4>Classics 101</h4>
             </div>
@@ -60,7 +60,7 @@
             </div>
             <app-wall [activeStoryProfile]="this.activeStoryProfile" [activeStoryCharacter]="this.activeStoryCharacter" id="app__wall"></app-wall>
         </div>
-        <div *ngSwitchCase="'footerFirstCol'" class="footerFirstCol">
+        <div [ngClass]="{'suppressed': activeStoryProfile && activeStoryCharacter}" *ngSwitchCase="'footerFirstCol'" class="footerFirstCol">
             <hr>
             <h5>Reinventing Storytelling and Digital Literature</h5>
             <h6>Funded by Concordia University's Special Funding Grant (SPG) @Winter 2023</h6>
