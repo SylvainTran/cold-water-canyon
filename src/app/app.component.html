@@ -19,12 +19,12 @@
         </div>
         <div [ngClass]="{'suppressed': activeStoryProfile && activeStoryCharacter}" *ngSwitchCase="'firstCol'" class="links-menu-height justify-content-flex-start">
             <div class="link-menu-icons">
-                <mat-icon aria-hidden="false" aria-label="Example help icon" fontIcon="help"></mat-icon>&nbsp;&nbsp;<h4>Classics 101</h4>
+                <mat-icon aria-hidden="false" aria-label="Example help icon" fontIcon="help"></mat-icon>&nbsp;&nbsp;<h4 [ngClass]="{'greyed-out': true}">Classics 101 (in-construction)</h4>
             </div>
             <div class="link-menu-icons">
                 <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="library_books"></mat-icon>&nbsp;&nbsp;<h4>All Translations</h4>
             </div>
-            <h5 class="link-menu__discover">Discover</h5>
+            <h5 class="link-menu__discover">Discover - In Construction</h5>
         </div>
         <div *ngSwitchCase="'mainContent'" class="mainContent" #mainContentContainer [scrollTop]="0">
             <div *ngIf="!activeStoryProfile && !activeStoryCharacter">
@@ -34,13 +34,13 @@
                 <h3 (mouseenter)="setHover('f5')" (mouseout)="unsetHover()" [@moveRight]="activeHoveredElement === 'f5'? 'movedRight' : 'idle'" (click)="setActiveStoryProfile('f5')">F5 - The Onager, the Donkey, and the Lion</h3>
                 <h3 (mouseenter)="setHover('f12')" (mouseout)="unsetHover()" [@moveRight]="activeHoveredElement === 'f12'? 'movedRight' : 'idle'" (click)="setActiveStoryProfile('f12')">F12 - The Frogs and the Battle of the Bulls</h3>
                 <h3 (mouseenter)="setHover('f18')" (mouseout)="unsetHover()" [@moveRight]="activeHoveredElement === 'f18'? 'movedRight' : 'idle'" (click)="setActiveStoryProfile('f18')">F18 - The Fox, the Lion, and the Footprints</h3>
-                <h3 (mouseenter)="setHover('f19')" (mouseout)="unsetHover()" [@moveRight]="activeHoveredElement === 'f19'? 'movedRight' : 'idle'" (click)="setActiveStoryProfile('f19')">FX - Coming Soon</h3>
+                <h3 (mouseenter)="setHover('f19')" (mouseout)="unsetHover()" [@moveRight]="activeHoveredElement === 'f19'? 'movedRight' : 'idle'" (click)="setActiveStoryProfile('f19')">FX - In Construction</h3>
                 <hr>
                 <h2>Game X AI Format</h2>
-                <h3 (mouseenter)="setHover('f20')" (mouseout)="unsetHover()" [@moveRight]="activeHoveredElement === 'f20'? 'movedRight' : 'idle'" (click)="setActiveStoryProfile('f20')">FX - Choose your Own Adventure - Coming Soon</h3>
+                <h3 (mouseenter)="setHover('f20')" (mouseout)="unsetHover()" [@moveRight]="activeHoveredElement === 'f20'? 'movedRight' : 'idle'" (click)="setActiveStoryProfile('f20')">FX - Choose your Own Adventure - In Construction</h3>
                 <hr>
                 <h2>Poetics X Virtual 3d World Format</h2>
-                <h3 (mouseenter)="setHover('f21')" (mouseout)="unsetHover()" [@moveRight]="activeHoveredElement === 'f21'? 'movedRight' : 'idle'" (click)="setActiveStoryProfile('f21')">FX - Exploration/Simulation</h3>
+                <h3 (mouseenter)="setHover('f21')" (mouseout)="unsetHover()" [@moveRight]="activeHoveredElement === 'f21'? 'movedRight' : 'idle'" (click)="setActiveStoryProfile('f21')">FX - Exploration/Simulation - In Construction</h3>
             </div>
             <div *ngIf="activeStoryCharacters.length > 0">
                 <h1>The Stage</h1>
@@ -53,7 +53,16 @@
             </div>
             <div *ngFor="let character of activeStoryCharacters" class="story--user-links">
                 <ul>
-                    <li><h4 (click)="setActiveCharacter(character.name)">Read as {{character.name}}</h4></li>
+                    <li>
+                        <h4
+                        matRipple
+                        [matRippleCentered]="false"
+                        [matRippleRadius]="100"
+                        [matRippleUnbounded]="true"
+                        [matRippleColor]="'rgb(0,255,255,0.5)'"
+                        (click)="setActiveCharacter(character.name)">Read as {{character.name}}
+                        </h4>
+                    </li>
                 </ul>
                 <hr>
                 <p>Click Here to Read the Original Translation by Dr. Laura Gibbs (In Construction)</p>
@@ -70,10 +79,28 @@
             <p>Sylvain Tran is a poet, writer and narrative designer. He also continues to study and work as a Full Stack Software Developer to pay the bills. His career goals include becoming the greatest Creative Director the gaming world has ever seen. You can find and contact Sylvain Tran's website at this link: (Link)</p>
         </div>
         <div *ngSwitchCase="'topRightCol'" class="topRightCol">
-            <div (click)="this.resetScrollTopPosition()" *ngIf="activeStoryProfile" (click)="switchStory()" class="link-menu-icons">
+            <div
+                *ngIf="activeStoryProfile" 
+                matRipple
+                [matRippleCentered]="false"
+                [matRippleRadius]="100"
+                [matRippleUnbounded]="true"
+                [matRippleColor]="'rgb(0,255,255,0.5)'"
+                (click)="this.resetScrollTopPosition()" 
+                (click)="switchStory()" 
+                class="link-menu-icons">
                 <mat-icon>movie_creation</mat-icon>&nbsp;&nbsp;<h4>Read another fable</h4>
             </div><br>
-            <div (click)="this.resetScrollTopPosition()" *ngIf="activeStoryCharacter" (click)="switchUser()" class="link-menu-icons">
+            <div 
+                *ngIf="activeStoryCharacter"
+                matRipple
+                [matRippleCentered]="false"
+                [matRippleRadius]="100"
+                [matRippleUnbounded]="true"
+                [matRippleColor]="'rgb(0,255,255,0.5)'"
+                (click)="this.resetScrollTopPosition()"
+                (click)="switchUser()" 
+                class="link-menu-icons">
                 <mat-icon>switch_video</mat-icon>&nbsp;&nbsp;<h4>Read as another character</h4>
             </div>
         </div>
