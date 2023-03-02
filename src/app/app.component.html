@@ -37,6 +37,8 @@
             </div>
             <div *ngFor="let character of activeStoryCharacters" class="story--user-links">
                 <h1 (click)="setActiveCharacter(character.name)">Continue as {{character.name}}</h1>
+                <hr>
+                <h3>Read Original Translation</h3>
             </div>
             <app-wall [activeStoryProfile]="this.activeStoryProfile" [activeStoryCharacter]="this.activeStoryCharacter" id="app__wall"></app-wall>
         </div>
