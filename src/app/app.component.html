@@ -21,7 +21,7 @@
             <div class="link-menu-icons">
                 <mat-icon aria-hidden="false" aria-label="Example help icon" fontIcon="help"></mat-icon>&nbsp;&nbsp;<h4 [ngClass]="{'greyed-out': true}">Classics 101 (in-construction)</h4>
             </div>
-            <div class="link-menu-icons">
+            <div (click)="switchStory()" class="link-menu-icons">
                 <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="library_books"></mat-icon>&nbsp;&nbsp;<h4>All Translations</h4>
             </div>
             <h5 class="link-menu__discover">Discover - In Construction</h5>

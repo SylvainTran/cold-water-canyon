@@ -100,12 +100,14 @@ export class AppComponent implements AfterViewInit {
   public switchUser(): void {
     this.activeStoryCharacter = "";
     this.activeStoryCharacters = this.getActiveStoryCharacters();
+    this.setHoveringOverCharacter(false);
   }
 
   public switchStory(): void {
     this.activeStoryProfile = "";
     this.activeStoryCharacter = "";
     this.activeStoryCharacters = [];
+    this.setHoveringOverCharacter(false);
   }
   
   public resetScrollTopPosition(): void {
