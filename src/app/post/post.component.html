@@ -2,7 +2,12 @@
     <div class="post__author">{{ post.author }}</div>
     <div class="post__date">{{ post.date }}</div>
     <div class="post__body">
-        {{ post.body }}        
+        <div *ngIf="!imageMediaSrc else imageMedia">
+            {{ post.body }}
+        </div>
+        <ng-template #imageMedia>
+            <img src="../../assets/images/{{imageMediaSrc + '.png'}}" alt="{{imageMediaSrc}}"/>
+        </ng-template>
     </div>
     <div class="post__comments__container">
         <div class="post__links__container">
@@ -23,7 +28,7 @@
             </div>
         </div>
     </div>
-    <div *ngIf="post.threejsSceneKey" class="threejsScene--container">
+    <div *ngIf="!imageMediaSrc && post.threejsSceneKey" class="threejsScene--container">
         <div class="threejsScene--frame"></div>
         <canvas [id]="post.threejsSceneKey" class="threejsScene--canvas"></canvas>
     </div>

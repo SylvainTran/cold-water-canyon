@@ -5,6 +5,10 @@
 @post-margin-bottom: 10rem;
 @post-font-size: 3rem;
 @post-line-height: 1rem;
+@post-image-media-width: 400px;
+@post-image-media-height: 400px;
+@post-margin-top: 1.5rem;
+@post-margin-bottom: 1.5rem;
 
 #post__container {
     font-family: @primary-font;
@@ -20,7 +24,13 @@
     }
 
     .post__body {
-       line-height: @post-line-height; 
+       line-height: @post-line-height;
+       margin-top: @post-margin-top;
+       margin-bottom: @post-margin-bottom;
+       img {
+           width: @post-image-media-width;
+           height: @post-image-media-height;
+       }
     }
 
     .post__date {

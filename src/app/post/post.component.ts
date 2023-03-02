@@ -16,6 +16,8 @@ export class PostComponent implements OnInit, OnChanges, AfterViewInit {
 
   areCommentsDisplayed: boolean = false;
 
+  imageMediaSrc: string = "";
+
   public parseThreejs() {
     console.log("Parsing threejs...");
 
@@ -61,11 +63,23 @@ export class PostComponent implements OnInit, OnChanges, AfterViewInit {
     }
   }
 
+  //"PIC-f12-4"
+  parseImageMediaFromPostBody() {
+    let body = this.post?.body;
+    if (body?.includes('PIC')) {
+      let parts = body.split("-");
+      this.imageMediaSrc = parts[1] + "-" + parts[2];
+    }
+  }
+
   ngOnInit(): void {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
     console.log(changes);
+    if (changes['post']) {
+      this.parseImageMediaFromPostBody();
+    }
   }
 
   ngAfterViewInit(): void {

@@ -137,7 +137,7 @@ export class PartDispatcherService {
       //list.insertAtPreviousSKey(post.sKey, post.previous, post.next);
     });
     console.log("List size test: " + list.size());
-}
+  }
 
   public arrangePosts(storyKey: string, activeCharacterProfile: string): Content[] {
     let allPosts: Content[] = [...this.getPosts(storyKey, activeCharacterProfile), ...this.getRelationPostsContent(storyKey, activeCharacterProfile)];    
