@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { PartDispatcherService } from './part-dispatcher.service';
 
 @Injectable({
@@ -6,7 +6,8 @@ import { PartDispatcherService } from './part-dispatcher.service';
 })
 export class PageControllerService {
 
-  constructor(public partDispatcherService: PartDispatcherService) {
-    
-  }
+  // Intro done event
+  onIntroScreenOver: EventEmitter<any> = new EventEmitter();
+
+  constructor(public partDispatcherService: PartDispatcherService) {}
 }

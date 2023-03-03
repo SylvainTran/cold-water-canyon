@@ -71,7 +71,15 @@
                 <hr>
                 <p class="greyed-out">Click Here to Read the Original Translation by Dr. Laura Gibbs Instead (In Construction)</p>
             </div>
-            <app-wall [activeStoryProfile]="this.activeStoryProfile" [activeStoryCharacter]="this.activeStoryCharacter" id="app__wall"></app-wall>
+            <!--Fade Intro Screen-->
+            <div *ngIf="activeStoryCharacter && playIntroFadeAnimationSwitch" class="intro-fade-screen">
+                <h1 [@fadeIntroScene]="playIntroFadeAnimationSwitch ? 'fadedIn' : 'fadedOut'"
+                    (@fadeIntroScene.start)="onIntroAnimationStarted($event)"
+                    (@fadeIntroScene.done)="onIntroAnimationDone($event)">
+                    {{this.getActiveStoryName()}}
+                </h1>
+            </div>
+            <app-wall [playedIntroFadeAnimation]="playedIntroFadeAnimation" [activeStoryProfile]="this.activeStoryProfile" [activeStoryCharacter]="this.activeStoryCharacter" id="app__wall"></app-wall>
         </div>
         <div [ngClass]="{'suppressed': activeStoryProfile && activeStoryCharacter}" *ngSwitchCase="'footerFirstCol'" class="footerFirstCol">
             <hr>

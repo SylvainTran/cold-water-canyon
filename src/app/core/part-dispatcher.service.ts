@@ -20,6 +20,16 @@ export class PartDispatcherService {
     return storyData.properties.content.stories;
   }
 
+  public getActiveStoryName(sKey: string): string {
+    let storyName = "";
+    this.getStories().forEach(story => {
+      if (story.sKey === sKey) {
+        storyName = story.name;
+      }
+    });
+    return storyName;
+  }
+
   public getCharacters(storyKey: String): StoryCharacter[] {
     let characters: StoryCharacter[] = [];
     this.getStories().forEach(story => {

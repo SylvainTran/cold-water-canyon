@@ -19,19 +19,26 @@ export class WallComponent implements OnChanges {
   @Output()
   posts: Post[] = [];
 
+  @Input()
+  playedIntroFadeAnimation: boolean = false;
+
   constructor(private pageControllerService: PageControllerService) {}
   
   ngOnChanges(changes: SimpleChanges): void {    
     // this.posts = this.pageControllerService.partDispatcherService.getPosts(this.activeStoryProfile, this.activeStoryCharacter);
 
-    if (changes['activeStoryCharacter']) {
-      this.posts = this.pageControllerService.partDispatcherService.arrangePosts(this.activeStoryProfile, this.activeStoryCharacter);
+    if (changes['playedIntroFadeAnimation']) {
+      this.setPosts();
     }
-
+    
     // Update the posts' order in the sequence using the ranks (who owns it)
     
     // Re-read the story sequence in order to determine the final order
 
     // Insert the random posts anywhere in that sequence
+  }
+
+  public setPosts(): void {
+    this.posts = this.pageControllerService.partDispatcherService.arrangePosts(this.activeStoryProfile, this.activeStoryCharacter);
   }
 }

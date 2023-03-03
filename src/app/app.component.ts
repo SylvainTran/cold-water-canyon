@@ -1,7 +1,8 @@
-import { AfterViewInit, Component, ElementRef, Output, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnChanges, Output, SimpleChanges, ViewChild } from '@angular/core';
 import { PageControllerService } from './core/page-controller.service';
 import { StoryCharacter } from './core/content';
 import { animate, state, style, transition, trigger } from '@angular/animations';
+import { EventEmitter } from 'stream';
 
 export interface Tile {
   color: string;
@@ -16,19 +17,29 @@ export interface Tile {
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.less'],
   animations: [
+    trigger('fadeIntroScene', [
+      state('fadedOut', style({
+        color: 'rgb(18,18,18)',
+        backgroundColor: 'rgb(18,18,18)'
+      })),
+      state('fadedIn', style({
+        color: 'white',
+        backgroundColor: 'black'
+      })),
+      transition('fadedOut => fadedIn', [
+        animate('1s')
+      ]),
+      transition('fadedIn => fadedOut', [
+        animate('0.5s')
+      ]),
+    ]),
     trigger('toggleLiVisible', [
       state('showLi', style({
         listStyleType: 'circle'
       })),
       state('hideLi', style({
         listStyleType: 'none'
-      })),
-      transition('idle => movedRight', [
-        animate('1s')
-      ]),
-      transition('movedRight => idle', [
-        animate('0.5s')
-      ])
+      }))
     ]),
     trigger('moveRight', [
       state('idle', style({
@@ -76,6 +87,10 @@ export class AppComponent implements AfterViewInit {
 
   activeHoveredElement: string = "";
   isHoveringOverCharacter: boolean = false;
+  playIntroFadeAnimationSwitch: boolean = true;
+
+  @Output()
+  playedIntroFadeAnimation: boolean = false;
 
   constructor(public pageControllerService: PageControllerService) {}
   
@@ -91,10 +106,16 @@ export class AppComponent implements AfterViewInit {
   public setActiveCharacter(character: string): void {
     this.activeStoryCharacter = character;
     this.activeStoryCharacters = [];
+    // Anims
+    this.playIntroFadeAnimationSwitch = true;
   }
 
   public getActiveStoryCharacters(): StoryCharacter[] {
     return this.pageControllerService.partDispatcherService.getCharacters(this.activeStoryProfile);
+  }
+
+  public getActiveStoryName(): string {
+    return this.pageControllerService.partDispatcherService.getActiveStoryName(this.activeStoryProfile);
   }
 
   public switchUser(): void {
@@ -107,6 +128,7 @@ export class AppComponent implements AfterViewInit {
     this.activeStoryProfile = "";
     this.activeStoryCharacter = "";
     this.activeStoryCharacters = [];
+    this.playedIntroFadeAnimation = false;
     this.setHoveringOverCharacter(false);
   }
   
@@ -126,5 +148,14 @@ export class AppComponent implements AfterViewInit {
 
   public setHoveringOverCharacter(state: boolean): void {
     this.isHoveringOverCharacter = state;
+  }
+
+  public onIntroAnimationStarted(event: any): void {
+  }
+
+  public onIntroAnimationDone(event: any): void {
+    this.playIntroFadeAnimationSwitch = false;
+    this.playedIntroFadeAnimation = true;
+    this.pageControllerService.onIntroScreenOver.emit();
   }
 }
