@@ -68,13 +68,14 @@ export class AppComponent implements AfterViewInit {
   
   @ViewChild('mainContentContainer') mainContentContainerRef: ElementRef | undefined;
 
+  // Element on which the cursor is above
   activeHoveredElement: string = "";
+  // Is a character's selector being hovered over?
   isHoveringOverCharacter: boolean = false;
-
+  // Should it show the intro (to a fable in sm format) fade animation?
   showIntroFadeAnimation: boolean = false;
-
-  @Output()
-  playedIntroFadeAnimation: boolean = false;
+  // Has the user's current sequence played the intro animation yet?
+  @Output() playedIntroFadeAnimation: boolean = false;
 
   constructor(public pageControllerService: PageControllerService) {}
   
@@ -103,6 +104,9 @@ export class AppComponent implements AfterViewInit {
     return this.pageControllerService.partDispatcherService.getActiveStoryName(this.activeStoryProfile);
   }
 
+  /**
+   *  Switches the active character (from a fable/tale)
+   */
   public switchUser(): void {
     this.activeStoryCharacter = "";
     this.activeStoryCharacters = this.getActiveStoryCharacters();
@@ -110,6 +114,9 @@ export class AppComponent implements AfterViewInit {
     this.setHoveringOverCharacter(false);
   }
 
+  /**
+   *  Switches the story (resets all the fable reading related variables)
+   */
   public switchStory(): void {
     this.activeStoryProfile = "";
     this.activeStoryCharacter = "";
@@ -118,6 +125,9 @@ export class AppComponent implements AfterViewInit {
     this.setHoveringOverCharacter(false);
   }
   
+  /**
+   *  Resets the scroll top's position on the mainContentContainer
+   */
   public resetScrollTopPosition(): void {
     if (this.mainContentContainerRef) {
       this.mainContentContainerRef.nativeElement.scrollTop = 0;
@@ -136,6 +146,9 @@ export class AppComponent implements AfterViewInit {
     this.isHoveringOverCharacter = state;
   }
 
+  /**
+   * Called when the intro animation has started
+   */
   public onIntroAnimationStarted(): void {
     this.showIntroFadeAnimation = true;
     setTimeout(() => {
@@ -143,6 +156,9 @@ export class AppComponent implements AfterViewInit {
     }, 5000);
   }
 
+  /**
+   * Called when the intro animation is done
+   */
   public onIntroAnimationDone(): void {
     this.showIntroFadeAnimation = false;
     this.playedIntroFadeAnimation = true;
