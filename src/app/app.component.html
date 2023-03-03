@@ -49,7 +49,7 @@
                 <h1>How to Read</h1>
                 <p>Pick a character below. Read from the top to the bottom by scrolling down. You can read another fable or experience the same story through another character's perspective by clicking the buttons at the top right of the screen.</p>
                 <br>
-                <h1>Characters</h1>
+                <h1>Characters (3d models in construction)</h1>
             </div>
             <div *ngFor="let character of activeStoryCharacters" class="story--user-links">
                 <ul>
@@ -91,8 +91,8 @@
                 [matRippleUnbounded]="true"
                 [matRippleColor]="'rgb(0,255,255,0.5)'"
                 (click)="switchStory()" 
-                class="link-menu-icons">
-                <mat-icon>movie_creation</mat-icon>&nbsp;&nbsp;<h4>Read another fable</h4>
+                class="greyed-out link-menu-icons">
+                <mat-icon>movie_creation</mat-icon>&nbsp;&nbsp;<h4 class="is-inline-block">Read another fable</h4>
             </div><br>
             <div 
                 *ngIf="activeStoryCharacter"
@@ -102,8 +102,8 @@
                 [matRippleUnbounded]="true"
                 [matRippleColor]="'rgb(0,255,255,0.5)'"
                 (click)="switchUser()" 
-                class="link-menu-icons">
-                <mat-icon>switch_video</mat-icon>&nbsp;&nbsp;<h4>Read as another character</h4>
+                class="greyed-out link-menu-icons">
+                <mat-icon>switch_video</mat-icon>&nbsp;&nbsp;<h4 class="is-inline-block">Read as another character</h4>
             </div>
         </div>
     </mat-grid-tile>
