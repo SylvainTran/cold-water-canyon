@@ -1,8 +1,7 @@
-import { AfterViewInit, Component, ElementRef, OnChanges, Output, SimpleChanges, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Output, ViewChild } from '@angular/core';
 import { PageControllerService } from './core/page-controller.service';
 import { StoryCharacter } from './core/content';
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { EventEmitter } from 'stream';
 
 export interface Tile {
   color: string;
