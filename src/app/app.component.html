@@ -72,10 +72,8 @@
                 <p class="greyed-out">Click Here to Read the Original Translation by Dr. Laura Gibbs Instead (In Construction)</p>
             </div>
             <!--Fade Intro Screen-->
-            <div *ngIf="activeStoryCharacter && playIntroFadeAnimationSwitch" class="intro-fade-screen">
-                <h1 [@fadeIntroScene]="playIntroFadeAnimationSwitch ? 'fadedIn' : 'fadedOut'"
-                    (@fadeIntroScene.start)="onIntroAnimationStarted($event)"
-                    (@fadeIntroScene.done)="onIntroAnimationDone($event)">
+            <div *ngIf="activeStoryCharacter && showIntroFadeAnimation" [ngClass]="{'fadeInToIntroScreen': !playedIntroFadeAnimation}" class="intro-fade-screen">
+                <h1>
                     {{this.getActiveStoryName()}}
                 </h1>
             </div>
@@ -90,28 +88,30 @@
             <h5>About The Author</h5>
             <p>Sylvain Tran is a poet, writer and narrative designer. He also continues to study and work as a software developer to pay the bills. His career goals include becoming the greatest Creative Director the gaming world has ever seen. You can find and contact Sylvain Tran's website at this link: (Link)</p>
         </div>
-        <div *ngSwitchCase="'topRightCol'" class="topRightCol">
-            <div
-                *ngIf="activeStoryProfile" 
-                matRipple
-                [matRippleCentered]="false"
-                [matRippleRadius]="100"
-                [matRippleUnbounded]="true"
-                [matRippleColor]="'rgb(0,255,255,0.5)'"
-                (click)="switchStory()" 
-                class="greyed-out link-menu-icons">
-                <mat-icon>movie_creation</mat-icon>&nbsp;&nbsp;<h4 class="is-inline-block">Read another fable</h4>
-            </div><br>
-            <div 
-                *ngIf="activeStoryCharacter"
-                matRipple
-                [matRippleCentered]="false"
-                [matRippleRadius]="100"
-                [matRippleUnbounded]="true"
-                [matRippleColor]="'rgb(0,255,255,0.5)'"
-                (click)="switchUser()" 
-                class="greyed-out link-menu-icons">
-                <mat-icon>switch_video</mat-icon>&nbsp;&nbsp;<h4 class="is-inline-block">Read as another character</h4>
+        <div *ngIf="!showIntroFadeAnimation">
+            <div *ngSwitchCase="'topRightCol'" class="topRightCol">
+                <div
+                    *ngIf="activeStoryProfile"
+                    matRipple
+                    [matRippleCentered]="false"
+                    [matRippleRadius]="100"
+                    [matRippleUnbounded]="true"
+                    [matRippleColor]="'rgb(0,255,255,0.5)'"
+                    (click)="switchStory()"
+                    class="greyed-out link-menu-icons">
+                    <mat-icon>movie_creation</mat-icon>&nbsp;&nbsp;<h4 class="is-inline-block">Read another fable</h4>
+                </div><br>
+                <div
+                    *ngIf="activeStoryCharacter"
+                    matRipple
+                    [matRippleCentered]="false"
+                    [matRippleRadius]="100"
+                    [matRippleUnbounded]="true"
+                    [matRippleColor]="'rgb(0,255,255,0.5)'"
+                    (click)="switchUser()"
+                    class="greyed-out link-menu-icons">
+                    <mat-icon>switch_video</mat-icon>&nbsp;&nbsp;<h4 class="is-inline-block">Read as another character</h4>
+                </div>
             </div>
         </div>
     </mat-grid-tile>

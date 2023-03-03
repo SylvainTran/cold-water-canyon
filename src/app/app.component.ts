@@ -17,22 +17,6 @@ export interface Tile {
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.less'],
   animations: [
-    trigger('fadeIntroScene', [
-      state('fadedOut', style({
-        color: 'rgb(18,18,18)',
-        backgroundColor: 'rgb(18,18,18)'
-      })),
-      state('fadedIn', style({
-        color: 'white',
-        backgroundColor: 'black'
-      })),
-      transition('fadedOut => fadedIn', [
-        animate('1s')
-      ]),
-      transition('fadedIn => fadedOut', [
-        animate('0.5s')
-      ]),
-    ]),
     trigger('toggleLiVisible', [
       state('showLi', style({
         listStyleType: 'circle'
@@ -87,7 +71,8 @@ export class AppComponent implements AfterViewInit {
 
   activeHoveredElement: string = "";
   isHoveringOverCharacter: boolean = false;
-  playIntroFadeAnimationSwitch: boolean = true;
+
+  showIntroFadeAnimation: boolean = false;
 
   @Output()
   playedIntroFadeAnimation: boolean = false;
@@ -106,8 +91,9 @@ export class AppComponent implements AfterViewInit {
   public setActiveCharacter(character: string): void {
     this.activeStoryCharacter = character;
     this.activeStoryCharacters = [];
+
     // Anims
-    this.playIntroFadeAnimationSwitch = true;
+    this.onIntroAnimationStarted();
   }
 
   public getActiveStoryCharacters(): StoryCharacter[] {
@@ -121,6 +107,7 @@ export class AppComponent implements AfterViewInit {
   public switchUser(): void {
     this.activeStoryCharacter = "";
     this.activeStoryCharacters = this.getActiveStoryCharacters();
+    this.playedIntroFadeAnimation = false;
     this.setHoveringOverCharacter(false);
   }
 
@@ -150,11 +137,15 @@ export class AppComponent implements AfterViewInit {
     this.isHoveringOverCharacter = state;
   }
 
-  public onIntroAnimationStarted(event: any): void {
+  public onIntroAnimationStarted(): void {
+    this.showIntroFadeAnimation = true;
+    setTimeout(() => {
+      this.onIntroAnimationDone();
+    }, 5000);
   }
 
-  public onIntroAnimationDone(event: any): void {
-    this.playIntroFadeAnimationSwitch = false;
+  public onIntroAnimationDone(): void {
+    this.showIntroFadeAnimation = false;
     this.playedIntroFadeAnimation = true;
     this.pageControllerService.onIntroScreenOver.emit();
   }
