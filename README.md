@@ -1,7 +1,5 @@
-# Cloud Cathedral 77
+# Morals & Plays
 
-This is a project in which the format of the medium acts as the message. It's a mythopoeia. The creation of a myth in social media format.
+The web app has transformed into a study and translations of classics (Aesop's Fables as a first example) into modern language and social media interfaces.
 
-Interact with villagers on Myth Media and watch as the story unfolds.
-
-The experience is about lurking on Myth Media and interacting with a narrative simulation set in a fictive social media context.
+The project has expanded into including other kinds of translations as well, most of which have some relationship with AI generation (the co-authorship problem between writer X AI). AI is also used as a tool to generate content (multi-modal media - pictures and voice landscapes).
