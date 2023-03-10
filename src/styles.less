@@ -76,7 +76,17 @@
 */
 body {
     // .ivy-bg()
+    scrollbar-color: black rgb(18,18,18);
 }
 
 html, body { height: 100%; }
 body { margin: 0; }
+
+body::-webkit-scrollbar-track {
+    background: rgb(18,18,18);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: black;
+}
+  
