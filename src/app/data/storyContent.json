@@ -97,7 +97,7 @@
                                     "shares": [],
                                     "body": "Man it’s hot out here. I wish I could find something nice to eat today… I haven’t eaten anything but grass for days. Oh, hey, it’s Donkey.",
                                     "parts": [],
-                                    "threejsSceneKey": "f4-A",
+                                    "threejsSceneKey": "",
                                     "rank": "2", 
                                     "previous": "",
                                     "next": "R-A"
@@ -110,7 +110,7 @@
                                     "shares": [],
                                     "body": "The sun is hot and I’m walking alone in the plains. I wonder what Donkey’s doing?",
                                     "parts": [],
-                                    "threejsSceneKey": "f4-B",
+                                    "threejsSceneKey": "",
                                     "rank": "4",
                                     "previous": "A",
                                     "next": ""
@@ -163,7 +163,7 @@
                                     "shares": [],
                                     "body": "I’m going to take back what I said, Donkey. I don’t care about how good your diet is, if you have to go through that slavery. That’s too high a price--even for a donkey.",
                                     "parts": [],
-                                    "threejsSceneKey": "f4-C",
+                                    "threejsSceneKey": "",
                                     "rank": "6",
                                     "previous": "A",
                                     "next": ""
@@ -240,7 +240,7 @@
                                     "shares": [],
                                     "body": "I think that, well, I'm on the bright side of things.",
                                     "parts": [],
-                                    "threejsSceneKey": "f4-1",
+                                    "threejsSceneKey": "",
                                     "rank": "2", 
                                     "previous": "",
                                     "next": "R-A"
@@ -253,7 +253,7 @@
                                     "shares": [],
                                     "body": "My life for a bargain? I don't think so. I have everything I want.",
                                     "parts": [],
-                                    "threejsSceneKey": "f4-2",
+                                    "threejsSceneKey": "",
                                     "rank": "4",
                                     "previous": "A",
                                     "next": ""
@@ -319,7 +319,7 @@
                                     "shares": [],
                                     "body": "What foolishness are you playing? See how I am well-fed by my master.",
                                     "parts": [],
-                                    "threejsSceneKey": "f4-c4",
+                                    "threejsSceneKey": "",
                                     "rank": "6",
                                     "previous": "A",
                                     "next": ""
@@ -405,7 +405,7 @@
                                     "shares": [],
                                     "body": "Wow, that looks like slavery to me. I guess I’m lucky after all, compared to him. That’s right, I have grass near the hillsides, while you need someone to feed you while being mistreated like that.",
                                     "parts": [],
-                                    "threejsSceneKey": "f5-1",
+                                    "threejsSceneKey": "",
                                     "rank": "2", 
                                     "previous": "",
                                     "next": "R-A"
@@ -624,7 +624,7 @@
                                     "shares": [],
                                     "body": "Well, that sure breaks the routine. Ribbit. I recognize these bulls. My gosh. They're the bulls that control half of the meadow. This is bad news.",
                                     "parts": [],
-                                    "threejsSceneKey": "f12-B",
+                                    "threejsSceneKey": "",
                                     "rank": "3", 
                                     "previous": "",
                                     "next": "R-A"
@@ -750,7 +750,7 @@
                                     "shares": [],
                                     "body": "Why are all the animals going in that cave? I wonder if there’s anything important going on.",
                                     "parts": [],
-                                    "threejsSceneKey": "f12-A",
+                                    "threejsSceneKey": "",
                                     "rank": "3", 
                                     "previous": "",
                                     "next": "R-A"
@@ -768,7 +768,7 @@
                                             "shares": [],
                                             "body": "The lion has grown sick. We’re trying to smooze up to him while we can.",
                                             "parts": [],
-                                            "threejsSceneKey": "f18-4",
+                                            "threejsSceneKey": "",
                                             "rank": "4", 
                                             "previous": "",
                                             "next": "R-A"
@@ -781,7 +781,7 @@
                                             "shares": [],
                                             "body": "You mean lick his stinky fur, to get his favor? You’ll need a bigger tongue for that, pal! You can’t lick it up for all of us, no you can’t!",
                                             "parts": [],
-                                            "threejsSceneKey": "f18-4",
+                                            "threejsSceneKey": "",
                                             "rank": "4", 
                                             "previous": "",
                                             "next": "R-A"
@@ -794,7 +794,7 @@
                                             "shares": [],
                                             "body": "That’s right, I’ll lick him more!",
                                             "parts": [],
-                                            "threejsSceneKey": "f18-4",
+                                            "threejsSceneKey": "",
                                             "rank": "4", 
                                             "previous": "",
                                             "next": "R-A"
@@ -807,7 +807,7 @@
                                             "shares": [],
                                             "body": "What a bunch of weirdos. Wait… I’ve got a suspicion…",
                                             "parts": [],
-                                            "threejsSceneKey": "f18-4",
+                                            "threejsSceneKey": "",
                                             "rank": "4", 
                                             "previous": "",
                                             "next": "R-A"
@@ -816,7 +816,7 @@
                                     "shares": [],
                                     "body": "Hey, you! Can you tell me what’s going on over there?",
                                     "parts": [],
-                                    "threejsSceneKey": "f12-B",
+                                    "threejsSceneKey": "",
                                     "rank": "4", 
                                     "previous": "",
                                     "next": "R-A"
@@ -829,7 +829,7 @@
                                     "shares": [],
                                     "body": "Because I can see that the tracks are going in, but that none are going out.",
                                     "parts": [],
-                                    "threejsSceneKey": "f12-C",
+                                    "threejsSceneKey": "",
                                     "rank": "8", 
                                     "previous": "",
                                     "next": "R-A"
@@ -847,7 +847,7 @@
                                             "shares": [],
                                             "body": "An old lion was getting old and weak, and he was not getting any less hungry.",
                                             "parts": [],
-                                            "threejsSceneKey": "f12-R-A",
+                                            "threejsSceneKey": "",
                                             "rank": "1",
                                             "previous": "",
                                             "next": "A"
@@ -860,7 +860,7 @@
                                             "shares": [],
                                             "body": "I know what I’m going to do: I’ll pretend I’m sick, then the idiots are going to come pay their respect and wish me well so that I don’t eat them up later. But then… I’ll do just the opposite, hehehehehehehehe",
                                             "parts": [],
-                                            "threejsSceneKey": "f18-R-B",
+                                            "threejsSceneKey": "",
                                             "rank": "2", 
                                             "previous": "",
                                             "next": "R-A"
@@ -873,7 +873,7 @@
                                             "shares": [],
                                             "body": "The fox approached the mouth of the cave, careful to look around her as she threaded. The lion saw her and immediately smiled.",
                                             "parts": [],
-                                            "threejsSceneKey": "f18-R-C",
+                                            "threejsSceneKey": "",
                                             "rank": "5", 
                                             "previous": "",
                                             "next": "R-A"
@@ -886,7 +886,7 @@
                                             "shares": [],
                                             "body": "PIC-f18-6",
                                             "parts": [],
-                                            "threejsSceneKey": "f18-R-D",
+                                            "threejsSceneKey": "",
                                             "rank": "6", 
                                             "previous": "",
                                             "next": "R-A"
@@ -899,7 +899,7 @@
                                             "shares": [],
                                             "body": "Hey, fox. Did you come to visit me? I won’t forget it. It’s quite dark here. Why don’t you come inside?",
                                             "parts": [],
-                                            "threejsSceneKey": "f18-R-E",
+                                            "threejsSceneKey": "",
                                             "rank": "7", 
                                             "previous": "",
                                             "next": "R-A"
