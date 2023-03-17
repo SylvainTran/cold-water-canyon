@@ -20,6 +20,7 @@ html, body, .global-grid {
     position: fixed;
     width: 100%;
     height: 100%;
+    font-family: @primary-font;
 }
 
 .mainContent {
@@ -27,6 +28,10 @@ html, body, .global-grid {
     overflow: scroll;
     align-self: start;
     .full-parent-height-and-width();
+}
+
+.mainContent h3 {
+    line-height: 0.5rem;
 }
 
 .links-menu {
@@ -79,7 +84,7 @@ html, body, .global-grid {
 }
 
 .app__title h1 {
-    font-family: @primary-font-bold;
+    font-family: @primary-font;
 }
 
 // Hover effects
@@ -131,4 +136,15 @@ html, body, .global-grid {
     animation-duration: 5s;
     animation-timing-function: linear;
     animation-iteration-count: 1;
+}
+
+// Links
+
+a, a:hover, a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: @primary-font;
 }

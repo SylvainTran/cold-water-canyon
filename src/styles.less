@@ -49,8 +49,13 @@
 /**
     Fonts
 */
-@primary-font: "Proxima-Nova";
+@primary-font: "Hiragino";
 @primary-font-bold: "Proxima-Nova-Bold";
+
+@font-face {
+    font-family: "Hiragino";
+    src: url("assets/fonts/hiragino-mincho-pron-w3-1.otf") format("opentype");
+}
 
 @font-face {
     font-family: "Proxima-Nova";
@@ -81,6 +86,11 @@ body {
 
 html, body { height: 100%; }
 body { margin: 0; }
+
+body::-webkit-scrollbar {
+    background-color: black;
+    width: 12px;
+}
 
 body::-webkit-scrollbar-track {
     background: rgb(18,18,18);

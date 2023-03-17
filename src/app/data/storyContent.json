@@ -34,7 +34,7 @@
                                             "date": "848110d",
                                             "comments": [],
                                             "shares": [],
-                                            "body": "O-K sure. We hang in the sun, cousin. By the way, I’m impressed by your pelt and your teeth. You look way more in shape than I do. Where do you workout?",
+                                            "body": "O-K sure. By the way, I’m impressed by your pelt and your teeth. You look way more in shape than I do. Where do you workout?",
                                             "parts": [],
                                             "threejsSceneKey": "",
                                             "rank": "1",
@@ -97,7 +97,7 @@
                                     "shares": [],
                                     "body": "Man it’s hot out here. I wish I could find something nice to eat today… I haven’t eaten anything but grass for days. Oh, hey, it’s Donkey.",
                                     "parts": [],
-                                    "threejsSceneKey": "f4-1",
+                                    "threejsSceneKey": "f4-A",
                                     "rank": "2", 
                                     "previous": "",
                                     "next": "R-A"
@@ -110,7 +110,7 @@
                                     "shares": [],
                                     "body": "The sun is hot and I’m walking alone in the plains. I wonder what Donkey’s doing?",
                                     "parts": [],
-                                    "threejsSceneKey": "f4-2",
+                                    "threejsSceneKey": "f4-B",
                                     "rank": "4",
                                     "previous": "A",
                                     "next": ""
@@ -161,9 +161,9 @@
                                         }
                                     ],
                                     "shares": [],
-                                    "body": "I’m going to take back what I said, Donkey. I don’t care about how epic your diet is, if you have to go through that shit. That’s too high a price. Even for a donkey.",
+                                    "body": "I’m going to take back what I said, Donkey. I don’t care about how good your diet is, if you have to go through that slavery. That’s too high a price--even for a donkey.",
                                     "parts": [],
-                                    "threejsSceneKey": "f4-2",
+                                    "threejsSceneKey": "f4-C",
                                     "rank": "6",
                                     "previous": "A",
                                     "next": ""
@@ -179,7 +179,7 @@
                                             "date": "848110d",
                                             "comments": [],
                                             "shares": [],
-                                            "body": "300 BCE. The sun is high, and an onager is walking on a mellow boulevard to an unimportant destination. But what stands on the horizon? Is it a donkey? Here is a tale of envying the wrong person, and of deliberately turning a blind eye to a situation in exchange for a life of security.",
+                                            "body": "300 BCE. The sun is high, and an onager is walking on a mellow boulevard to an unimportant destination. But what stands on the horizon? Is it a donkey? Here is a tale of exchanging much for a life of security.",
                                             "parts": [],
                                             "threejsSceneKey": "",
                                             "rank": "1",
@@ -222,6 +222,162 @@
                                             "parts": [],
                                             "threejsSceneKey": "",
                                             "rank": "8",
+                                            "previous": "A",
+                                            "next": "B"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Donkey",
+                            "posts": [
+                                {
+                                    "sKey": "A",
+                                    "author": "Donkey",
+                                    "date": "848110d",
+                                    "comments": [],
+                                    "shares": [],
+                                    "body": "I think that, well, I'm on the bright side of things.",
+                                    "parts": [],
+                                    "threejsSceneKey": "f4-1",
+                                    "rank": "2", 
+                                    "previous": "",
+                                    "next": "R-A"
+                                },
+                                {
+                                    "sKey": "B",
+                                    "author": "Donkey",
+                                    "date": "848108d",
+                                    "comments": [],
+                                    "shares": [],
+                                    "body": "My life for a bargain? I don't think so. I have everything I want.",
+                                    "parts": [],
+                                    "threejsSceneKey": "f4-2",
+                                    "rank": "4",
+                                    "previous": "A",
+                                    "next": ""
+                                },
+                                {
+                                    "sKey": "C",
+                                    "author": "Donkey",
+                                    "date": "848108d",
+                                    "comments": [
+                                        {
+                                            "sKey": "C-1",
+                                            "author": "Onager",
+                                            "date": "848108d",
+                                            "comments": [],
+                                            "shares": [],
+                                            "body": "I may be unsated, but at least I have my freedom with me!",
+                                            "parts": [],
+                                            "threejsSceneKey": "",
+                                            "rank": "1",
+                                            "previous": "",
+                                            "next": ""
+                                        },
+                                        {
+                                            "sKey": "C-2",
+                                            "author": "Donkey",
+                                            "date": "848108d",
+                                            "comments": [],
+                                            "shares": [],
+                                            "body": "What is the value of freedom if you have to starve?",
+                                            "parts": [],
+                                            "threejsSceneKey": "",
+                                            "rank": "1",
+                                            "previous": "",
+                                            "next": ""
+                                        },
+                                        {
+                                            "sKey": "C-3",
+                                            "author": "Onager",
+                                            "date": "848108d",
+                                            "comments": [],
+                                            "shares": [],
+                                            "body": "A freedom so forgotten that it also forgot its price: the loss of your dignity.",
+                                            "parts": [],
+                                            "threejsSceneKey": "",
+                                            "rank": "1",
+                                            "previous": "",
+                                            "next": ""
+                                        },
+                                        {
+                                            "sKey": "C-4",
+                                            "author": "Donkey",
+                                            "date": "848108d",
+                                            "comments": [],
+                                            "shares": [],
+                                            "body": "Dignity has no gain for a donkey!",
+                                            "parts": [],
+                                            "threejsSceneKey": "",
+                                            "rank": "1",
+                                            "previous": "",
+                                            "next": ""
+                                        }
+                                    ],
+                                    "shares": [],
+                                    "body": "What foolishness are you playing? See how I am well-fed by my master.",
+                                    "parts": [],
+                                    "threejsSceneKey": "f4-c4",
+                                    "rank": "6",
+                                    "previous": "A",
+                                    "next": ""
+                                }
+                            ],
+                            "relations": [
+                                {
+                                    "name": "Narrator",
+                                    "posts": [
+                                        {
+                                            "sKey": "R-A",
+                                            "author": "Narrator",
+                                            "date": "848110d",
+                                            "comments": [],
+                                            "shares": [],
+                                            "body": "300 BCE. The sun is high, and a Donkey is walking on a mellow boulevard to an unimportant destination. But what stands on the horizon? Is it an Onager? Here is a tale of valuing freedom little, in exchange for a life of security.",
+                                            "parts": [],
+                                            "threejsSceneKey": "",
+                                            "rank": "1",
+                                            "previous": "",
+                                            "next": "A"
+                                        },
+                                        {
+                                            "sKey": "R-B",
+                                            "author": "Narrator",
+                                            "date": "848110d",
+                                            "comments": [],
+                                            "shares": [],
+                                            "body": "The thought crossed his mind more than once, like a misplaced item.",
+                                            "parts": [],
+                                            "threejsSceneKey": "",
+                                            "rank": "3",
+                                            "previous": "A",
+                                            "next": "B"
+                                        },
+                                        {
+                                            "sKey": "R-C",
+                                            "author": "Narrator",
+                                            "date": "848110d",
+                                            "comments": [],
+                                            "shares": [],
+                                            "body": "An onager approaches the horizon, looking thirsty and hungry simultaenously. The Donkey could barely stare at the poor animal.",
+                                            "parts": [],
+                                            "threejsSceneKey": "",
+                                            "rank": "5",
+                                            "previous": "A",
+                                            "next": "B"
+                                        },
+                                        {
+                                            "sKey": "R-E",
+                                            "author": "Narrator",
+                                            "date": "Today",
+                                            "comments": [],
+                                            "shares": [],
+                                            "body": "And the Donkey was satisfied with his elected fate. The Onager died of starvation a few days later--the Donkey who passed him by did not so much as glance his way.",
+                                            "parts": [],
+                                            "threejsSceneKey": "",
+                                            "rank": "7",
                                             "previous": "A",
                                             "next": "B"
                                         }
@@ -428,7 +584,7 @@
                                     "shares": [],
                                     "body": "What is this low tremor in the ground? Why are the lilies sinking and the dragonflies departing so suddenly?",
                                     "parts": [],
-                                    "threejsSceneKey": "f12-2",
+                                    "threejsSceneKey": "",
                                     "rank": "2", 
                                     "previous": "",
                                     "next": "R-A"
@@ -468,7 +624,7 @@
                                     "shares": [],
                                     "body": "Well, that sure breaks the routine. Ribbit. I recognize these bulls. My gosh. They're the bulls that control half of the meadow. This is bad news.",
                                     "parts": [],
-                                    "threejsSceneKey": "f12-3",
+                                    "threejsSceneKey": "f12-B",
                                     "rank": "3", 
                                     "previous": "",
                                     "next": "R-A"
@@ -481,7 +637,7 @@
                                     "shares": [],
                                     "body": "PIC-f12-4",
                                     "parts": [],
-                                    "threejsSceneKey": "f12-4",
+                                    "threejsSceneKey": "",
                                     "rank": "4", 
                                     "previous": "",
                                     "next": "R-A"
@@ -494,7 +650,7 @@
                                     "shares": [],
                                     "body": "The bulls are fighting each other. That is bad news. From the tremors and noise, the lilies are being squished to the sides of the pond. The dragonflies are flying off, and the butterflies are quivering back to the woods. Our very lifestyle is being threatened.",
                                     "parts": [],
-                                    "threejsSceneKey": "f12-4",
+                                    "threejsSceneKey": "",
                                     "rank": "5", 
                                     "previous": "",
                                     "next": "R-A"
@@ -521,7 +677,7 @@
                                     "shares": [],
                                     "body": "Goodbye, my home.",
                                     "parts": [],
-                                    "threejsSceneKey": "f12-4",
+                                    "threejsSceneKey": "",
                                     "rank": "6", 
                                     "previous": "",
                                     "next": "R-A"
@@ -539,7 +695,7 @@
                                             "shares": [],
                                             "body": "What is the balance of the world, if not imbalance? This is a tale that proves the following: When rich and powerful people fight one another, it is the poor that ultimately pay the price.",
                                             "parts": [],
-                                            "threejsSceneKey": "f12-1",
+                                            "threejsSceneKey": "",
                                             "rank": "1",
                                             "previous": "",
                                             "next": "A"
@@ -594,7 +750,7 @@
                                     "shares": [],
                                     "body": "Why are all the animals going in that cave? I wonder if there’s anything important going on.",
                                     "parts": [],
-                                    "threejsSceneKey": "f12-3",
+                                    "threejsSceneKey": "f12-A",
                                     "rank": "3", 
                                     "previous": "",
                                     "next": "R-A"
@@ -660,7 +816,7 @@
                                     "shares": [],
                                     "body": "Hey, you! Can you tell me what’s going on over there?",
                                     "parts": [],
-                                    "threejsSceneKey": "f12-4",
+                                    "threejsSceneKey": "f12-B",
                                     "rank": "4", 
                                     "previous": "",
                                     "next": "R-A"
@@ -673,7 +829,7 @@
                                     "shares": [],
                                     "body": "Because I can see that the tracks are going in, but that none are going out.",
                                     "parts": [],
-                                    "threejsSceneKey": "f12-4",
+                                    "threejsSceneKey": "f12-C",
                                     "rank": "8", 
                                     "previous": "",
                                     "next": "R-A"
@@ -691,7 +847,7 @@
                                             "shares": [],
                                             "body": "An old lion was getting old and weak, and he was not getting any less hungry.",
                                             "parts": [],
-                                            "threejsSceneKey": "f12-1",
+                                            "threejsSceneKey": "f12-R-A",
                                             "rank": "1",
                                             "previous": "",
                                             "next": "A"
@@ -704,7 +860,7 @@
                                             "shares": [],
                                             "body": "I know what I’m going to do: I’ll pretend I’m sick, then the idiots are going to come pay their respect and wish me well so that I don’t eat them up later. But then… I’ll do just the opposite, hehehehehehehehe",
                                             "parts": [],
-                                            "threejsSceneKey": "f18-2",
+                                            "threejsSceneKey": "f18-R-B",
                                             "rank": "2", 
                                             "previous": "",
                                             "next": "R-A"
@@ -717,7 +873,7 @@
                                             "shares": [],
                                             "body": "The fox approached the mouth of the cave, careful to look around her as she threaded. The lion saw her and immediately smiled.",
                                             "parts": [],
-                                            "threejsSceneKey": "f18-2",
+                                            "threejsSceneKey": "f18-R-C",
                                             "rank": "5", 
                                             "previous": "",
                                             "next": "R-A"
@@ -730,7 +886,7 @@
                                             "shares": [],
                                             "body": "PIC-f18-6",
                                             "parts": [],
-                                            "threejsSceneKey": "f18-2",
+                                            "threejsSceneKey": "f18-R-D",
                                             "rank": "6", 
                                             "previous": "",
                                             "next": "R-A"
@@ -743,7 +899,7 @@
                                             "shares": [],
                                             "body": "Hey, fox. Did you come to visit me? I won’t forget it. It’s quite dark here. Why don’t you come inside?",
                                             "parts": [],
-                                            "threejsSceneKey": "f18-2",
+                                            "threejsSceneKey": "f18-R-E",
                                             "rank": "7", 
                                             "previous": "",
                                             "next": "R-A"
@@ -756,7 +912,7 @@
                                             "shares": [],
                                             "body": "Other people’s mistakes can often save us from making them.",
                                             "parts": [],
-                                            "threejsSceneKey": "f18-2",
+                                            "threejsSceneKey": "",
                                             "rank": "9", 
                                             "previous": "",
                                             "next": "R-A"
