@@ -62,14 +62,18 @@ You sense that the statue wants to say more, but it seems to hold back from sayi
 You find a scroll at the foot of the sphinx. &quot;Take this scroll with you and begone,&quot; it tells you.
 
 [[Take the scroll.]]
-[[Reject the gift.]]</tw-passagedata><tw-passagedata pid="5" name="Power." tags="" position="475,650" size="100,100">&quot;Power stirs up the flames inside.&quot; If the sphinx&#39;s statue could smile, you thought it might have. &quot;Like a blacksmith&#39;s forge it hungers for steel, for something soft to strengthen. It is like a firefly lured to the light - the unreliable etincelles of the night.&quot;
+[[Reject the gift.]]
+
+(set: $sphinxAnswer to &#39;roof&#39;)</tw-passagedata><tw-passagedata pid="5" name="Power." tags="" position="475,650" size="100,100">&quot;Power stirs up the flames inside.&quot; If the sphinx&#39;s statue could smile, you thought it might have. &quot;Like a blacksmith&#39;s forge it hungers for steel, for something soft to strengthen. It is like a firefly lured to the light - the unreliable etincelles of the night.&quot;
 
 &quot;But despite its value, no men may stake a permanent camp on its mountain. For the mountain and the tempest are savage and will cause the snow to overwhelm the longitude of its face. So it is with you, mortal -- climb the moutain as you draw breath, but you will never fully feel at home if you do.&quot;
 
 You find a scroll at the foot of the sphinx. &quot;Take this scroll with you and begone.&quot;
 
 [[Take the scroll.]]
-[[Reject the gift.]]</tw-passagedata><tw-passagedata pid="6" name="Time." tags="" position="350,650" size="100,100">&quot;Time is your answer, then?&quot; The sphinx looks thoughtful. You notice how odd his softened expression contrasts with the hardness of his stone skin. The sphinx seems to notice your curious inquiry. 
+[[Reject the gift.]]
+
+(set: $sphinxAnswer to &#39;power&#39;)</tw-passagedata><tw-passagedata pid="6" name="Time." tags="" position="350,650" size="100,100">&quot;Time is your answer, then?&quot; The sphinx looks thoughtful. You notice how odd his softened expression contrasts with the hardness of his stone skin. The sphinx seems to notice your curious inquiry. 
 
 &quot;My heart and flesh, by my maker, was made harder than steel, and so I will last until the last days of this world.&quot; He looks at you with a strange expression, and as he moves aside to reveal the door to the cathedral. 
 
@@ -78,11 +82,18 @@ You find a scroll at the foot of the sphinx. &quot;Take this scroll with you and
 You find a scroll at the foot of the sphinx. &quot;Take this scroll with you and begone.&quot;
 
 [[Take the scroll.]]
-[[Reject the gift.]]</tw-passagedata><tw-passagedata pid="7" name="Take the scroll." tags="" position="350,775" size="100,100">You take the scroll with you. What harm can a scroll do, after all?
+[[Reject the gift.]]
 
-[[Open the doors of the cathedral.]]</tw-passagedata><tw-passagedata pid="8" name="Reject the gift." tags="" position="475,775" size="100,100">You refuse to take the scroll with you. You don&#39;t trust a talking statue -- nothing forebrooding in this place can amount to good. After all, you came only for the treasure.
 
-[[Open the doors of the cathedral.]]</tw-passagedata><tw-passagedata pid="9" name="Open the doors of the cathedral." tags="" position="350,900" size="100,100">The inside is just as you remembered: a wide, open field of rooms, windows, scattered furniture, and a nearly erotic sense of loss. You breathe in the even colder air, and stand in awe of the beauty of this place. White blue moonlight pierces through the unbroken mosaics in the windows and make you feel calm and serene.
+(set: $sphinxAnswer to &#39;time&#39;)</tw-passagedata><tw-passagedata pid="7" name="Take the scroll." tags="" position="350,775" size="100,100">You take the scroll with you. What harm can a scroll do, after all?
+
+[[Open the doors of the cathedral.]]
+
+(set: $tookSphinxScroll to true)</tw-passagedata><tw-passagedata pid="8" name="Reject the gift." tags="" position="475,775" size="100,100">You refuse to take the scroll with you. You don&#39;t trust a talking statue -- nothing forebrooding in this place can amount to good. After all, you came only for the treasure.
+
+[[Open the doors of the cathedral.]]
+
+(set: $tookSphinxScroll to false)</tw-passagedata><tw-passagedata pid="9" name="Open the doors of the cathedral." tags="" position="350,900" size="100,100">The inside is just as you remembered: a wide, open field of rooms, windows, scattered furniture, and a nearly erotic sense of loss. You breathe in the even colder air, and stand in awe of the beauty of this place. White blue moonlight pierces through the unbroken mosaics in the windows and make you feel calm and serene.
 
 The monks, however, were extremely tidy, so despite their absence, you can see that most of the things you were used to are at the same place.
 
@@ -153,25 +164,17 @@ The absence of clothes remind you that you are indeed alone. There is nobody els
 [[Write about the dimness of the windows.]]
 [[Comment on the absence of clothes.]]
 [[Look around some more.]]</tw-passagedata><tw-passagedata pid="17" name="Write some impressions in your diary." tags="" position="725,400" size="100,100">=&gt;&lt;=
-&quot;A tide of gratitude washed upon me
+(seq-link: bind _poem, &quot;A tide of gratitude washed upon me
 As a stood upon the naked beachside
-of the people who raised me.
-
-I owed them all, and they owed me none:
-A reunion like the ocean&#39;s wave craddles sand.
-
-Everlasting unto the starry field of bright, twinkling emotions.
-
-And yet I come bearing no gift, as my heart is hollow
-and my soul is even emptier upon my every walking.
-
-What should I give thee, but the complaints of my eyes?
-
-What do I seek in this place, and what do I hope to find?
-O treasure, what quality has you in this stretching moment?
-
-But seek you I have come to do, and to take you away to my depths
-I have come to carry away.&quot;</tw-passagedata><tw-passagedata pid="18" name="Go left." tags="" position="837.5,1350" size="100,100">You hear yourself muttering, this place must be IN-DEVELOPMENT.</tw-passagedata><tw-passagedata pid="19" name="Go right." tags="" position="962.5,1350" size="100,100">You hear yourself muttering, this place must be IN-DEVELOPMENT.</tw-passagedata><tw-passagedata pid="20" name="Go upstairs." tags="" position="900,1475" size="100,100">You don&#39;t have time to waste -- straight to the treasure tower.
+of the people who raised me.&quot;, &quot;I owed them all, and they owed me none:
+A reunion like the ocean&#39;s wave craddles sand.&quot;, &quot;Everlasting unto the starry field of bright, twinkling emotions.&quot;, &quot;And yet I come bearing no gift, as my heart is hollow
+and my soul is even emptier upon my every walking.&quot;, &quot;What should I give thee, but the complaint of my eyes?&quot;, &quot;What do I seek in this place, and what do I hope to find?
+O treasure, what quality has you in this stretching moment?&quot;, &quot;But seek you I have come to do, and to take you away to my depths
+I have come to carry away.&quot;)
+{(live: )[
+    (if: time &gt; 100s or _poem is &quot;But seek you I have come to do, and to take you away to my depths
+I have come to carry away.&quot;)[[[At the gates]](stop:)]
+]}</tw-passagedata><tw-passagedata pid="18" name="Go left." tags="" position="837.5,1350" size="100,100">You hear yourself muttering, this place must be IN-DEVELOPMENT.</tw-passagedata><tw-passagedata pid="19" name="Go right." tags="" position="962.5,1350" size="100,100">You hear yourself muttering, this place must be IN-DEVELOPMENT.</tw-passagedata><tw-passagedata pid="20" name="Go upstairs." tags="" position="900,1475" size="100,100">You don&#39;t have time to waste -- straight to the treasure tower.
 
 As you climb the stairs two or three steps at a time, you notice a flickering shadow in the corner of your eyes, and you let out a scream despite yourself. The shadow follows the wall that goes under the staircase.
 
@@ -200,7 +203,7 @@ You continue climbing the last set of stairs, doing your best to brace ahead.
 The first floor led to a small entrance with a porticuli. Beyond the entrance was the central tower&#39;s front door.
 
 [[Attempt to open the door.]]</tw-passagedata><tw-passagedata pid="25" name="Attempt to open the door." tags="" position="1025,1725" size="100,100">(if: $hasKeyToCentralTower is true)[You jiggle the ornate brass key out of your pockets and unlock the door.]
-(else:)[The door is locked. You notice a brass lock under the knob.]</tw-passagedata><tw-passagedata pid="26" name="Go inside." tags="" position="900,1725" size="100,100"></tw-passagedata><tw-passagedata pid="27" name="Turn around and continue to go upstairs." tags="" position="775,1725" size="100,100"></tw-passagedata><tw-passagedata pid="28" name="Go where the shadow went." tags="" position="650,1725" size="100,100"></tw-passagedata></tw-storydata>
+(else:)[The door is locked. You notice a brass lock under the knob.]</tw-passagedata><tw-passagedata pid="26" name="Go inside." tags="" position="900,1725" size="100,100"></tw-passagedata><tw-passagedata pid="27" name="Turn around and continue to go upstairs." tags="" position="775,1725" size="100,100"></tw-passagedata><tw-passagedata pid="28" name="Go where the shadow went." tags="" position="650,1725" size="100,100"></tw-passagedata><tw-passagedata pid="29" name="[At the gates" tags="" position="725,525" size="100,100"></tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
