@@ -35,7 +35,9 @@ The Cathedral remains dormant like an old lion in the evening grass. You step ou
 
 &lt;audio autoplay&gt;
     &lt;source src=&quot;vo/cathedral-intro-vo.mp3&quot; type=&quot;audio/mp3&quot;&gt;
-&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="2" name="Move towards the Cathedral." tags="" position="475,425" size="100,100">A sphinx&#39;s statue begins talking to you.
+&lt;/audio&gt;
+
+(set: $hasKeyToCentralTower to false)</tw-passagedata><tw-passagedata pid="2" name="Move towards the Cathedral." tags="" position="475,425" size="100,100">A sphinx&#39;s statue begins talking to you.
 
 &lt;img src=&quot;images/TheCathedral_Twine/sphinx.png&quot;&gt;
 
@@ -175,11 +177,30 @@ As you climb the stairs two or three steps at a time, you notice a flickering sh
 
 [[Light your torch, and follow the shadow downstairs.]]
 [[Ask who goes there.]]
-[[Continue to climb upstairs.]]
-
-</tw-passagedata><tw-passagedata pid="21" name="Consult your notes." tags="" position="1125,1200" size="100,100">LEFT HALLWAY --&gt; Hall of Myths --&gt; Dormitory --&gt; Study Rooms F1-F5
+[[Continue to climb upstairs.]]</tw-passagedata><tw-passagedata pid="21" name="Consult your notes." tags="" position="1125,1200" size="100,100">LEFT HALLWAY --&gt; Hall of Myths --&gt; Dormitory --&gt; Study Rooms F1-F5
 UPSTAIRS --&gt; Central Tower --&gt; The Bishop&#39;s Court --&gt; ??? (Top Level?)
-RIGHT HALLWAY --&gt; The Star Garden --&gt; Seminal Rooms B1-B5</tw-passagedata><tw-passagedata pid="22" name="Light your torch, and follow the shadow downstairs." tags="" position="900,1600" size="100,100">You hear yourself muttering, this place must be IN-DEVELOPMENT.</tw-passagedata><tw-passagedata pid="23" name="Ask who goes there." tags="" position="775,1600" size="100,100">You hear yourself muttering, this place must be IN-DEVELOPMENT.</tw-passagedata><tw-passagedata pid="24" name="Continue to climb upstairs." tags="" position="1025,1600" size="100,100">You hear yourself muttering, this place must be IN-DEVELOPMENT.</tw-passagedata></tw-storydata>
+RIGHT HALLWAY --&gt; The Star Garden --&gt; Seminal Rooms B1-B5</tw-passagedata><tw-passagedata pid="22" name="Light your torch, and follow the shadow downstairs." tags="" position="900,1600" size="100,100">The figure doesn&#39;t make you feel safe. What if someone else was here?
+
+You quickly start thinking of the possibilities. Perhaps someone saw you leaving at the port, and followed you out of curiosity? Maybe they overheard you speak about treasure while you were drunk at the tavern?
+
+You have to know, so you decide to follow the figure around the stairs. You light a torch and stop where the shadow disappeared.
+
+To your surprise, there&#39;s a small door in the wall there; it would have gone unnoticed had you not shined your torch as the material of the door was the same as the rest of the wall.
+
+[[Go inside.]]
+[[Turn around and continue to go upstairs.]]</tw-passagedata><tw-passagedata pid="23" name="Ask who goes there." tags="" position="775,1600" size="100,100">&quot;Who goes there?&quot; You hear your own voice echo weakly in the distant hallways. Looking around, you see nothing.
+
+[[Go where the shadow went.]]
+[[Continue to climb upstairs.]]</tw-passagedata><tw-passagedata pid="24" name="Continue to climb upstairs." tags="" position="1025,1600" size="100,100">You tell yourself that whatever the shadowy figure was, it was probably just the poorly lit windows playing tricks on you. Plus, the sun was starting to get low.
+
+No time to waste. 
+
+You continue climbing the last set of stairs, doing your best to brace ahead. 
+
+The first floor led to a small entrance with a porticuli. Beyond the entrance was the central tower&#39;s front door.
+
+[[Attempt to open the door.]]</tw-passagedata><tw-passagedata pid="25" name="Attempt to open the door." tags="" position="1025,1725" size="100,100">(if: $hasKeyToCentralTower is true)[You jiggle the ornate brass key out of your pockets and unlock the door.]
+(else:)[The door is locked. You notice a brass lock under the knob.]</tw-passagedata><tw-passagedata pid="26" name="Go inside." tags="" position="900,1725" size="100,100"></tw-passagedata><tw-passagedata pid="27" name="Turn around and continue to go upstairs." tags="" position="775,1725" size="100,100"></tw-passagedata><tw-passagedata pid="28" name="Go where the shadow went." tags="" position="650,1725" size="100,100"></tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
