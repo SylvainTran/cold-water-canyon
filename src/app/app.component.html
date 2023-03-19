@@ -9,7 +9,7 @@
         <div [ngClass]="{'suppressed': activeStoryProfile && activeStoryCharacter}" *ngSwitchCase="'titleAndLogo'" class="app__title">
             <div class="inblock-icon">
                 <!-- <mat-icon aria-hidden="false" aria-label="Logo" style="color: rgb(0, 238, 255);">shield_moon</mat-icon>&nbsp;&nbsp; -->
-                <h1>A Variety of Cathedrals. A liminal space.</h1>
+                <h1>Three Cathedrals. One liminal space.</h1>
             </div>
         </div>
         <div [ngClass]="{'suppressed': activeStoryProfile && activeStoryCharacter}" *ngSwitchCase="'searchBar'" class="searchBar">
@@ -24,7 +24,7 @@
             <div (click)="switchStory()" class="link-menu-icons">
                 <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="library_books"></mat-icon>&nbsp;&nbsp;<h4>The Cathedral</h4>
             </div>
-            <h5 class="link-menu__discover">Traveler's Review - In Construction</h5>
+            <h5 class="link-menu__discover">Traveller's Review - In Construction</h5>
         </div>
         <div *ngSwitchCase="'mainContent'" class="mainContent" #mainContentContainer [scrollTop]="0">
             <div *ngIf="!activeStoryProfile && !activeStoryCharacter">
