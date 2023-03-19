@@ -87,13 +87,13 @@ You find a scroll at the foot of the sphinx. &quot;Take this scroll with you and
 
 (set: $sphinxAnswer to &#39;time&#39;)</tw-passagedata><tw-passagedata pid="7" name="Take the scroll." tags="" position="350,775" size="100,100">You take the scroll with you. What harm can a scroll do, after all?
 
-[[Open the doors of the cathedral.]]
+[[Open the doors of the Cathedral.]]
 
 (set: $tookSphinxScroll to true)</tw-passagedata><tw-passagedata pid="8" name="Reject the gift." tags="" position="475,775" size="100,100">You refuse to take the scroll with you. You don&#39;t trust a talking statue -- nothing forebrooding in this place can amount to good. After all, you came only for the treasure.
 
-[[Open the doors of the cathedral.]]
+[[Open the doors of the Cathedral.]]
 
-(set: $tookSphinxScroll to false)</tw-passagedata><tw-passagedata pid="9" name="Open the doors of the cathedral." tags="" position="350,900" size="100,100">The inside is just as you remembered: a wide, open field of rooms, windows, scattered furniture, and a nearly erotic sense of loss. You breathe in the even colder air, and stand in awe of the beauty of this place. White blue moonlight pierces through the unbroken mosaics in the windows and make you feel calm and serene.
+(set: $tookSphinxScroll to false)</tw-passagedata><tw-passagedata pid="9" name="Open the doors of the Cathedral." tags="" position="350,900" size="100,100">The inside is just as you remembered: a wide, open field of rooms, windows, scattered furniture, and a nearly erotic sense of loss. You breathe in the even colder air, and stand in awe of the beauty of this place. White blue moonlight pierces through the unbroken mosaics in the windows and make you feel calm and serene.
 
 The monks, however, were extremely tidy, so despite their absence, you can see that most of the things you were used to are at the same place.
 
@@ -173,8 +173,7 @@ O treasure, what quality has you in this stretching moment?&quot;, &quot;But see
 I have come to carry away.&quot;)
 {(live: )[
     (if: time &gt; 100s or _poem is &quot;But seek you I have come to do, and to take you away to my depths
-I have come to carry away.&quot;)[[[At the gates]](stop:)]
-]}</tw-passagedata><tw-passagedata pid="18" name="Go left." tags="" position="837.5,1350" size="100,100">You hear yourself muttering, this place must be IN-DEVELOPMENT.</tw-passagedata><tw-passagedata pid="19" name="Go right." tags="" position="962.5,1350" size="100,100">You hear yourself muttering, this place must be IN-DEVELOPMENT.</tw-passagedata><tw-passagedata pid="20" name="Go upstairs." tags="" position="900,1475" size="100,100">You don&#39;t have time to waste -- straight to the treasure tower.
+I have come to carry away.&quot;)[[[At the gates]](stop:)]]}</tw-passagedata><tw-passagedata pid="18" name="Go left." tags="" position="837.5,1350" size="100,100">You hear yourself muttering, this place must be IN-DEVELOPMENT.</tw-passagedata><tw-passagedata pid="19" name="Go right." tags="" position="962.5,1350" size="100,100">You hear yourself muttering, this place must be IN-DEVELOPMENT.</tw-passagedata><tw-passagedata pid="20" name="Go upstairs." tags="" position="900,1475" size="100,100">You don&#39;t have time to waste -- straight to the treasure tower.
 
 As you climb the stairs two or three steps at a time, you notice a flickering shadow in the corner of your eyes, and you let out a scream despite yourself. The shadow follows the wall that goes under the staircase.
 
@@ -203,7 +202,7 @@ You continue climbing the last set of stairs, doing your best to brace ahead.
 The first floor led to a small entrance with a porticuli. Beyond the entrance was the central tower&#39;s front door.
 
 [[Attempt to open the door.]]</tw-passagedata><tw-passagedata pid="25" name="Attempt to open the door." tags="" position="1025,1725" size="100,100">(if: $hasKeyToCentralTower is true)[You jiggle the ornate brass key out of your pockets and unlock the door.]
-(else:)[The door is locked. You notice a brass lock under the knob.]</tw-passagedata><tw-passagedata pid="26" name="Go inside." tags="" position="900,1725" size="100,100"></tw-passagedata><tw-passagedata pid="27" name="Turn around and continue to go upstairs." tags="" position="775,1725" size="100,100"></tw-passagedata><tw-passagedata pid="28" name="Go where the shadow went." tags="" position="650,1725" size="100,100"></tw-passagedata><tw-passagedata pid="29" name="[At the gates" tags="" position="725,525" size="100,100"></tw-passagedata></tw-storydata>
+(else:)[The door is locked. You notice a brass lock under the knob.]</tw-passagedata><tw-passagedata pid="26" name="Go inside." tags="" position="900,1725" size="100,100">You hear yourself muttering, this place must be IN-DEVELOPMENT.</tw-passagedata><tw-passagedata pid="27" name="Turn around and continue to go upstairs." tags="" position="775,1725" size="100,100">You hear yourself muttering, this place must be IN-DEVELOPMENT.</tw-passagedata><tw-passagedata pid="28" name="Go where the shadow went." tags="" position="650,1725" size="100,100">You hear yourself muttering, this place must be IN-DEVELOPMENT.</tw-passagedata><tw-passagedata pid="29" name="[At the gates" tags="" position="725,525" size="100,100"></tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim

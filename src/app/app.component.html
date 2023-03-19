@@ -30,22 +30,30 @@
             <div *ngIf="!activeStoryProfile && !activeStoryCharacter">
                 <h2>You see several paths ahead of you...</h2><h5>(Turn the audio on. If using Chrome, this requires enabling the site's Sound settings)</h5>
                 <h2>F0</h2><hr>
-                <h3 (mouseenter)="setHover('f4')" (mouseout)="unsetHover()" [@moveRight]="activeHoveredElement === 'f4'? 'movedRight' : 'idle'" (click)="setActiveStoryProfile('f4')">The Onager, the Donkey, and the Driver</h3>
-                <h3 (mouseenter)="setHover('f5')" (mouseout)="unsetHover()" [@moveRight]="activeHoveredElement === 'f5'? 'movedRight' : 'idle'" (click)="setActiveStoryProfile('f5')">The Onager, the Donkey, and the Lion</h3>
-                <h3 (mouseenter)="setHover('f12')" (mouseout)="unsetHover()" [@moveRight]="activeHoveredElement === 'f12'? 'movedRight' : 'idle'" (click)="setActiveStoryProfile('f12')">The Frogs and the Battle of the Bulls</h3>
-                <h3 (mouseenter)="setHover('f18')" (mouseout)="unsetHover()" [@moveRight]="activeHoveredElement === 'f18'? 'movedRight' : 'idle'" (click)="setActiveStoryProfile('f18')">The Fox, the Lion, and the Footprints</h3>
-                <h2>F1</h2>
-                <hr><br>
-                <a href="../assets/The Cathedral.html">The Interactive Cathedral</a><br><br>
                 <div style="font-size: 0.55rem; line-height: 0.8rem;">
                     <p>May contain the following:</p>
                     <ul>
                         <li>Artificially generated imagery</li>
                         <li>Sounds</li>
                         <li>Voice over</li>
-                        <li>Disturbing content</li>
-                    </ul>    
+                        <li>A travel itinerary into the depths of the soul</li>
+                    </ul>
                 </div>
+                <a href="../assets/The Cathedral.html">The Interactive Cathedral</a><br><br>
+                <h2>F1</h2>
+                <hr><br>
+                <div style="font-size: 0.55rem; line-height: 0.8rem;">
+                    <p>These dusty scrolls have accompanied many a weary traveller.</p>
+                    <ul>
+                        <li>In the pursuit of the fire beyond the cave's shadows, a man must be willing to let go of things that weigh him down.</li>
+                        <li>Or find greater wings to spur him forth in his ascension into the heavens.</li>
+                        <li>All of which, for the lesser man sitting in his dark cave, makes him seem like a clown.</li>
+                    </ul>
+                </div>
+                <h3 (mouseenter)="setHover('f4')" (mouseout)="unsetHover()" [@moveRight]="activeHoveredElement === 'f4'? 'movedRight' : 'idle'" (click)="setActiveStoryProfile('f4')">The Onager, the Donkey, and the Driver</h3>
+                <h3 (mouseenter)="setHover('f5')" (mouseout)="unsetHover()" [@moveRight]="activeHoveredElement === 'f5'? 'movedRight' : 'idle'" (click)="setActiveStoryProfile('f5')">The Onager, the Donkey, and the Lion</h3>
+                <h3 (mouseenter)="setHover('f12')" (mouseout)="unsetHover()" [@moveRight]="activeHoveredElement === 'f12'? 'movedRight' : 'idle'" (click)="setActiveStoryProfile('f12')">The Frogs and the Battle of the Bulls</h3>
+                <h3 (mouseenter)="setHover('f18')" (mouseout)="unsetHover()" [@moveRight]="activeHoveredElement === 'f18'? 'movedRight' : 'idle'" (click)="setActiveStoryProfile('f18')">The Fox, the Lion, and the Footprints</h3>
                 <h2>F2</h2>
                 <hr>
                 <h3 (mouseenter)="setHover('f21')" (mouseout)="unsetHover()" [@moveRight]="activeHoveredElement === 'f21'? 'movedRight' : 'idle'">The 3d Cathedral</h3>
