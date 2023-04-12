@@ -8,9 +8,8 @@
         class="mat-grid-tile-custom">
         <div [ngClass]="{'suppressed': activeStoryProfile && activeStoryCharacter}" *ngSwitchCase="'titleAndLogo'" class="app__title">
             <div class="inblock-icon">
-                <!-- <mat-icon aria-hidden="false" aria-label="Logo" style="color: rgb(0, 238, 255);">shield_moon</mat-icon>&nbsp;&nbsp; -->
-                <img src="../assets/images/f22.png" alt="logo"/>
-                <h1>Three Cathedrals. One liminal space.</h1>
+                <img src="../assets/images/f22.png" style="width: 64px; height: 64px; float: left; margin-right: 1rem;" alt="logo"/>
+                <h2 style="text-align: center;">Three Cathedrals. One liminal space.</h2>
             </div>
         </div>
         <div [ngClass]="{'suppressed': activeStoryProfile && activeStoryCharacter}" *ngSwitchCase="'searchBar'" class="searchBar">
